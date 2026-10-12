@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Контакты — iFCM GROUP</title>
+<meta name="description" content="Контакты iFCM GROUP: центральный офис в Москве, телефон, почта и форма обращения.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Noto+Sans:wght@400;500;700&family=Noto+Serif:ital,wght@1,400&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/nav.css">
+<script src="assets/config.js"></script>
+</head>
+<body>
+<div id="siteHeader"></div>
+<main>
+<section class="cover w">
+  <div class="shapes" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="wrap in">
+    <div class="txt">
+      <div class="crumbs lbl"><a href="index.html">Главная</a><span aria-hidden="true">/</span><span>Контакты</span></div>
+      <h1 class="d">Давайте <span class="s">поговорим</span></h1>
+      <p class="lead">Расскажите о задаче — подберём решение для вашего объекта. Поставщикам и кандидатам тоже сюда: выберите тему обращения.</p>
+    </div>
+    
+  </div>
+</section>
+<section class="sec w"><div class="wrap split" style="align-items:flex-start">
+  <div class="tx">
+    <span class="plate">Центральный офис</span>
+    <p class="d" style="margin:0;font-size:clamp(30px,3.6vw,48px);line-height:1.05;color:var(--navy)">ООО «АЙЭФСИЭМ ГРУПП»</p>
+    <p data-c="address" style="font-size:20px;color:var(--ink)">107113, Москва, ул. 3-я Рыбинская, д. 18, стр. 22</p>
+    <p style="margin:0">БЦ «Буревестник»</p>
+    <div class="card" style="gap:6px">
+      <span class="lbl" style="color:var(--muted)">Телефон</span><span class="d sel" data-c="phone" style="font-size:clamp(26px,3vw,36px);color:var(--navy)">+7 (495) 246-01-10</span>
+      <span class="lbl" style="color:var(--muted);margin-top:10px">Почта</span><span class="sel" data-c="email" style="font-size:18px;color:var(--navy)">reception.ru@ifcmgroup.ru</span>
+    </div>
+    <a class="btn navy" href="https://yandex.ru/maps/?text=Москва%2C%203-я%20Рыбинская%20улица%2C%2018с22" target="_blank" rel="noopener">Открыть на Яндекс Картах</a>
+  </div>
+  <form class="form tx" data-lead="Обращение с сайта" novalidate>
+    <h2 class="d" style="margin:0;font-size:clamp(28px,3vw,40px);color:var(--navy)">Напишите нам</h2>
+    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label>Тема обращения
+      <select name="topic" id="topic">
+        <option data-key="client" value="Сотрудничество">Хочу заказать услуги</option>
+        <option data-key="supplier" value="Поставщик">Хочу стать поставщиком</option>
+        <option data-key="career" value="Карьера">Ищу работу</option>
+        <option data-key="other" value="Другое">Другое</option>
+      </select>
+    </label>
+    <div class="row">
+      <label>Имя<input name="name" id="name" autocomplete="name" placeholder="Как к вам обращаться"></label>
+      <label>Телефон<input name="phone" id="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></label>
+    </div>
+    <label>Компания<input name="company" id="company" autocomplete="organization" placeholder="Необязательно"></label>
+    <label>Сообщение<textarea name="message" id="message" placeholder="Объект, город, количество сотрудников — всё, что поможет нам подготовиться"></textarea></label>
+    <label class="chk"><input type="checkbox" name="consent" id="consent"><span>Согласен на обработку персональных данных в соответствии с <a href="https://disk.360.yandex.ru/i/gnEF3XklKYBSMg" target="_blank" rel="noopener">политикой</a></span></label>
+    <button class="btn" type="submit">Отправить</button>
+    <div class="msg" role="status"></div>
+  </form>
+</div></section>
+</main>
+<div id="siteFooter"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>
