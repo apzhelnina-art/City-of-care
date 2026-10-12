@@ -1,0 +1,20 @@
+/* iFCM — шапка и мобильное меню (общие для всех страниц, включая главную) */
+/* ---------- шапка ---------- */
+.logo-fix{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:var(--gut);z-index:60;background:var(--navy);border-radius:999px;padding:12px 18px;display:flex}
+.logo-fix img{height:24px;width:auto;display:block}
+.nav{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:var(--gut);z-index:60;display:flex;gap:10px}
+.pill{background:var(--navy);color:var(--white);border-radius:999px;padding:15px 22px;display:flex;gap:24px}
+.pill a{text-decoration:none;white-space:nowrap}
+.pill a:hover,.pill a[aria-current="page"]{color:var(--red-soft)}
+.cta-pill{background:var(--red);color:var(--white);border-radius:999px;padding:15px 22px;text-decoration:none;border:0;cursor:pointer;font:inherit}
+.burger{display:none;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:0 18px;min-height:48px;font:inherit;cursor:pointer;align-items:center;gap:10px}
+.burger i{display:block;width:18px;height:2px;background:#fff;box-shadow:0 6px 0 #fff,0 -6px 0 #fff}
+.menu{position:fixed;inset:0;z-index:80;background:var(--navy);color:#fff;display:flex;flex-direction:column;padding:calc(90px + env(safe-area-inset-top,0px)) var(--gut) 32px;gap:6px;overflow:auto}
+.menu[hidden]{display:none}
+.menu a{font-family:var(--display);font-weight:900;font-size:clamp(34px,9vw,56px);line-height:1.15;text-decoration:none;letter-spacing:-.03em}
+.menu a[aria-current="page"]{color:var(--red-soft)}
+.menu .close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:var(--gut);background:var(--red);color:#fff;border:0;border-radius:999px;min-height:48px;padding:0 20px;font:inherit;cursor:pointer}
+.menu .m-foot{margin-top:auto;padding-top:32px;color:var(--lilac);font-size:15px}
+@media (max-width:1180px){.pill.links{display:none}.burger{display:inline-flex}}
+
+@media (max-width:600px){.nav .cta-pill{display:none}}
