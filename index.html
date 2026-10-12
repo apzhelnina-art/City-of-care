@@ -152,6 +152,8 @@ h1,h2,h3{text-wrap:balance}
 .c-form.flash{box-shadow:0 0 0 4px var(--red);transition:box-shadow .3s}
 .stats2{align-items:flex-end}.dh-wrap{margin-left:auto;display:flex;align-items:center}.drag-hint.dh2{width:72px;height:72px;background:rgba(21,18,58,.6);border:2px solid rgba(255,255,255,.35)}
 @media (max-width:700px){.drag-hint.dh2{width:56px;height:56px}}
+.pd-ok{display:flex;gap:10px;align-items:flex-start;margin:14px 6px 0;font-size:14px;color:var(--muted);cursor:pointer;max-width:720px}
+.pd-ok input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--navy)}
 /* FOOTER GRID (tap cells) */
 .grid-sec{padding-block:40px 0}
 .contact-row{display:flex;flex-wrap:wrap;gap:14px;align-items:stretch}
@@ -251,6 +253,7 @@ h1,h2,h3{text-wrap:balance}
       <button type="submit" aria-label="Отправить"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></button>
     </form>
   </div>
+  <label class="pd-ok"><input type="checkbox" id="pdOk"><span>Согласен на обработку персональных данных. Нажимая стрелку, вы передаёте телефон, чтобы мы перезвонили.</span></label>
   <div class="selbox" id="selBox" aria-live="polite"></div>
   <div class="ok" id="ok" role="status"></div>
   <div class="gwrap">
@@ -516,6 +519,7 @@ const BACKEND_URL = window.IFCM_BACKEND_URL || ""; // адрес задаётс�
   /* ================= form ================= */
   $('#f').addEventListener('submit',function(e){e.preventDefault();var ok=$('#ok'),btn=$('#f button'),v=$('#tel').value.replace(/\D/g,'');
     if(v.length<10||v.length>12){ok.textContent='Введите номер целиком, 10–11 цифр.';return}
+    if(!$('#pdOk').checked){ok.textContent='Отметьте согласие на обработку персональных данных.';return}
     btn.disabled=true;ok.textContent='Отправляем…';
     fetch(BACKEND_URL+'/api/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:$('#tel').value,services:window.__sel||[],website:$('#website').value,page:location.href})})
       .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok)throw new Error(j.error||'ошибка')})})
