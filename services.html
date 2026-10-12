@@ -107,6 +107,23 @@ h1,h2,h3{text-wrap:balance;margin:0}
 .s-idx button .n{display:flex;justify-content:space-between;font-family:var(--display);font-weight:900;font-size:22px}
 .s-idx button b{font-size:17px;line-height:1.2}
 .s-idx button[aria-pressed="true"]{transform:translateX(10px);box-shadow:-10px 0 0 var(--ink)}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.fgrid .card{background:#fff;border-radius:30px;overflow:hidden;display:flex;flex-direction:column}
+.fgrid .fph{aspect-ratio:16/9;background-size:cover;background-position:center}
+.fgrid .body{padding:24px 26px 26px;display:flex;flex-direction:column;gap:12px;flex:1}
+.fgrid h3{font-size:clamp(22px,2.2vw,30px);line-height:1.05;margin:0}
+.fgrid .lead{margin:0;color:var(--muted);font-size:15px}
+.fgrid .chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 8px}
+.fgrid .chips span{border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:500}
+.fgrid .chips span:nth-child(4n+1){background:var(--red);color:#fff}
+.fgrid .chips span:nth-child(4n+2){background:var(--navy);color:#fff}
+.fgrid .chips span:nth-child(4n+3){background:var(--peach);color:var(--navy)}
+.fgrid .chips span:nth-child(4n+4){background:var(--paper);color:var(--navy)}
+.fgrid .card.dark .chips span:nth-child(4n+2){background:#fff;color:var(--navy)}
+.fgrid .card.dark .chips span:nth-child(4n+4){background:#3A3480;color:#fff}
+.fgrid .more{display:inline-flex;align-items:center;gap:8px;color:var(--red);font-weight:700;text-decoration:none;margin-top:auto}
+.fgrid .card.dark{background:var(--navy);color:#fff}.fgrid .card.dark .lead{color:var(--lilac)}.fgrid .card.dark .more{color:var(--peach)}
+@media (max-width:760px){.fgrid{grid-template-columns:1fr}}
 .s-stage{flex:1 1 640px;min-width:0;position:relative;border-radius:36px;overflow:hidden;min-height:620px;background:var(--ink)}
 .s-stage .ph{position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity .5s}
 .s-stage .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,18,58,.1) 30%,rgba(21,18,58,.9))}
@@ -323,16 +340,9 @@ h1,h2,h3{text-wrap:balance;margin:0}
 <section class="page" id="services" role="tabpanel">
   <div class="s-head w wrap">
     <h1 class="d">100+ <span class="s">услуг</span><br>«под ключ»</h1>
-    <p style="margin:0;max-width:380px;font-size:18px;color:var(--muted)">Выберите направление слева — услуги «упадут» на фото. Всё это закрываем одним договором.</p>
+    <p style="margin:0;max-width:380px;font-size:18px;color:var(--muted)">Четыре направления и больше ста услуг — закрываем одним договором.</p>
   </div>
-  <div class="w"><div class="wrap s-ui">
-    <div class="s-idx" id="sIdx"></div>
-    <div class="s-stage" aria-live="polite">
-      <div class="ph" id="sPh"></div><div class="sh"></div>
-      <div class="drops" id="sDrops"></div>
-      <div class="tx"><span class="lbl" id="sNum" style="color:var(--red-soft)"></span><h2 class="d" id="sTitle"></h2><p id="sLead"></p><a class="btn" href="contacts.html" style="align-self:flex-start">Оставить заявку</a></div>
-    </div>
-  </div></div>
+  <div class="w"><div class="wrap"><div class="fgrid" id="fg"></div></div></div>
   <div class="marq" aria-hidden="true"><div class="d"><span>Питание</span><span class="bdot" aria-hidden="true"></span><span class="out">Инженерия 24/7</span><span class="bdot" aria-hidden="true"></span><span>Клининг</span><span class="bdot" aria-hidden="true"></span><span class="out">Вахтовые посёлки</span><span class="bdot" aria-hidden="true"></span><span>Питание</span><span class="bdot" aria-hidden="true"></span><span class="out">Инженерия 24/7</span><span class="bdot" aria-hidden="true"></span><span>Клининг</span><span class="bdot" aria-hidden="true"></span><span class="out">Вахтовые посёлки</span><span class="bdot" aria-hidden="true"></span></div></div>
 </section>
 
@@ -475,14 +485,8 @@ h1,h2,h3{text-wrap:balance;margin:0}
     {t:'Эксплуатация зданий',c:'#211C59',p:'ceiling',l:'Работа всех инженерных систем 24/7 — на месте или с мобильными сервисами.',i:['Электрика и электроизмерения','Освещение','СКУД и видео','Пожарная сигнализация','Водоснабжение','Очистные системы','Лифты и котельные','Строительный ремонт']},
     {t:'Управление инфраструктурой',c:'#2A2563',p:'gardener',l:'Все инфраструктурные задачи — по единому договору.',i:['Клининг','Ресепшн','Охрана','Озеленение','Почта','Управление отходами','Прачечная','Транспорт','Фитнес и досуг']},
     {t:'Жилые комплексы «под ключ»',c:'#15123A',p:'engineers',l:'Вахтовые посёлки и жилые комплексы: проживание, питание, инженерия.',i:['Гостиничное обслуживание','Сбалансированное питание','Эксплуатация инженерных систем']}];
-  var CL=['red','white','navy','peach'];
-  $('#sIdx').innerHTML=SV.map(function(s,i){return '<button aria-pressed="'+(i===0)+'" data-i="'+i+'" style="background:'+s.c+'"><span class="n"><span>0'+(i+1)+'</span><span><svg class="arw" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></span><b>'+s.t+'</b></button>'}).join('');
-  function pickS(i){var s=SV[i];$$('#sIdx button').forEach(function(b,j){b.setAttribute('aria-pressed',String(j===i))});
-    $('#sPh').style.backgroundImage='url('+IMG[s.p]+')';$('#sNum').textContent='0'+(i+1)+' / 04';$('#sTitle').textContent=s.t;$('#sLead').textContent=s.l;
-    var W=$('#sDrops').clientWidth,small=W<520;
-    $('#sDrops').innerHTML=s.i.map(function(x,k){var cols=small?2:3,col=k%cols,row=Math.floor(k/cols),left=6+col*(88/cols)+(row%2?6:0),top=6+row*(small?16:20),rot=((k*37)%17)-8;
-      return '<span class="stk '+CL[k%4]+'" style="left:'+left+'%;top:'+top+'%;transform:rotate('+rot+'deg);animation-delay:'+(k*80)+'ms">'+x+'</span>'}).join('')}
-  $('#sIdx').addEventListener('click',function(e){var b=e.target.closest('button');if(b)pickS(+b.dataset.i)});
+  var AR='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  $('#fg').innerHTML=SV.map(function(s,i){return '<article class="card'+(i%3?'':' dark')+'"><div class="fph" role="img" aria-label="'+s.t+'" style="background-image:url('+IMG[s.p]+')"></div><div class="body"><span class="lbl" style="color:var(--red)">0'+(i+1)+'</span><h3 class="d">'+s.t+'</h3><p class="lead">'+s.l+'</p><div class="chips">'+s.i.map(function(x){return '<span>'+x+'</span>'}).join('')+'</div><a class="more" href="contacts.html">Оставить заявку '+AR+'</a></div></article>'}).join('');
 
   /* ===== 3. Поставщикам ===== */
   var DOCS=[['Форма КВА','https://disk.360.yandex.ru/i/-bMPy4_zq50SBg'],['Правовые документы','https://www.ifcmgroup.ru/law_documents'],['Общие условия взаимодействия с поставщиками','https://www.ifcmgroup.ru/law_documents/general_terms'],['Антиалкогольная и антинаркотическая политика','https://drive.google.com/file/d/1P20rwh3eaqG32LlCZhG_GfylHJQy5gYq/view'],['Антикоррупционная политика','https://drive.google.com/file/d/1MT5pCCJEqJfogJ8ur9WkkBcAYwUt2zCC/view'],['Проведение аудита поставщика','https://drive.google.com/file/d/1941N6hu5QY0JHt2JCNU1UY6m0BmfFD5M/view'],['Заверения и гарантии поставщика','https://drive.google.com/file/d/1K3tYYgeQDHpZBRCrfEOP28tEcGbkR1N2/view'],['Порядок возмещения имущественных потерь','https://drive.google.com/file/d/1mfABpuWnwEaqMwSDp5YsctYNGcDrYAo9/view'],['Политика о персональных данных','https://drive.google.com/file/d/1c76pTXJRbjtvGhp62x6AaTpS9swsjZto/view'],['Обмен документами: ЭДО или бумага','https://drive.google.com/file/d/1n7jzqrH0YGdDf5BcLAMJ-C9wloDfuw9n/view'],['Условия обмена на бумажном носителе','https://drive.google.com/file/d/1AhMokWzlOxCL0RmxF0hO3ATylOCHj_qz/view?usp=drivesdk']];
@@ -536,7 +540,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
       .catch(function(err){ok.innerHTML='Не получилось отправить'+(err&&err.message&&err.message!=='Failed to fetch'?': '+err.message:'')+'. Позвоните: <a href="tel:+74952460110">+7 (495) 246-01-10</a> или напишите на <a href="mailto:reception.ru@ifcmgroup.ru">reception.ru@ifcmgroup.ru</a>.'})
       .then(function(){if(btn)btn.disabled=false})});
 
-  function onShow(id){if(id==='services')pickS(+(($('#sIdx [aria-pressed=true]')||{}).dataset||{i:0}).i||0);if(id==='contacts')sizeMini()}
+  function onShow(id){if(id==='contacts')sizeMini()}
   (function loop(t){drawChain(t);drawMini(t);requestAnimationFrame(loop)})(0);
   addEventListener('resize',function(){if(!$('#contacts').hidden)sizeMini()});
   function valid(h){return /^[a-z]+$/.test(h)&&!!document.getElementById(h)&&document.getElementById(h).classList.contains('page')}
