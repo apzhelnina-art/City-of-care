@@ -107,23 +107,43 @@ h1,h2,h3{text-wrap:balance;margin:0}
 .s-idx button .n{display:flex;justify-content:space-between;font-family:var(--display);font-weight:900;font-size:22px}
 .s-idx button b{font-size:17px;line-height:1.2}
 .s-idx button[aria-pressed="true"]{transform:translateX(10px);box-shadow:-10px 0 0 var(--ink)}
-.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.fgrid .card{background:#fff;border-radius:30px;overflow:hidden;display:flex;flex-direction:column}
-.fgrid .fph{aspect-ratio:16/9;background-size:cover;background-position:center}
-.fgrid .body{padding:24px 26px 26px;display:flex;flex-direction:column;gap:12px;flex:1}
-.fgrid h3{font-size:clamp(22px,2.2vw,30px);line-height:1.05;margin:0}
-.fgrid .lead{margin:0;color:var(--muted);font-size:15px}
-.fgrid .chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 8px}
-.fgrid .chips span{border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:500}
-.fgrid .chips span:nth-child(4n+1){background:var(--red);color:#fff}
-.fgrid .chips span:nth-child(4n+2){background:var(--navy);color:#fff}
-.fgrid .chips span:nth-child(4n+3){background:var(--peach);color:var(--navy)}
-.fgrid .chips span:nth-child(4n+4){background:var(--paper);color:var(--navy)}
-.fgrid .card.dark .chips span:nth-child(4n+2){background:#fff;color:var(--navy)}
-.fgrid .card.dark .chips span:nth-child(4n+4){background:#3A3480;color:#fff}
-.fgrid .more{display:inline-flex;align-items:center;gap:8px;color:var(--red);font-weight:700;text-decoration:none;margin-top:auto}
-.fgrid .card.dark{background:var(--navy);color:#fff}.fgrid .card.dark .lead{color:var(--lilac)}.fgrid .card.dark .more{color:var(--peach)}
-@media (max-width:760px){.fgrid{grid-template-columns:1fr}}
+.ubands{margin-top:clamp(20px,3vw,40px)}
+/* О нас — вариант 4: фото в капле, текст под экраном */
+.a-hero{min-height:min(90svh,860px);padding-block:30px 10px;align-items:flex-end}
+.a-hero .ph{top:30px;bottom:30px;right:var(--gut);width:min(50%,720px);border-radius:50% 0 50% 50%;background-position:50% 20%}
+.a-hero .ph::after{display:none}
+.a-hero h1{z-index:3;color:var(--navy);font-size:clamp(90px,17.5vw,290px);line-height:.8;letter-spacing:-.06em}
+.a-hero h1 span:nth-child(2){padding-left:.5em}
+.a-hero h1 span:nth-child(3){color:var(--red)}
+.a-side{padding-block:clamp(30px,4vw,60px)}
+.side2{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,2fr);gap:clamp(16px,4vw,60px);align-items:baseline;border-top:2px solid var(--navy);padding-top:24px;color:var(--ink);font-size:clamp(22px,2.4vw,34px);line-height:1.35}
+.side2 b{font-family:var(--display);font-weight:900;color:var(--red);font-size:clamp(28px,3vw,44px);letter-spacing:-.02em}
+.ub{position:relative;overflow:hidden;padding:clamp(44px,6vw,90px) var(--gut)}
+.ub.dk{background:#1B1650;color:#fff}.ub.lt{background:#FFF4EE;color:var(--navy)}
+.ub::before,.ub::after{content:"";position:absolute;pointer-events:none}
+.ub::before{width:clamp(200px,28vw,420px);height:clamp(200px,28vw,420px);right:-6%;top:-18%;border-radius:50% 0 50% 50%;background:var(--red)}
+.ub::after{width:clamp(110px,14vw,220px);height:clamp(110px,14vw,220px);left:-3%;bottom:-12%;border-radius:50%;background:#3A3480}
+.ub.rev::before{right:auto;left:-6%;border-radius:0 50% 50% 50%}
+.ub.rev::after{left:auto;right:-3%;background:var(--red);border-radius:999px 999px 0 0}
+.ub-in{position:relative;z-index:1;max-width:1360px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,80px);align-items:center}
+.ub.rev .ub-pic{order:-1}
+.ub-n{display:block;font-size:clamp(44px,5vw,72px);line-height:1;letter-spacing:-.03em;color:var(--red)}.ub.dk .ub-n{color:#FF5A6E}
+.ub h2{font-size:clamp(40px,5.6vw,84px);line-height:.9;margin:12px 0 18px}
+.ub h2 .s{font-size:.9em}.ub.dk h2 .s{color:var(--peach)}.ub.lt h2 .s{color:var(--red)}
+.ub-l{font-size:17px;margin:0 0 22px;max-width:520px;opacity:.9}
+.ub ul{list-style:none;margin:0 0 28px;padding:0;columns:2;column-gap:28px;max-width:600px}
+.ub li{break-inside:avoid;position:relative;padding:9px 0 9px 22px;border-top:1px solid rgba(255,255,255,.18);font-size:15.5px}
+.ub.lt li{border-color:rgba(33,28,89,.12)}
+.ub li::before{content:"";position:absolute;left:0;top:17px;width:10px;height:10px;border-radius:50% 0 50% 50%;background:var(--red)}.ub.dk li::before{background:#FF5A6E}
+.ub-cta{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;text-decoration:none;background:var(--red);color:#fff;box-shadow:0 5px 0 #8E0716}
+.ub-pic{position:relative}
+.ub-ph{width:100%;max-width:520px;margin-inline:auto;background-size:cover}
+.ub-pic .stk{position:absolute;left:4%;bottom:8%;font-size:clamp(16px,1.7vw,24px);transform:rotate(-4deg)}
+.ub.rev .ub-pic .stk{left:auto;right:4%;transform:rotate(4deg)}
+@media (max-width:820px){.ub-in{grid-template-columns:1fr}.ub-pic,.ub.rev .ub-pic{order:-1}.ub-ph{max-width:340px}.ub ul{column-gap:16px}.ub li{font-size:14px;padding:8px 0 8px 18px}.ub li::before{width:8px;height:8px;top:15px}.ub h2{font-size:clamp(38px,11vw,60px)}}
+@media (max-width:360px){.ub li{font-size:13px}}
+/* О нас: карточка не на лице */
+.a-hero .side{top:auto;bottom:36px;right:var(--gut);max-width:300px}
 .s-stage{flex:1 1 640px;min-width:0;position:relative;border-radius:36px;overflow:hidden;min-height:620px;background:var(--ink)}
 .s-stage .ph{position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity .5s}
 .s-stage .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,18,58,.1) 30%,rgba(21,18,58,.9))}
@@ -243,11 +263,6 @@ h1,h2,h3{text-wrap:balance;margin:0}
   .drops{position:relative;inset:auto;display:flex;flex-wrap:wrap;gap:12px;padding:22px 20px 6px}
   .drops .stk{position:static;transform:none !important}
   .s-stage .tx{position:relative}
-  .a-hero{flex-direction:column;align-items:stretch;min-height:0;padding-block:0 30px;gap:22px}
-  .a-hero .ph{position:relative;width:auto;height:min(64vw,360px);margin-inline:calc(-1*var(--gut));order:0}
-  .a-hero .ph::after{display:none}
-  .a-hero h1{order:1;font-size:clamp(64px,19vw,120px)}
-  .a-hero .side{position:relative;right:auto;top:auto;order:2;max-width:none}
   .mis-shapes{display:none}
   .chk-l{position:static}
   .collage{height:clamp(500px,124vw,780px);margin-top:16px;margin-bottom:clamp(-110px,-15vw,-70px)}
@@ -261,6 +276,20 @@ h1,h2,h3{text-wrap:balance;margin:0}
   .collage .stk:nth-of-type(4){left:5% !important;top:61% !important;transform:rotate(4deg) !important}
   .collage .stk:nth-of-type(3){left:46% !important;top:74% !important;transform:rotate(-3deg) !important}
 }
+/* О нас: раскладка «как на компьютере» до 560px */
+@media (max-width:900px) and (min-width:561px){
+  .a-hero{min-height:min(80svh,640px);padding-block:40px 30px}
+  .a-hero .ph{width:52%}
+  .a-hero h1{font-size:clamp(70px,15vw,130px)}
+}
+@media (max-width:560px){
+  .a-hero{flex-direction:column;align-items:stretch;min-height:0;padding-block:0 30px;gap:22px}
+  .a-hero .ph{position:relative;width:auto;height:min(64vw,360px);margin-inline:calc(-1*var(--gut));order:0}
+  .a-hero .ph::after{display:none}
+  .a-hero h1{order:1;font-size:clamp(64px,19vw,120px)}
+  .a-hero .side{position:relative;right:auto;top:auto;bottom:auto;order:2;max-width:none}
+}
+@media (max-width:560px){.a-hero .ph{top:auto;bottom:auto;right:auto;width:auto;border-radius:0 0 50% 50%;height:min(90vw,380px)}.side2{grid-template-columns:1fr;gap:10px;font-size:21px}}
 @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
 </style>
 
@@ -283,9 +312,9 @@ h1,h2,h3{text-wrap:balance;margin:0}
 <section class="page" id="about" role="tabpanel" hidden>
   <div class="a-hero w">
     <div class="ph" role="img" aria-label="Инженер iFCM с ноутбуком на объекте" style="background-image:url(img/laptop.jpg)"></div>
-    <div class="side"><b>iFCM GROUP</b>С 1993 года — от представительства Sodexo до полностью автономного российского предприятия с международными стандартами.</div>
     <h1 class="d"><span>С 1993</span><span>года</span><span>рядом.</span></h1>
   </div>
+  <div class="a-side w"><div class="wrap"><div class="side2"><b>iFCM GROUP</b>С 1993 года — от представительства Sodexo до полностью автономного российского предприятия с международными стандартами.</div></div></div>
 
   <div class="sec w"><div class="wrap">
     <span class="plate" style="margin-bottom:34px">Кто мы?</span>
@@ -342,7 +371,12 @@ h1,h2,h3{text-wrap:balance;margin:0}
     <h1 class="d">100+ <span class="s">услуг</span><br>«под ключ»</h1>
     <p style="margin:0;max-width:380px;font-size:18px;color:var(--muted)">Четыре направления и больше ста услуг — закрываем одним договором.</p>
   </div>
-  <div class="w"><div class="wrap"><div class="fgrid" id="fg"></div></div></div>
+  <div class="ubands">
+<div class="ub dk" id="s1"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">01 / 04</span><h2 class="d">Организация<br><span class="s">питания</span></h2><p class="ub-l">От столовых полного цикла и фабрики-кухни до доставки горячего обеда до рабочего места.</p><ul><li>Ресторан в дневную и ночную смены</li><li>Кухня полного цикла</li><li>Доставка в офис</li><li>Кофепоинт «на доверии»</li><li>Банкеты и VIP</li><li>Карты дотаций</li><li>Анимационный календарь</li><li>Бонусы в ресторанах</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Организация питания" style="background-image:url(img/salad.jpg);background-position:62% 30%;border-radius:50% 0 50% 50%;aspect-ratio:1/1"></div><span class="stk red">Вкусно</span></div></div></div>
+<div class="ub lt rev" id="s2"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">02 / 04</span><h2 class="d">Эксплуатация<br><span class="s">зданий 24/7</span></h2><p class="ub-l">Работа всех инженерных систем круглосуточно — на месте или с мобильными сервисами.</p><ul><li>Электрика и электроизмерения</li><li>Освещение</li><li>СКУД и видео</li><li>Пожарная сигнализация</li><li>Водоснабжение</li><li>Очистные системы</li><li>Лифты и котельные</li><li>Строительный ремонт</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Эксплуатация зданий 24/7" style="background-image:url(img/ceiling.jpg);background-position:55% 25%;border-radius:50%;aspect-ratio:1/1"></div><span class="stk white">Надёжно</span></div></div></div>
+<div class="ub dk" id="s3"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">03 / 04</span><h2 class="d">Управление<br><span class="s">инфраструктурой</span></h2><p class="ub-l">Все инфраструктурные задачи — по единому договору.</p><ul><li>Клининг</li><li>Ресепшн</li><li>Охрана</li><li>Озеленение</li><li>Почта</li><li>Управление отходами</li><li>Прачечная</li><li>Транспорт</li><li>Фитнес и досуг</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Управление инфраструктурой" style="background-image:url(img/gardener.jpg);background-position:30% 30%;border-radius:999px 999px 28px 28px;aspect-ratio:4/5"></div><span class="stk navy">Чисто</span></div></div></div>
+<div class="ub lt rev" id="s4"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">04 / 04</span><h2 class="d">Жилые комплексы<br><span class="s">«под ключ»</span></h2><p class="ub-l">Вахтовые посёлки и жилые комплексы: проживание, питание, инженерия.</p><ul><li>Гостиничное обслуживание</li><li>Сбалансированное питание</li><li>Эксплуатация инженерных систем</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Жилые комплексы «под ключ»" style="background-image:url(img/engineers.jpg);background-position:65% 30%;border-radius:0 50% 50% 50%;aspect-ratio:1/1"></div><span class="stk peach">Как дома</span></div></div></div>
+  </div>
   <div class="marq" aria-hidden="true"><div class="d"><span>Питание</span><span class="bdot" aria-hidden="true"></span><span class="out">Инженерия 24/7</span><span class="bdot" aria-hidden="true"></span><span>Клининг</span><span class="bdot" aria-hidden="true"></span><span class="out">Вахтовые посёлки</span><span class="bdot" aria-hidden="true"></span><span>Питание</span><span class="bdot" aria-hidden="true"></span><span class="out">Инженерия 24/7</span><span class="bdot" aria-hidden="true"></span><span>Клининг</span><span class="bdot" aria-hidden="true"></span><span class="out">Вахтовые посёлки</span><span class="bdot" aria-hidden="true"></span></div></div>
 </section>
 
@@ -485,8 +519,6 @@ h1,h2,h3{text-wrap:balance;margin:0}
     {t:'Эксплуатация зданий',c:'#211C59',p:'ceiling',l:'Работа всех инженерных систем 24/7 — на месте или с мобильными сервисами.',i:['Электрика и электроизмерения','Освещение','СКУД и видео','Пожарная сигнализация','Водоснабжение','Очистные системы','Лифты и котельные','Строительный ремонт']},
     {t:'Управление инфраструктурой',c:'#2A2563',p:'gardener',l:'Все инфраструктурные задачи — по единому договору.',i:['Клининг','Ресепшн','Охрана','Озеленение','Почта','Управление отходами','Прачечная','Транспорт','Фитнес и досуг']},
     {t:'Жилые комплексы «под ключ»',c:'#15123A',p:'engineers',l:'Вахтовые посёлки и жилые комплексы: проживание, питание, инженерия.',i:['Гостиничное обслуживание','Сбалансированное питание','Эксплуатация инженерных систем']}];
-  var AR='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-  $('#fg').innerHTML=SV.map(function(s,i){return '<article class="card'+(i%3?'':' dark')+'"><div class="fph" role="img" aria-label="'+s.t+'" style="background-image:url('+IMG[s.p]+')"></div><div class="body"><span class="lbl" style="color:var(--red)">0'+(i+1)+'</span><h3 class="d">'+s.t+'</h3><p class="lead">'+s.l+'</p><div class="chips">'+s.i.map(function(x){return '<span>'+x+'</span>'}).join('')+'</div><a class="more" href="contacts.html">Оставить заявку '+AR+'</a></div></article>'}).join('');
 
   /* ===== 3. Поставщикам ===== */
   var DOCS=[['Форма КВА','https://disk.360.yandex.ru/i/-bMPy4_zq50SBg'],['Правовые документы','https://www.ifcmgroup.ru/law_documents'],['Общие условия взаимодействия с поставщиками','https://www.ifcmgroup.ru/law_documents/general_terms'],['Антиалкогольная и антинаркотическая политика','https://drive.google.com/file/d/1P20rwh3eaqG32LlCZhG_GfylHJQy5gYq/view'],['Антикоррупционная политика','https://drive.google.com/file/d/1MT5pCCJEqJfogJ8ur9WkkBcAYwUt2zCC/view'],['Проведение аудита поставщика','https://drive.google.com/file/d/1941N6hu5QY0JHt2JCNU1UY6m0BmfFD5M/view'],['Заверения и гарантии поставщика','https://drive.google.com/file/d/1K3tYYgeQDHpZBRCrfEOP28tEcGbkR1N2/view'],['Порядок возмещения имущественных потерь','https://drive.google.com/file/d/1mfABpuWnwEaqMwSDp5YsctYNGcDrYAo9/view'],['Политика о персональных данных','https://drive.google.com/file/d/1c76pTXJRbjtvGhp62x6AaTpS9swsjZto/view'],['Обмен документами: ЭДО или бумага','https://drive.google.com/file/d/1n7jzqrH0YGdDf5BcLAMJ-C9wloDfuw9n/view'],['Условия обмена на бумажном носителе','https://drive.google.com/file/d/1AhMokWzlOxCL0RmxF0hO3ATylOCHj_qz/view?usp=drivesdk']];
