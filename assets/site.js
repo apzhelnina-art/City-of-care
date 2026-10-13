@@ -11,9 +11,13 @@
   ];
   var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   if (here === '') here = 'index.html';
+  /* язык: пара страниц RU <-> EN */
+  var LANG = 'EN', LANG_ALT = {'index.html':'en.html','about.html':'en-about.html','services.html':'en-services.html','suppliers.html':'en-suppliers.html','career.html':'en-career.html','contacts.html':'en-contacts.html'};
+  var alt = LANG_ALT[here] || 'en.html';
   function cur(href) { return href === here ? ' aria-current="page"' : ''; }
 
   /* ---------- шапка ---------- */
+  (function () { var st = document.createElement('style'); st.textContent = '.lang-pill{background:#fff;color:#211C59;border-radius:999px;padding:15px 18px;text-decoration:none;font-weight:700}.lang-pill:hover{background:#FFD3C4}@media (max-width:600px){.lang-pill{display:none}}'; document.head.appendChild(st); })();
   var head = document.getElementById('siteHeader');
   if (head) {
     var links = PAGES.slice(1, 5).map(function (p) { return '<a href="' + p[0] + '"' + cur(p[0]) + '>' + p[1] + '</a>'; }).join('');
@@ -21,16 +25,27 @@
       '<a class="logo-fix" href="index.html" aria-label="iFCM GROUP — на главную"><img src="assets/logo-white.png" alt="iFCM"></a>' +
       '<nav class="nav" aria-label="Разделы сайта">' +
         '<div class="pill links lbl">' + links + '</div>' +
+        '<a class="lang-pill lbl" href="' + alt + '" hreflang="' + LANG.toLowerCase() + '">' + LANG + '</a>' +
         '<a class="cta-pill lbl" href="contacts.html"' + cur('contacts.html') + '>Связаться</a>' +
         '<button class="burger lbl" type="button" aria-expanded="false" aria-controls="siteMenu"><i></i>Меню</button>' +
       '</nav>' +
       '<div class="menu" id="siteMenu" hidden>' +
         '<button class="close lbl" type="button">Закрыть</button>' +
         PAGES.map(function (p) { return '<a href="' + p[0] + '"' + cur(p[0]) + '>' + p[1] + '</a>'; }).join('') +
+        '<a href="' + alt + '" hreflang="' + LANG.toLowerCase() + '">' + LANG + '</a>' +
         '<div class="m-foot"><span data-c="phone">+7 (495) 246-01-10</span><br><span data-c="email">reception.ru@ifcmgroup.ru</span></div>' +
       '</div>';
     var menu = document.getElementById('siteMenu'), burger = head.querySelector('.burger');
     function setMenu(open) { menu.hidden = !open; burger.setAttribute('aria-expanded', String(open)); document.documentElement.style.overflow = open ? 'hidden' : ''; if (open) menu.querySelector('.close').focus(); else burger.focus(); }
+    /* логотип: на главной — плавно в начало страницы, на других — переход на главную */
+    head.querySelector('.logo-fix').addEventListener('click', function (e) {
+      var page = (location.pathname.split('/').pop() || 'index.html');
+      if (page === 'index.html') {
+        e.preventDefault();
+        try { history.replaceState(null, '', location.pathname + location.search); } catch (_) {}
+        window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      }
+    });
     burger.addEventListener('click', function () { setMenu(true); });
     menu.querySelector('.close').addEventListener('click', function () { setMenu(false); });
     menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
@@ -55,7 +70,7 @@
             '<div class="col"><b>Центральный офис</b><span class="sel" data-c="phone">+7 (495) 246-01-10</span><span class="sel" data-c="email">reception.ru@ifcmgroup.ru</span><span data-c="address">107113, Москва, ул. 3-я Рыбинская, д. 18, стр. 22</span></div>' +
           '</div>' +
         '</div>' +
-        '<div class="bottom"><span>© 1993–' + new Date().getFullYear() + ' ООО «АЙЭФСИЭМ ГРУПП»</span><a href="https://www.ifcmgroup.ru/eng" target="_blank" rel="noopener" style="color:#C9C7E0">English version</a></div>' +
+        '<div class="bottom"><span>© 1993–' + new Date().getFullYear() + ' ООО «АЙЭФСИЭМ ГРУПП»</span><a href="' + alt + '" style="color:#C9C7E0">English version</a></div>' +
       '</div></footer>';
   }
 
