@@ -1,0 +1,145 @@
+{
+  "hero": {
+    "badge": "iFCM GROUP · since 1993",
+    "title": "City\nof care",
+    "lead": "Corporate catering, building operations and infrastructure services — managed by one team.",
+    "labels": [
+      "Catering",
+      "Engineering 24/7",
+      "Cleaning",
+      "Remote camp"
+    ]
+  },
+  "poster": {
+    "lines": [
+      "Tasty.",
+      "Clean.",
+      "Reliable."
+    ],
+    "text": "We create, manage and develop corporate catering and technical building operation services. For more than 30 years our partners have been getting happier and their teams closer.",
+    "photo": "img/chef2.jpg"
+  },
+  "constructor": {
+    "title": "Build a service",
+    "accent": "for your site",
+    "text": "Everything you choose, we cover with a single contract.",
+    "services": [
+      {
+        "name": "Corporate catering",
+        "color": "red"
+      },
+      {
+        "name": "Operations 24/7",
+        "color": "navy"
+      },
+      {
+        "name": "Cleaning",
+        "color": "white"
+      },
+      {
+        "name": "Coffee point",
+        "color": "peach"
+      },
+      {
+        "name": "Security",
+        "color": "navy"
+      },
+      {
+        "name": "Access control & CCTV",
+        "color": "white"
+      },
+      {
+        "name": "Reception",
+        "color": "peach"
+      },
+      {
+        "name": "Landscaping",
+        "color": "white"
+      },
+      {
+        "name": "Elevators & boilers",
+        "color": "navy"
+      },
+      {
+        "name": "Laundry",
+        "color": "peach"
+      },
+      {
+        "name": "Lunch delivery",
+        "color": "red"
+      },
+      {
+        "name": "Banquets & VIP",
+        "color": "red"
+      }
+    ]
+  },
+  "tiles": [
+    {
+      "title": "Corporate catering",
+      "text": "Restaurants, full-cycle kitchens, delivery, coffee points",
+      "color": "navy",
+      "photo": "img/kitchen.jpg"
+    },
+    {
+      "title": "Building operations 24/7",
+      "text": "Electrics, access control, water supply, elevators, boilers",
+      "color": "red",
+      "photo": "img/engineer.jpg"
+    },
+    {
+      "title": "Infrastructure management",
+      "text": "Cleaning, reception, security, landscaping",
+      "color": "peach",
+      "photo": "img/corridor.jpg"
+    },
+    {
+      "title": "Turnkey residential complexes",
+      "text": "Accommodation, catering and engineering for remote camps",
+      "color": "ink",
+      "photo": "img/cashier.jpg"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b1",
+      "type": "numbers",
+      "title": "iFCM in numbers",
+      "hidden": false,
+      "items": [
+        {
+          "value": "1993",
+          "label": "year founded"
+        },
+        {
+          "value": "7,000+",
+          "label": "professionals on the team"
+        },
+        {
+          "value": "110,000",
+          "label": "people served every day"
+        },
+        {
+          "value": "40",
+          "label": "cities in 7 regions"
+        }
+      ]
+    }
+  ],
+  "newsTitle": "News",
+  "news": [
+    {
+      "id": "n1",
+      "date": "2026-10-09",
+      "title": "Sample news",
+      "text": "This is a sample to show how the section looks. Replace or delete it in the admin panel.",
+      "photo": "img/meeting.jpg",
+      "hidden": true
+    }
+  ],
+  "contacts": {
+    "phone": "+7 (495) 246-01-10",
+    "email": "reception.ru@ifcmgroup.ru",
+    "address": "Moscow, 3rd Rybinskaya St., 18, bldg. 22"
+  }
+}
