@@ -291,7 +291,7 @@ const BACKEND_URL = window.IFCM_BACKEND_URL || ""; // адрес задаётс�
     if(rnd()<.12)continue;
     var h=Math.max(.6,(5.8-dist*.55)*(.45+rnd()*.9)+(rnd()<.08?3:0));
     var b={x:cx,z:cz,w:.78+rnd()*.12,d:.78+rnd()*.12,h:h,lit:[],ours:false,hue:rnd()};
-    var floors=Math.max(2,Math.round(h*3));for(var i=0;i<floors*3*4;i++)b.lit.push(rnd()<.42);
+    var floors=Math.max(2,Math.round(h*3));for(var i=0;i<floors*3*4;i++)b.lit.push(rnd()<.55);
     B.push(b);
   }
   // our objects: pick a spread of buildings
@@ -302,7 +302,7 @@ const BACKEND_URL = window.IFCM_BACKEND_URL || ""; // адрес задаётс�
   function nview(nx,nz){var ct=Math.cos(cam.th),st=Math.sin(cam.th);var z1=nx*st+nz*ct;return z1*Math.cos(cam.phi)} // horizontal normals: facing camera if <0
   function mix(a,b,t){return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t]}
   function rgb(c,a){return 'rgba('+(c[0]|0)+','+(c[1]|0)+','+(c[2]|0)+','+(a==null?1:a)+')'}
-  var SKY_FOG=[255,170,150], NAVYc=[33,28,89], REDc=[229,13,38];
+  var SKY_FOG=[255,211,196], NAVYc=[33,28,89], REDc=[229,13,38];
   function sizeCity(){var f=fit(city);C.ctx=f.ctx;C.w=f.w;C.h=f.h;C.cx=f.w*.5;C.cy=f.h*(f.w<700?.6:.62);cam.f=f.w<700?f.w*1.55:Math.min(f.w,f.h*1.3)*0.95;cam.D=f.w<700?27:22}
   function quad(ctx,p){ctx.beginPath();ctx.moveTo(p[0][0],p[0][1]);for(var i=1;i<p.length;i++)ctx.lineTo(p[i][0],p[i][1]);ctx.closePath()}
   var t0=performance.now(),OT=[],TG=[null,null,null,null],TS=[{},{},{},{}],TRc=null,TRt=0;
@@ -335,10 +335,10 @@ const BACKEND_URL = window.IFCM_BACKEND_URL || ""; // адрес задаётс�
     if(!cam.drag&&!reduce){cam.th+=0.0016*cam.auto+cam.vel;cam.vel*=.94}
     var sc=Math.min(1,scrollY/(C.h||1));cam.phi=.62+sc*.35;
     // sky
-    var g=ctx.createLinearGradient(0,0,0,C.h);g.addColorStop(0,'#211C59');g.addColorStop(.42,'#7A1E4F');g.addColorStop(.7,'#E5492F');g.addColorStop(1,'#FFC2A8');
+    var g=ctx.createLinearGradient(0,0,0,C.h);g.addColorStop(0,'#211C59');g.addColorStop(.42,'#83143F');g.addColorStop(.72,'#E50D26');g.addColorStop(1,'#FFD3C4');
     ctx.fillStyle=g;ctx.fillRect(0,0,C.w,C.h);
     // sun glow
-    var sg=ctx.createRadialGradient(C.w*.5,C.h*.58,10,C.w*.5,C.h*.58,C.w*.55);sg.addColorStop(0,'rgba(255,214,170,.55)');sg.addColorStop(1,'rgba(255,214,170,0)');ctx.fillStyle=sg;ctx.fillRect(0,0,C.w,C.h);
+    var sg=ctx.createRadialGradient(C.w*.5,C.h*.58,10,C.w*.5,C.h*.58,C.w*.55);sg.addColorStop(0,'rgba(255,211,196,.5)');sg.addColorStop(1,'rgba(255,214,170,0)');ctx.fillStyle=sg;ctx.fillRect(0,0,C.w,C.h);
     // ground plate
     var gp=[proj(-7.2,0,-7.2),proj(7.2,0,-7.2),proj(7.2,0,7.2),proj(-7.2,0,7.2)];quad(ctx,gp);ctx.fillStyle='rgba(33,28,89,.55)';ctx.fill();
     // streets glow lines
@@ -363,7 +363,7 @@ const BACKEND_URL = window.IFCM_BACKEND_URL || ""; // адрес задаётс�
           var ax=fc[0][0]+(fc[1][0]-fc[0][0])*u0,az=fc[0][1]+(fc[1][1]-fc[0][1])*u0,bx=fc[0][0]+(fc[1][0]-fc[0][0])*u1,bz=fc[0][1]+(fc[1][1]-fc[0][1])*u1;
           var wq=[proj(ax,v0,az),proj(bx,v0,bz),proj(bx,v1,bz),proj(ax,v1,az)];quad(ctx,wq);
           var flick=b.ours?(.65+.35*Math.sin(time*2+r)):1;
-          ctx.fillStyle=on?rgb(mix(b.ours?[255,120,110]:[255,222,170],SKY_FOG,fog*.6),.9*flick):'rgba(255,90,90,.25)';ctx.fill()}
+          ctx.fillStyle=on?rgb(mix(b.ours?[255,140,125]:[255,236,170],SKY_FOG,fog*.25),flick):'rgba(255,90,90,.25)';ctx.fill()}
       });
       // roof
       var rp=[proj(x0,h,z0),proj(x1,h,z0),proj(x1,h,z1),proj(x0,h,z1)];quad(ctx,rp);ctx.fillStyle=rgb(mix(mix(base,[255,190,160],.55),SKY_FOG,fog));ctx.fill();

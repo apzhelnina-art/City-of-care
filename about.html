@@ -291,7 +291,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
 }
 @media (max-width:560px){.a-hero .ph{top:auto;bottom:auto;right:auto;width:auto;border-radius:0 0 50% 50%;height:min(90vw,380px)}.side2{grid-template-columns:1fr;gap:10px;font-size:21px}}
 @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
-.lang-sw{margin-left:auto;flex:none;background:#fff;color:var(--navy);border-radius:999px;padding:11px 16px;font-weight:700;font-size:14px;text-decoration:none}.lang-sw:hover{background:var(--peach)}
+.lang-sw{margin-left:auto;flex:none;background:#fff;color:var(--navy);border-radius:999px;padding:11px 16px;font-weight:700;font-size:14px;text-decoration:none}.lang-sw:hover{background:var(--peach)}@media (max-width:700px){.bar .logo{order:0}.lang-sw{order:1}.bar .tabs{order:2}.k-hero h1{color:var(--navy);text-shadow:none}}
 </style>
 
 <script src="assets/config.js"></script>
@@ -461,7 +461,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
     <div class="pin" id="pin"><span class="stk white">Мы здесь · 3-я Рыбинская, 18</span></div>
     <div class="in w"><div class="wrap" style="width:100%">
       <span class="drag-hint" id="dragHint" title="Квартал можно покрутить" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l-4 4"/></svg></span>
-      <h1 class="d">Давайте<br><span class="s" style="color:var(--red-soft)">поговорим</span></h1>
+      <h1 class="d">Давайте<br><span class="s" style="color:var(--red);text-shadow:none">поговорим</span></h1>
     </div></div>
   </div>
   <div class="w"><div class="wrap k-grid">
@@ -549,14 +549,14 @@ h1,h2,h3{text-wrap:balance;margin:0}
   function mix(a,b,t){return 'rgb('+[0,1,2].map(function(i){return Math.round(a[i]+(b[i]-a[i])*t)}).join(',')+')'}
   function sizeMini(){var f=fit(mini);M.ctx=f.ctx;M.w=f.w;M.h=f.h;M.cx=f.w*.55;M.cy=f.h*.66;cam.f=Math.min(f.w*1.2,f.h*1.5)*.95}
   function drawMini(t){if(mini.offsetParent===null)return;var ctx=M.ctx;if(!ctx)return;if(!cam.drag&&!reduce){cam.th+=.0016+cam.vel;cam.vel*=.94}
-    var g=ctx.createLinearGradient(0,0,0,M.h);g.addColorStop(0,'#211C59');g.addColorStop(.5,'#7A1E4F');g.addColorStop(.8,'#E5492F');g.addColorStop(1,'#FFC2A8');ctx.fillStyle=g;ctx.fillRect(0,0,M.w,M.h);
+    var g=ctx.createLinearGradient(0,0,0,M.h);g.addColorStop(0,'#211C59');g.addColorStop(.36,'#83143F');g.addColorStop(.6,'#E50D26');g.addColorStop(.84,'#FFD3C4');g.addColorStop(1,'#FFD3C4');ctx.fillStyle=g;ctx.fillRect(0,0,M.w,M.h);
     quad(ctx,[P(-4.6,0,-4.6),P(4.6,0,-4.6),P(4.6,0,4.6),P(-4.6,0,4.6)]);ctx.fillStyle='rgba(33,28,89,.55)';ctx.fill();
     var L=BL.map(function(b){return {b:b,z:P(b.x,0,b.z)[2]}}).sort(function(a,b){return b.z-a.z}),pinAt=null,time=t/1000;
     L.forEach(function(it){var b=it.b,hw=b.w/2,x0=b.x-hw,x1=b.x+hw,z0=b.z-hw,z1=b.z+hw,h=b.h,base=b.office?[229,13,38]:[70,58,130];
       [[[x0,z0],[x1,z0],0,-1],[[x1,z0],[x1,z1],1,0],[[x1,z1],[x0,z1],0,1],[[x0,z1],[x0,z0],-1,0]].forEach(function(fc,fi){var nv=(fc[2]*Math.sin(cam.th)+fc[3]*Math.cos(cam.th));if(nv>=0)return;
-        var light=.5+.5*Math.max(0,fc[2]*-.6+fc[3]*.8);quad(ctx,[P(fc[0][0],0,fc[0][1]),P(fc[1][0],0,fc[1][1]),P(fc[1][0],h,fc[1][1]),P(fc[0][0],h,fc[0][1])]);ctx.fillStyle=mix(base,[255,160,130],light*.4);ctx.fill();
+        var light=.5+.5*Math.max(0,fc[2]*-.6+fc[3]*.8);quad(ctx,[P(fc[0][0],0,fc[0][1]),P(fc[1][0],0,fc[1][1]),P(fc[1][0],h,fc[1][1]),P(fc[0][0],h,fc[0][1])]);ctx.fillStyle=mix(base,[255,170,150],light*.45);ctx.fill();
         var fl=Math.max(2,Math.round(h*3));for(var r=0;r<fl;r++)for(var c=0;c<3;c++){if(!b.office&&!b.lit[(fi*30+r*3+c)%80])continue;var u0=(c+.25)/3,u1=(c+.75)/3,v0=(r+.3)/fl*h,v1=(r+.75)/fl*h,ax=fc[0][0]+(fc[1][0]-fc[0][0])*u0,az=fc[0][1]+(fc[1][1]-fc[0][1])*u0,bx=fc[0][0]+(fc[1][0]-fc[0][0])*u1,bz=fc[0][1]+(fc[1][1]-fc[0][1])*u1;
-          quad(ctx,[P(ax,v0,az),P(bx,v0,bz),P(bx,v1,bz),P(ax,v1,az)]);ctx.fillStyle=b.office?'rgba(255,255,255,'+(.7+.3*Math.sin(time*2+r))+')':'rgba(255,222,170,.85)';ctx.fill()}});
+          quad(ctx,[P(ax,v0,az),P(bx,v0,bz),P(bx,v1,bz),P(ax,v1,az)]);ctx.fillStyle=b.office?'rgba(255,255,255,'+(.7+.3*Math.sin(time*2+r))+')':'rgb(255,236,170)';ctx.fill()}});
       quad(ctx,[P(x0,h,z0),P(x1,h,z0),P(x1,h,z1),P(x0,h,z1)]);ctx.fillStyle=mix(base,[255,200,170],.5);ctx.fill();
       if(b.office){var tp=P(b.x,h,b.z),pulse=(Math.sin(time*3)+1)/2,R=10+pulse*8;var rg=ctx.createRadialGradient(tp[0],tp[1],0,tp[0],tp[1],R*3);rg.addColorStop(0,'rgba(255,255,255,.8)');rg.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=rg;ctx.beginPath();ctx.arc(tp[0],tp[1],R*3,0,7);ctx.fill();pinAt=tp}});
     if(pinAt){var pn=$('#pin');pn.style.left=pinAt[0]+'px';pn.style.top=(pinAt[1]-18)+'px'}}
