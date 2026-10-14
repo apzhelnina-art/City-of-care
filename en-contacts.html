@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="icon" href="assets/logo-blue.png">
-<meta name="description" content="Офис iFCM GROUP в Москве, телефон, почта and форма обращения.">
+<meta name="description" content="iFCM GROUP office in Moscow: phone, email and contact form.">
 <title>Contacts — iFCM GROUP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Noto+Serif:ital,wght@1,400&display=swap">
@@ -213,7 +213,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
 .k-hero{position:relative;height:min(84svh,760px);min-height:520px;overflow:hidden;color:#fff;touch-action:pan-y}
 #mini{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab}
 .k-hero .in{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-block:30px 44px;pointer-events:none}
-.k-hero h1{font-size:clamp(60px,11vw,190px);line-height:.82;text-shadow:0 6px 40px rgba(21,18,58,.35)}
+.k-hero h1{font-size:clamp(60px,9.5vw,150px);line-height:.82;text-shadow:0 6px 40px rgba(21,18,58,.35)}
 .pin{position:absolute;z-index:3;transform:translate(-50%,-100%);pointer-events:none}
 .pin .stk{font-size:13px}
 .k-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;position:relative;z-index:4}
@@ -228,6 +228,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
 .drag-hint{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;margin-bottom:16px;background:rgba(21,18,58,.55);border-radius:50%;animation:sway 2.4s ease-in-out infinite;transition:opacity .5s}
 .drag-hint.off{opacity:0}
 @keyframes sway{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+@media (min-width:900px){.k-hero{height:min(84svh,780px)}.k-hero .in{padding-block:30px 70px}}
 .k-grid{display:flex;flex-wrap:wrap;gap:16px;margin-top:-40px;position:relative;z-index:4;align-items:flex-start}
 .k-quick{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:12px;padding-top:56px}
 .k-btn{display:flex;flex-direction:column;gap:6px;border-radius:28px;padding:22px 24px;text-decoration:none;box-shadow:0 10px 30px rgba(21,18,58,.08)}
@@ -291,6 +292,43 @@ h1,h2,h3{text-wrap:balance;margin:0}
 }
 @media (max-width:560px){.a-hero .ph{top:auto;bottom:auto;right:auto;width:auto;border-radius:0 0 50% 50%;height:min(90vw,380px)}.side2{grid-template-columns:1fr;gap:10px;font-size:21px}}
 @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+.k-office{display:none}
+.dh-b i{display:none}
+@media (min-width:900px){.k-hero .in .wrap{height:100%;display:flex;flex-direction:column;justify-content:space-between;padding-top:44px}
+.k-office{display:flex;flex-direction:column;align-items:flex-start;gap:10px;max-width:470px;pointer-events:auto;background:rgba(21,18,58,.42);border:1.5px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:30px;padding:24px 26px 26px}
+.k-office .lbl{color:var(--lilac,#C9C7E0)}.k-office b{font-size:26px;line-height:1.15;color:#fff}.k-office .k-bc{color:var(--lilac,#C9C7E0);margin-bottom:8px}
+.k-info-sec{display:none}
+.dh-b{position:absolute;right:max(40px,calc((100vw - 1360px)/2 + 40px));bottom:150px;margin:0;width:auto;height:auto;padding:12px 18px 12px 14px;gap:10px;border-radius:999px;background:rgba(21,18,58,.6);color:#fff;z-index:3}
+.dh-b i{display:inline;font-style:normal;font-weight:700;font-size:14px}}
+@media (max-width:899px){.dh-b{position:absolute;right:16px;top:16px;margin:0}}
+@media (min-width:900px) and (max-width:1200px){.k-office{max-width:400px;padding:20px 22px 22px}.k-office b{font-size:21px}}
+
+/* Contacts v3 */
+.k2{gap:6px;max-width:520px;background:linear-gradient(160deg,rgba(33,28,89,.94),rgba(27,22,80,.8))!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:0 30px 80px rgba(10,8,40,.45);backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:32px!important;padding:30px 32px!important;color:#fff}
+.k2 a,.k-mob a{color:#fff;text-decoration:none}
+.k2-tag{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#C9C7E0;margin-bottom:10px}.k2-tag i{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(229,13,38,.3),0 0 18px 4px rgba(229,13,38,.6)}
+.k2-phone b{display:block;font-size:40px;line-height:1.05}
+.k2-mail{font-size:20px;font-weight:700;opacity:.95;margin-bottom:10px;word-break:break-word}
+.k2-addr{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding-top:14px;border-top:1px solid rgba(255,255,255,.22);width:100%;color:#E6E1F2;font-size:15px;line-height:1.45}
+.k2-addr .btn.white{color:var(--navy)}
+.k2-btns{display:flex;gap:10px;flex-wrap:wrap}.k2-btns .ghost{border:1.5px solid rgba(255,255,255,.45);border-radius:999px;padding:13px 20px;font-weight:700;font-size:15px}.k2-btns .ghost:hover{background:#fff;color:var(--navy)}
+@media (min-width:900px){.k-hero{height:auto!important;min-height:min(84svh,780px)}.k-hero .in{height:auto!important;min-height:inherit}.k-hero .in .wrap{gap:44px;padding-bottom:40px}}
+.dh-b{width:60px!important;height:60px!important;padding:0!important;justify-content:center}
+.k-grid{display:block!important;margin-top:-40px}
+.k-card{display:grid!important;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;padding:clamp(28px,4vw,56px)!important;position:relative;z-index:4}
+.k-left{display:flex;flex-direction:column;gap:18px}.k-left h2{font-size:clamp(34px,4vw,60px)!important}
+.k-plate{font-size:14px;align-self:flex-start}
+.k-sub{margin:0;color:var(--muted);font-size:17px;line-height:1.5;max-width:420px}
+.k-left .topics{flex-direction:column;align-items:flex-start}
+.k-left .topics button{font-size:17px;padding:14px 22px}
+.k-right{display:flex;flex-direction:column;gap:18px}
+.k-h2{font-size:clamp(34px,4vw,60px);color:var(--navy);margin:0 0 28px}
+.k-mapbox{position:relative;height:clamp(300px,40vw,480px);border-radius:36px;overflow:hidden;background:#EDE6F0;box-shadow:0 20px 60px rgba(21,18,58,.1)}
+.k-mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.k-mob,.k-sticky{display:none}
+@media (max-width:899px){.k-grid{margin-top:0}.k-card{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:16px}.k-left .topics{flex-direction:row}
+.k-mob{display:flex;flex-direction:column;gap:6px;background:var(--navy);color:#fff;border-radius:30px;padding:24px;margin-top:-30px;position:relative;z-index:4;box-shadow:0 20px 50px rgba(21,18,58,.25)}.k-mob .k2-phone b{font-size:32px}}
+@media (max-width:700px){.k-sticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;gap:8px;opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .3s,transform .3s}.k-sticky.on{opacity:1;transform:none;pointer-events:auto}.k-sticky a{flex:1;text-align:center;color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:16px;box-shadow:0 10px 30px rgba(21,18,58,.3)}}
 .lang-sw{margin-left:auto;flex:none;background:#fff;color:var(--navy);border-radius:999px;padding:11px 16px;font-weight:700;font-size:14px;text-decoration:none}.lang-sw:hover{background:var(--peach)}@media (max-width:700px){.bar .logo{order:0}.lang-sw{order:1}.bar .tabs{order:2}.k-hero h1{color:var(--navy);text-shadow:none}}
 .a-hero h1{font-size:clamp(56px,10vw,170px)!important}
 </style>
@@ -461,34 +499,29 @@ h1,h2,h3{text-wrap:balance;margin:0}
     <canvas id="mini" aria-label="3D block: the red light is iFCM’s head office"></canvas>
     <div class="pin" id="pin"><span class="stk white">We’re here · 3rd Rybinskaya, 18</span></div>
     <div class="in w"><div class="wrap" style="width:100%">
-      <span class="drag-hint" id="dragHint" title="You can rotate the block" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l-4 4"/></svg></span>
+      <div class="k-office k2"><span class="k2-tag"><i></i>Head office · Moscow</span><a class="k2-phone" href="tel:+74952460110"><b class="d">+7 (495) 246-01-10</b></a><a class="k2-mail" href="mailto:reception.ru@ifcmgroup.ru">reception.ru@ifcmgroup.ru</a><div class="k2-addr"><span>18 3rd Rybinskaya St., bldg. 22, Moscow 107113 · Burevestnik Business Center</span><div class="k2-btns"><a class="btn white" href="#map">Directions <svg class="arw" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="ghost" href="#form">Write to us</a></div></div></div>
       <h1 class="d">Let’s<br><span class="s" style="color:var(--red);text-shadow:none">talk</span></h1>
     </div></div>
+    <span class="drag-hint dh-b" id="dragHint" title="You can rotate the block" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l-4 4"/></svg></span>
   </div>
   <div class="w"><div class="wrap k-grid">
-    <div class="k-quick">
-      <span class="plate">Quick contact</span>
-      <a class="k-btn" href="tel:+74952460110" style="background:var(--red);color:#fff"><span class="lbl">Call</span><b class="d">+7 (495) 246-01-10</b></a>
-      <a class="k-btn" href="mailto:reception.ru@ifcmgroup.ru" style="background:#fff;color:var(--navy)"><span class="lbl" style="color:var(--muted)">Email us</span><b class="d" style="word-break:break-word">reception.ru@ifcmgroup.ru</b></a>
-    </div>
+    <div class="k-mob"><span class="k2-tag"><i></i>Head office · Moscow</span><a class="k2-phone" href="tel:+74952460110"><b class="d">+7 (495) 246-01-10</b></a><a class="k2-mail" href="mailto:reception.ru@ifcmgroup.ru">reception.ru@ifcmgroup.ru</a><div class="k2-addr"><span>18 3rd Rybinskaya St., bldg. 22, Moscow 107113 · Burevestnik Business Center</span><a class="btn white" href="#map">Directions <svg class="arw" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div></div>
     <form class="k-card" id="kf" novalidate><span id="form" style="position:absolute;margin-top:-110px"></span><input id="kweb" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-      <h2 class="d">Send a request</h2>
-      <div class="topics" id="topics" role="group" aria-label="Topic"><button type="button" aria-pressed="true">Order services</button><button type="button" aria-pressed="false">Become a supplier</button><button type="button" aria-pressed="false">Looking for a job</button><button type="button" aria-pressed="false">Other</button></div>
+      <div class="k-left"><span class="stk red k-plate">Request</span><h2 class="d">Tell us about your&nbsp;task</h2><p class="k-sub">Pick a topic and leave a phone or email. A manager will get back to you during business hours.</p>
+      <div class="topics" id="topics" role="group" aria-label="Topic"><button type="button" aria-pressed="true">Order services</button><button type="button" aria-pressed="false">Become a supplier</button><button type="button" aria-pressed="false">Looking for a job</button><button type="button" aria-pressed="false">Other</button></div></div><div class="k-right">
       <div class="k-fields">
         <label>Name<input id="kname" autocomplete="name" placeholder="How should we address you"></label>
         <label>Phone<input id="ktel" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
-        <label class="full">Mail room<input id="kmail" type="email" autocomplete="email" placeholder="name@company.ru"></label>
+        <label class="full">Email<input id="kmail" type="email" autocomplete="email" placeholder="name@company.ru"></label>
         <label class="full">Message<textarea id="kmsg" placeholder="Site, city, number of employees — anything that helps us prepare"></textarea></label>
       </div>
       <label class="k-chk"><input type="checkbox" id="kcons"><span>I agree to the processing of personal data</span></label>
       <button class="btn" type="submit" style="align-self:flex-start">Send a request <svg class="arw" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></button>
       <div class="ok" id="kok" role="status"></div>
-    </form>
+    </div></form>
   </div></div>
-  <div class="sec w" style="padding-top:50px"><div class="wrap kinfo">
-    <div style="background:var(--navy);color:#fff"><span class="lbl" style="color:var(--lilac)">Head office</span><b class="d" style="font-size:26px;line-height:1.1">18 3rd Rybinskaya St., bldg. 22, Moscow 107113</b><span style="color:var(--lilac)">Burevestnik Business Centre</span></div>
-    <div style="background:var(--red);color:#fff"><span class="lbl">Directions</span><a class="btn white" href="https://yandex.ru/maps/?text=Москва%2C%203-я%20Рыбинская%20улица%2C%2018с22" target="_blank" rel="noopener" style="align-self:flex-start">Open in Yandex Maps <svg class="arw" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
-  </div></div>
+  <div class="sec w" id="map" style="padding-top:90px"><div class="wrap"><h2 class="d k-h2">Find us on the map</h2><div class="k-mapbox"><iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%203-%D1%8F%20%D0%A0%D1%8B%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%2018%D1%8122&amp;z=16" title="iFCM on Yandex Maps" loading="lazy" allowfullscreen></iframe></div></div></div>
+  <nav class="k-sticky" aria-label="Quick contact"><a href="tel:+74952460110" style="background:var(--red)">Call</a><a href="#form" style="background:var(--navy)">Write</a></nav>
 </section>
 </main>
 
@@ -548,18 +581,18 @@ h1,h2,h3{text-wrap:balance;margin:0}
   function P(x,y,z){var ct=Math.cos(cam.th),st=Math.sin(cam.th),x1=x*ct-z*st,z1=x*st+z*ct,cp=Math.cos(cam.phi),sp=Math.sin(cam.phi),y2=y*cp-z1*sp,z2=y*sp+z1*cp,k=cam.f/(cam.D+z2);return [M.cx+x1*k,M.cy-y2*k,z2]}
   function quad(ctx,p){ctx.beginPath();ctx.moveTo(p[0][0],p[0][1]);for(var i=1;i<p.length;i++)ctx.lineTo(p[i][0],p[i][1]);ctx.closePath()}
   function mix(a,b,t){return 'rgb('+[0,1,2].map(function(i){return Math.round(a[i]+(b[i]-a[i])*t)}).join(',')+')'}
-  function sizeMini(){var f=fit(mini);M.ctx=f.ctx;M.w=f.w;M.h=f.h;M.cx=f.w*.55;M.cy=f.h*.66;cam.f=Math.min(f.w*1.2,f.h*1.5)*.95}
+  function sizeMini(){var f=fit(mini);M.ctx=f.ctx;M.w=f.w;M.h=f.h;var wl=Math.max(f.w<700?0:40,(f.w-1360)/2),ww=Math.min(f.w,1360);if(f.w<900){M.cx=f.w*.55;M.cy=f.h*.66;cam.f=Math.min(f.w*1.2,f.h*1.5)*.95}else{var cl=wl+540,av=f.w-cl;M.cx=cl+av*.5;M.cy=f.h*.6;cam.f=Math.min(av*1.2,f.h*1.75)*.82}M.wide=f.w>=900}
   function drawMini(t){if(mini.offsetParent===null)return;var ctx=M.ctx;if(!ctx)return;if(!cam.drag&&!reduce){cam.th+=.0016+cam.vel;cam.vel*=.94}
     var g=ctx.createLinearGradient(0,0,0,M.h);g.addColorStop(0,'#211C59');g.addColorStop(.36,'#83143F');g.addColorStop(.6,'#E50D26');g.addColorStop(.84,'#FFD3C4');g.addColorStop(1,'#FFD3C4');ctx.fillStyle=g;ctx.fillRect(0,0,M.w,M.h);
-    quad(ctx,[P(-4.6,0,-4.6),P(4.6,0,-4.6),P(4.6,0,4.6),P(-4.6,0,4.6)]);ctx.fillStyle='rgba(33,28,89,.55)';ctx.fill();
+    quad(ctx,[P(-4.6,0,-4.6),P(4.6,0,-4.6),P(4.6,0,4.6),P(-4.6,0,4.6)]);ctx.fillStyle='rgba(33,28,89,.55)';ctx.fill();var mainC=ctx;if(!M.off)M.off=document.createElement('canvas');if(M.off.width!==mini.width||M.off.height!==mini.height){M.off.width=mini.width;M.off.height=mini.height}var oc=M.off.getContext('2d'),dpr=mini.width/M.w;oc.setTransform(1,0,0,1,0,0);oc.clearRect(0,0,M.off.width,M.off.height);oc.setTransform(dpr,0,0,dpr,0,0);ctx=oc;
     var L=BL.map(function(b){return {b:b,z:P(b.x,0,b.z)[2]}}).sort(function(a,b){return b.z-a.z}),pinAt=null,time=t/1000;
-    L.forEach(function(it){var b=it.b,hw=b.w/2,x0=b.x-hw,x1=b.x+hw,z0=b.z-hw,z1=b.z+hw,h=b.h,base=b.office?[229,13,38]:[70,58,130];
+    var __draw=function(it){var b=it.b,hw=b.w/2,x0=b.x-hw,x1=b.x+hw,z0=b.z-hw,z1=b.z+hw,h=(b.office&&M.wide)?6.2:b.h,base=b.office?[229,13,38]:[70,58,130];
       [[[x0,z0],[x1,z0],0,-1],[[x1,z0],[x1,z1],1,0],[[x1,z1],[x0,z1],0,1],[[x0,z1],[x0,z0],-1,0]].forEach(function(fc,fi){var nv=(fc[2]*Math.sin(cam.th)+fc[3]*Math.cos(cam.th));if(nv>=0)return;
         var light=.5+.5*Math.max(0,fc[2]*-.6+fc[3]*.8);quad(ctx,[P(fc[0][0],0,fc[0][1]),P(fc[1][0],0,fc[1][1]),P(fc[1][0],h,fc[1][1]),P(fc[0][0],h,fc[0][1])]);ctx.fillStyle=mix(base,[255,170,150],light*.45);ctx.fill();
         var fl=Math.max(2,Math.round(h*3));for(var r=0;r<fl;r++)for(var c=0;c<3;c++){if(!b.office&&!b.lit[(fi*30+r*3+c)%80])continue;var u0=(c+.25)/3,u1=(c+.75)/3,v0=(r+.3)/fl*h,v1=(r+.75)/fl*h,ax=fc[0][0]+(fc[1][0]-fc[0][0])*u0,az=fc[0][1]+(fc[1][1]-fc[0][1])*u0,bx=fc[0][0]+(fc[1][0]-fc[0][0])*u1,bz=fc[0][1]+(fc[1][1]-fc[0][1])*u1;
           quad(ctx,[P(ax,v0,az),P(bx,v0,bz),P(bx,v1,bz),P(ax,v1,az)]);ctx.fillStyle=b.office?'rgba(255,255,255,'+(.7+.3*Math.sin(time*2+r))+')':'rgb(255,236,170)';ctx.fill()}});
       quad(ctx,[P(x0,h,z0),P(x1,h,z0),P(x1,h,z1),P(x0,h,z1)]);ctx.fillStyle=mix(base,[255,200,170],.5);ctx.fill();
-      if(b.office){var tp=P(b.x,h,b.z),pulse=(Math.sin(time*3)+1)/2,R=10+pulse*8;var rg=ctx.createRadialGradient(tp[0],tp[1],0,tp[0],tp[1],R*3);rg.addColorStop(0,'rgba(255,255,255,.8)');rg.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=rg;ctx.beginPath();ctx.arc(tp[0],tp[1],R*3,0,7);ctx.fill();pinAt=tp}});
+      if(b.office){var tp=P(b.x,h,b.z),pulse=(Math.sin(time*3)+1)/2,R=10+pulse*8;var rg=ctx.createRadialGradient(tp[0],tp[1],0,tp[0],tp[1],R*3);rg.addColorStop(0,'rgba(255,255,255,.8)');rg.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=rg;ctx.beginPath();ctx.arc(tp[0],tp[1],R*3,0,7);ctx.fill();pinAt=tp}};L.forEach(function(it){if(!it.b.office)__draw(it)});ctx=mainC;ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=M.wide?.75:1;ctx.drawImage(M.off,0,0);ctx.restore();L.forEach(function(it){if(it.b.office)__draw(it)});
     if(pinAt){var pn=$('#pin');pn.style.left=pinAt[0]+'px';pn.style.top=(pinAt[1]-18)+'px'}}
   mini.addEventListener('pointerdown',function(e){cam.drag=true;cam.lx=e.clientX;mini.setPointerCapture(e.pointerId)});
   mini.addEventListener('pointermove',function(e){if(!cam.drag)return;var dx=e.clientX-cam.lx;cam.lx=e.clientX;cam.th-=dx*.006;cam.vel=-dx*.001;if(Math.abs(dx)>2){var dh=$('#dragHint');if(dh)dh.classList.add('off')}});
@@ -575,6 +608,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
       .catch(function(err){ok.innerHTML='Couldn’t send'+(err&&err.message&&err.message!=='Failed to fetch'?': '+err.message:'')+'. Call: <a href="tel:+74952460110">+7 (495) 246-01-10</a> or write to <a href="mailto:reception.ru@ifcmgroup.ru">reception.ru@ifcmgroup.ru</a>.'})
       .then(function(){if(btn)btn.disabled=false})});
 
+  (function(){var b=$('.k-sticky');function f(){if(!b)return;var h=$('#contacts .k-hero');b.classList.toggle('on',!$('#contacts').hidden&&!!h&&h.getBoundingClientRect().bottom<80)}addEventListener('scroll',f,{passive:true});f()})();
   function onShow(id){if(id==='contacts')sizeMini()}
   (function loop(t){drawChain(t);drawMini(t);requestAnimationFrame(loop)})(0);
   addEventListener('resize',function(){if(!$('#contacts').hidden)sizeMini()});
