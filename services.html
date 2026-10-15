@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<link rel="icon" href="assets/logo-blue.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
 <meta name="description" content="Корпоративное питание, эксплуатация зданий 24/7, управление инфраструктурой и жилые комплексы под ключ.">
 <title>Услуги — iFCM GROUP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -213,7 +215,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
 .k-hero{position:relative;height:min(84svh,760px);min-height:520px;overflow:hidden;color:#fff;touch-action:pan-y}
 #mini{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab}
 .k-hero .in{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-block:30px 44px;pointer-events:none}
-.k-hero h1{font-size:clamp(60px,11vw,190px);line-height:.82;text-shadow:0 6px 40px rgba(21,18,58,.35)}
+.k-hero h1{font-size:clamp(60px,9.5vw,150px);line-height:.82;text-shadow:0 6px 40px rgba(21,18,58,.35)}
 .pin{position:absolute;z-index:3;transform:translate(-50%,-100%);pointer-events:none}
 .pin .stk{font-size:13px}
 .k-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;position:relative;z-index:4}
@@ -228,6 +230,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
 .drag-hint{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;margin-bottom:16px;background:rgba(21,18,58,.55);border-radius:50%;animation:sway 2.4s ease-in-out infinite;transition:opacity .5s}
 .drag-hint.off{opacity:0}
 @keyframes sway{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+@media (min-width:900px){.k-hero{height:min(84svh,780px)}.k-hero .in{padding-block:30px 70px}}
 .k-grid{display:flex;flex-wrap:wrap;gap:16px;margin-top:-40px;position:relative;z-index:4;align-items:flex-start}
 .k-quick{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:12px;padding-top:56px}
 .k-btn{display:flex;flex-direction:column;gap:6px;border-radius:28px;padding:22px 24px;text-decoration:none;box-shadow:0 10px 30px rgba(21,18,58,.08)}
@@ -291,6 +294,63 @@ h1,h2,h3{text-wrap:balance;margin:0}
 }
 @media (max-width:560px){.a-hero .ph{top:auto;bottom:auto;right:auto;width:auto;border-radius:0 0 50% 50%;height:min(90vw,380px)}.side2{grid-template-columns:1fr;gap:10px;font-size:21px}}
 @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+.k-office{display:none}
+.dh-b i{display:none}
+@media (min-width:900px){.k-hero .in .wrap{height:100%;display:flex;flex-direction:column;justify-content:space-between;padding-top:44px}
+.k-office{display:flex;flex-direction:column;align-items:flex-start;gap:10px;max-width:470px;pointer-events:auto;background:rgba(21,18,58,.42);border:1.5px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:30px;padding:24px 26px 26px}
+.k-office .lbl{color:var(--lilac,#C9C7E0)}.k-office b{font-size:26px;line-height:1.15;color:#fff}.k-office .k-bc{color:var(--lilac,#C9C7E0);margin-bottom:8px}
+.k-info-sec{display:none}
+.dh-b{position:absolute;right:max(40px,calc((100vw - 1360px)/2 + 40px));bottom:150px;margin:0;width:auto;height:auto;padding:12px 18px 12px 14px;gap:10px;border-radius:999px;background:rgba(21,18,58,.6);color:#fff;z-index:3}
+.dh-b i{display:inline;font-style:normal;font-weight:700;font-size:14px}}
+@media (max-width:899px){.dh-b{position:absolute;right:16px;top:16px;margin:0}}
+@media (min-width:900px) and (max-width:1200px){.k-office{max-width:400px;padding:20px 22px 22px}.k-office b{font-size:21px}}
+
+/* Контакты v3 */
+.k2{gap:6px;max-width:520px;background:linear-gradient(160deg,rgba(33,28,89,.94),rgba(27,22,80,.8))!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:0 30px 80px rgba(10,8,40,.45);backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:32px!important;padding:30px 32px!important;color:#fff}
+.k2 a,.k-mob a{color:#fff;text-decoration:none}
+.k2-tag{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#C9C7E0;margin-bottom:10px}.k2-tag i{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(229,13,38,.3),0 0 18px 4px rgba(229,13,38,.6)}
+.k2-phone b{display:block;font-size:40px;line-height:1.05}
+.k2-mail{font-size:20px;font-weight:700;opacity:.95;margin-bottom:10px;word-break:break-word}
+.k2-addr{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding-top:14px;border-top:1px solid rgba(255,255,255,.22);width:100%;color:#E6E1F2;font-size:15px;line-height:1.45}
+.k2-addr .btn.white{color:var(--navy)}
+.k2-btns{display:flex;gap:10px;flex-wrap:wrap}.k2-btns .ghost{border:1.5px solid rgba(255,255,255,.45);border-radius:999px;padding:13px 20px;font-weight:700;font-size:15px}.k2-btns .ghost:hover{background:#fff;color:var(--navy)}
+@media (min-width:900px){.k-hero{height:auto!important;min-height:min(84svh,780px)}.k-hero .in{height:auto!important;min-height:inherit}.k-hero .in .wrap{gap:44px;padding-bottom:40px}}
+.dh-b{width:60px!important;height:60px!important;padding:0!important;justify-content:center}
+.k-grid{display:block!important;margin-top:-40px}
+.k-card{display:grid!important;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;padding:clamp(28px,4vw,56px)!important;position:relative;z-index:4}
+.k-left{display:flex;flex-direction:column;gap:18px}.k-left h2{font-size:clamp(34px,4vw,60px)!important}
+.k-plate{font-size:14px;align-self:flex-start}
+.k-sub{margin:0;color:var(--muted);font-size:17px;line-height:1.5;max-width:420px}
+.k-left .topics{flex-direction:column;align-items:flex-start}
+.k-left .topics button{font-size:17px;padding:14px 22px}
+.k-right{display:flex;flex-direction:column;gap:18px}
+.k-h2{font-size:clamp(34px,4vw,60px);color:var(--navy);margin:0 0 28px}
+.k-mapbox{position:relative;height:clamp(300px,40vw,480px);border-radius:36px;overflow:hidden;background:#EDE6F0;box-shadow:0 20px 60px rgba(21,18,58,.1)}
+.k-mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.k-mob,.k-sticky{display:none}
+@media (max-width:899px){.k-grid{margin-top:0}.k-card{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:16px}.k-left .topics{flex-direction:row}
+.k-mob{display:flex;flex-direction:column;gap:6px;background:var(--navy);color:#fff;border-radius:30px;padding:24px;margin-top:-30px;position:relative;z-index:4;box-shadow:0 20px 50px rgba(21,18,58,.25)}.k-mob .k2-phone b{font-size:32px}}
+@media (max-width:700px){.k-sticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;gap:8px;opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .3s,transform .3s}.k-sticky.on{opacity:1;transform:none;pointer-events:auto}.k-sticky a{flex:1;text-align:center;color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:16px;box-shadow:0 10px 30px rgba(21,18,58,.3)}}
+
+/* Карьера: вакансии */
+.vq-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 40px;margin-bottom:44px;scroll-margin-top:100px}
+.vq-h{margin:0;font-size:clamp(44px,6vw,92px);line-height:.92;color:var(--navy)}.vq-h .s{color:var(--red);font-weight:400}
+.vq-sub{margin:0;max-width:380px;color:var(--muted);font-size:17px;line-height:1.5}
+a.vq{text-decoration:none;padding:12px;gap:0;overflow:hidden}
+a.vq:hover{transform:rotate(0) translateY(-6px)!important;box-shadow:0 24px 50px rgba(21,18,58,.2)}
+a.vq:hover .vq-ph{background-size:112%}
+.vq-ph{position:relative;display:block;aspect-ratio:4/3;border-radius:24px;background-size:104%;background-position:center;transition:background-size .5s}
+.vq-pill{position:absolute;left:16px;bottom:-18px;font-size:clamp(18px,1.6vw,22px)}
+.vq-bd{display:flex;flex-direction:column;gap:6px;padding:34px 18px 18px}
+.vq-from{font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.vq-sal{font-size:clamp(34px,3.2vw,50px);line-height:1}
+.vq-hook{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.4;margin-top:6px;opacity:.9}
+.vq-go{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:16px;margin-top:14px}
+.vq-all{margin:70px auto 0;max-width:640px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--navy);color:#fff;text-decoration:none;border-radius:999px;padding:14px 14px 14px 36px;transition:background .25s}
+.vq-all:hover{background:var(--red)}
+.vq-all b{font-size:clamp(20px,2vw,28px)}
+.vq-all i{flex:none;width:64px;height:64px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;transition:background .25s}.vq-all:hover i{background:var(--navy)}
+@media (max-width:700px){.vq-all{margin-top:40px;padding-left:24px}.vq-all i{width:52px;height:52px}}
 .lang-sw{margin-left:auto;flex:none;background:#fff;color:var(--navy);border-radius:999px;padding:11px 16px;font-weight:700;font-size:14px;text-decoration:none}.lang-sw:hover{background:var(--peach)}@media (max-width:700px){.bar .logo{order:0}.lang-sw{order:1}.bar .tabs{order:2}.k-hero h1{color:var(--navy);text-shadow:none}}
 </style>
 
@@ -370,14 +430,14 @@ h1,h2,h3{text-wrap:balance;margin:0}
 <!-- ======================= 2. УСЛУГИ ======================= -->
 <section class="page" id="services" role="tabpanel">
   <div class="s-head w wrap">
-    <h1 class="d">100+ <span class="s">услуг</span><br>«под ключ»</h1>
-    <p style="margin:0;max-width:380px;font-size:18px;color:var(--muted)">Четыре направления и больше ста услуг — закрываем одним договором.</p>
+    <h1 class="d"><span data-sk="h1a">100+</span> <span class="s" data-sk="h1b">услуг</span><br><span data-sk="h1c">«под ключ»</span></h1>
+    <p style="margin:0;max-width:380px;font-size:18px;color:var(--muted)" data-sk="sub">Четыре направления и больше ста услуг — закрываем одним договором.</p>
   </div>
   <div class="ubands">
-<div class="ub dk" id="s1"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">01 / 04</span><h2 class="d">Организация<br><span class="s">питания</span></h2><p class="ub-l">От столовых полного цикла и фабрики-кухни до доставки горячего обеда до рабочего места.</p><ul><li>Ресторан в дневную и ночную смены</li><li>Кухня полного цикла</li><li>Доставка в офис</li><li>Кофепоинт «на доверии»</li><li>Банкеты и VIP</li><li>Карты дотаций</li><li>Анимационный календарь</li><li>Бонусы в ресторанах</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Организация питания" style="background-image:url(img/salad.jpg);background-position:62% 30%;border-radius:50% 0 50% 50%;aspect-ratio:1/1"></div><span class="stk red">Вкусно</span></div></div></div>
-<div class="ub lt rev" id="s2"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">02 / 04</span><h2 class="d">Эксплуатация<br><span class="s">зданий 24/7</span></h2><p class="ub-l">Работа всех инженерных систем круглосуточно — на месте или с мобильными сервисами.</p><ul><li>Электрика и электроизмерения</li><li>Освещение</li><li>СКУД и видео</li><li>Пожарная сигнализация</li><li>Водоснабжение</li><li>Очистные системы</li><li>Лифты и котельные</li><li>Строительный ремонт</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Эксплуатация зданий 24/7" style="background-image:url(img/ceiling.jpg);background-position:55% 25%;border-radius:50%;aspect-ratio:1/1"></div><span class="stk white">Надёжно</span></div></div></div>
-<div class="ub dk" id="s3"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">03 / 04</span><h2 class="d">Управление<br><span class="s">инфраструктурой</span></h2><p class="ub-l">Все инфраструктурные задачи — по единому договору.</p><ul><li>Клининг</li><li>Ресепшн</li><li>Охрана</li><li>Озеленение</li><li>Почта</li><li>Управление отходами</li><li>Прачечная</li><li>Транспорт</li><li>Фитнес и досуг</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Управление инфраструктурой" style="background-image:url(img/gardener.jpg);background-position:30% 30%;border-radius:999px 999px 28px 28px;aspect-ratio:4/5"></div><span class="stk navy" style="left:-3%;bottom:3%">Чисто</span></div></div></div>
-<div class="ub lt rev" id="s4"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">04 / 04</span><h2 class="d">Жилые комплексы<br><span class="s">«под ключ»</span></h2><p class="ub-l">Вахтовые посёлки и жилые комплексы: проживание, питание, инженерия.</p><ul><li>Гостиничное обслуживание</li><li>Сбалансированное питание</li><li>Эксплуатация инженерных систем</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Жилые комплексы «под ключ»" style="background-image:url(img/engineers.jpg);background-position:65% 30%;border-radius:0 50% 50% 50%;aspect-ratio:1/1"></div><span class="stk peach">Как дома</span></div></div></div>
+<div class="ub dk" id="s1"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">01 / 04</span><h2 class="d"><span data-sk="s1t1">Организация</span><br><span class="s" data-sk="s1t2">питания</span></h2><p class="ub-l" data-sk="s1lead">От столовых полного цикла и фабрики-кухни до доставки горячего обеда до рабочего места.</p><ul data-sl="s1list"><li>Ресторан в дневную и ночную смены</li><li>Кухня полного цикла</li><li>Доставка в офис</li><li>Кофепоинт «на доверии»</li><li>Банкеты и VIP</li><li>Карты дотаций</li><li>Анимационный календарь</li><li>Бонусы в ресторанах</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" data-sp="s1ph" role="img" aria-label="Организация питания" style="background-image:url(img/salad.jpg);background-position:62% 30%;border-radius:50% 0 50% 50%;aspect-ratio:1/1"></div><span class="stk red" data-sk="s1stk">Вкусно</span></div></div></div>
+<div class="ub lt rev" id="s2"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">02 / 04</span><h2 class="d"><span data-sk="s2t1">Эксплуатация</span><br><span class="s" data-sk="s2t2">зданий 24/7</span></h2><p class="ub-l" data-sk="s2lead">Работа всех инженерных систем круглосуточно — на месте или с мобильными сервисами.</p><ul data-sl="s2list"><li>Электрика и электроизмерения</li><li>Освещение</li><li>СКУД и видео</li><li>Пожарная сигнализация</li><li>Водоснабжение</li><li>Очистные системы</li><li>Лифты и котельные</li><li>Строительный ремонт</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" data-sp="s2ph" role="img" aria-label="Эксплуатация зданий 24/7" style="background-image:url(img/ceiling.jpg);background-position:55% 25%;border-radius:50%;aspect-ratio:1/1"></div><span class="stk white" data-sk="s2stk">Надёжно</span></div></div></div>
+<div class="ub dk" id="s3"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">03 / 04</span><h2 class="d"><span data-sk="s3t1">Управление</span><br><span class="s" data-sk="s3t2">инфраструктурой</span></h2><p class="ub-l" data-sk="s3lead">Все инфраструктурные задачи — по единому договору.</p><ul data-sl="s3list"><li>Клининг</li><li>Ресепшн</li><li>Охрана</li><li>Озеленение</li><li>Почта</li><li>Управление отходами</li><li>Прачечная</li><li>Транспорт</li><li>Фитнес и досуг</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" data-sp="s3ph" role="img" aria-label="Управление инфраструктурой" style="background-image:url(img/gardener.jpg);background-position:30% 30%;border-radius:999px 999px 28px 28px;aspect-ratio:4/5"></div><span class="stk navy" data-sk="s3stk" style="left:-3%;bottom:3%">Чисто</span></div></div></div>
+<div class="ub lt rev" id="s4"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">04 / 04</span><h2 class="d"><span data-sk="s4t1">Жилые комплексы</span><br><span class="s" data-sk="s4t2">«под ключ»</span></h2><p class="ub-l" data-sk="s4lead">Вахтовые посёлки и жилые комплексы: проживание, питание, инженерия.</p><ul data-sl="s4list"><li>Гостиничное обслуживание</li><li>Сбалансированное питание</li><li>Эксплуатация инженерных систем</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" data-sp="s4ph" role="img" aria-label="Жилые комплексы «под ключ»" style="background-image:url(img/engineers.jpg);background-position:65% 30%;border-radius:0 50% 50% 50%;aspect-ratio:1/1"></div><span class="stk peach" data-sk="s4stk">Как дома</span></div></div></div>
   </div>
   <div class="marq" aria-hidden="true"><div class="d"><span>Питание</span><span class="bdot" aria-hidden="true"></span><span class="out">Инженерия 24/7</span><span class="bdot" aria-hidden="true"></span><span>Клининг</span><span class="bdot" aria-hidden="true"></span><span class="out">Вахтовые посёлки</span><span class="bdot" aria-hidden="true"></span><span>Питание</span><span class="bdot" aria-hidden="true"></span><span class="out">Инженерия 24/7</span><span class="bdot" aria-hidden="true"></span><span>Клининг</span><span class="bdot" aria-hidden="true"></span><span class="out">Вахтовые посёлки</span><span class="bdot" aria-hidden="true"></span></div></div>
 </section>
@@ -416,41 +476,38 @@ h1,h2,h3{text-wrap:balance;margin:0}
 <!-- ======================= 4. КАРЬЕРА ======================= -->
 <section class="page" id="career" role="tabpanel" hidden>
   <div class="c-hero w"><div class="wrap">
-    <h1 class="d">Работа, где <span class="s">заботятся</span><br>и о вас</h1>
+    <h1 class="d"><span data-ck="h1a">Работа, где</span> <span class="s" data-ck="h1b">заботятся</span><br><span data-ck="h1c">и о вас</span></h1>
     <div class="collage" aria-label="Сотрудники iFCM">
-      <div class="ph p1" style="background-image:url(img/cook_v.jpg)"></div>
-      <div class="ph p2" style="background-image:url(img/baker_v.jpg)"></div>
-      <div class="ph p3" style="background-image:url(img/shop.jpg)"></div>
-      <div class="ph p4" style="background-image:url(img/lockers.jpg)"></div>
-      <span class="stk red" style="left:18%;top:8%;transform:rotate(-8deg);animation-delay:.2s">100% белая зарплата</span>
-      <span class="stk white" style="left:40%;top:18%;transform:rotate(6deg);animation-delay:.35s">Медосмотры</span>
-      <span class="stk navy" style="left:52%;top:72%;transform:rotate(-5deg);animation-delay:.5s">Обучение и рост</span>
-      <span class="stk peach" style="left:4%;top:82%;transform:rotate(4deg);animation-delay:.65s">Стабильность</span>
-      <span class="stk red" style="left:74%;top:30%;transform:rotate(9deg);animation-delay:.8s">7 000+ коллег</span>
+      <div class="ph p1" data-cp="ph1" style="background-image:url(img/cook_v.jpg)"></div>
+      <div class="ph p2" data-cp="ph2" style="background-image:url(img/baker_v.jpg)"></div>
+      <div class="ph p3" data-cp="ph3" style="background-image:url(img/shop.jpg)"></div>
+      <div class="ph p4" data-cp="ph4" style="background-image:url(img/lockers.jpg)"></div>
+      <span class="stk red" style="left:18%;top:8%;transform:rotate(-8deg);animation-delay:.2s" data-ck="st1">100% белая зарплата</span>
+      <span class="stk white" style="left:40%;top:18%;transform:rotate(6deg);animation-delay:.35s" data-ck="st2">Медосмотры</span>
+      <span class="stk navy" style="left:52%;top:72%;transform:rotate(-5deg);animation-delay:.5s" data-ck="st3">Обучение и рост</span>
+      <span class="stk peach" style="left:4%;top:82%;transform:rotate(4deg);animation-delay:.65s" data-ck="st4">Стабильность</span>
+      <span class="stk red" style="left:74%;top:30%;transform:rotate(9deg);animation-delay:.8s" data-ck="st5">Более 7 000 коллег</span>
     </div>
-    <div class="stk-row" aria-hidden="true"><span class="stk red">100% белая зарплата</span><span class="stk white">Медосмотры</span><span class="stk navy">Обучение и рост</span><span class="stk peach">Стабильность</span><span class="stk red">7 000+ коллег</span></div>
+    <div class="stk-row" aria-hidden="true"><span class="stk red" data-ck="st1">100% белая зарплата</span><span class="stk white" data-ck="st2">Медосмотры</span><span class="stk navy" data-ck="st3">Обучение и рост</span><span class="stk peach" data-ck="st4">Стабильность</span><span class="stk red" data-ck="st5">Более 7 000 коллег</span></div>
   </div></div>
 
   <div class="sec w" style="padding-top:20px"><div class="wrap" style="display:flex;flex-direction:column;gap:22px">
-    <span class="plate">Кем вы хотите работать?</span>
+    <span class="plate" data-ck="profPlate">Кем вы хотите работать?</span>
     <div class="prof" id="prof"></div>
-    <p class="d" id="profTxt" style="margin:0;font-size:clamp(24px,3vw,40px);line-height:1.1;color:var(--navy)">Выберите профессию — подскажем, с чего начать.</p>
+    <p class="d" id="profTxt" style="margin:0;font-size:clamp(24px,3vw,40px);line-height:1.1;color:var(--navy)" data-ck="profTxt">Выберите профессию — подскажем, с чего начать.</p>
   </div></div>
 
   <div class="sec w" style="padding-top:0"><div class="wrap perks">
-    <div class="perk"><svg class="sh" viewBox="0 0 90 90"><circle cx="45" cy="45" r="45" fill="#E50D26"/></svg><b>Всё по закону</b><p>Официальное трудоустройство, 100% белая зарплата, Трудовой кодекс.</p></div>
-    <div class="perk"><svg class="sh" viewBox="0 0 90 90"><path d="M45 0H90V45A45 45 0 1 1 45 0Z" fill="#211C59"/></svg><b>Стабильность</b><p>Гарантия стабильной работы и устойчивого развития компании.</p></div>
-    <div class="perk"><svg class="sh" viewBox="0 0 90 90"><path d="M0 0H45A45 45 0 0 1 45 90H0Z" fill="#FFD3C4"/></svg><b>Забота о здоровье</b><p>Оплачиваемые медосмотры, страхование, безопасные условия труда.</p></div>
-    <div class="perk"><svg class="sh" viewBox="0 0 90 90"><path d="M0 90V0A90 90 0 0 1 90 90Z" fill="#E50D26"/></svg><b>Обучение и развитие</b><p>Внутренние программы обучения и открытые возможности для роста.</p></div>
+    <div class="perk"><svg class="sh" viewBox="0 0 90 90"><circle cx="45" cy="45" r="45" fill="#E50D26"/></svg><b data-ck="perk1t">Всё по закону</b><p data-ck="perk1p">Официальное трудоустройство, 100% белая зарплата, Трудовой кодекс.</p></div>
+    <div class="perk"><svg class="sh" viewBox="0 0 90 90"><path d="M45 0H90V45A45 45 0 1 1 45 0Z" fill="#211C59"/></svg><b data-ck="perk2t">Стабильность</b><p data-ck="perk2p">Гарантия стабильной работы и устойчивого развития компании.</p></div>
+    <div class="perk"><svg class="sh" viewBox="0 0 90 90"><path d="M0 0H45A45 45 0 0 1 45 90H0Z" fill="#FFD3C4"/></svg><b data-ck="perk3t">Забота о здоровье</b><p data-ck="perk3p">Оплачиваемые медосмотры, страхование, безопасные условия труда.</p></div>
+    <div class="perk"><svg class="sh" viewBox="0 0 90 90"><path d="M0 90V0A90 90 0 0 1 90 90Z" fill="#E50D26"/></svg><b data-ck="perk4t">Обучение и развитие</b><p data-ck="perk4p">Внутренние программы обучения и открытые возможности для роста.</p></div>
   </div></div>
 
   <div class="sec w" style="padding-top:0"><div class="wrap">
-    <span class="plate navy" style="margin-bottom:30px">Слово сотрудникам</span>
-    <div class="qs">
-      <figure class="q" style="margin:0;background:#fff"><blockquote style="color:var(--navy)">«Наша компания предлагает интересные проекты, которые помогают мне развивать навыки и получать полезный опыт.»</blockquote><figcaption><b>Ольга Арион</b><br><span style="color:var(--muted)">менеджер производственного участка</span></figcaption></figure>
-      <figure class="q" style="margin:0;background:var(--red);color:#fff"><blockquote>«Во сколько бы ты ни написал или позвонил — тебе всегда помогут!»</blockquote><figcaption><b>Алексей Лепилин</b><br><span style="color:#FFE3E6">главный инженер</span></figcaption></figure>
-      <figure class="q" style="margin:0;background:var(--navy);color:#fff"><blockquote>«Считаю, что это самая лучшая компания из всех, в которых я работала раньше.»</blockquote><figcaption><b>Ольга Шлыкова</b><br><span style="color:var(--lilac)">пекарь-кондитер, 9+ лет в iFCM</span></figcaption></figure>
-    </div>
+    <div class="vq-head" id="vacancies"><h2 class="d vq-h"><span data-ck="vacT1">Актуальные</span> <span class="s" data-ck="vacT2">вакансии</span></h2><p class="vq-sub" data-ck="vacSub">Официальное оформление, обучение и команда, которая всегда поможет.</p></div>
+    <div class="qs vqs"><a class="q vq" data-cl href="#vacancies" style="background:#fff;color:var(--navy)"><span class="vq-ph" data-cp="v1ph" style="background-image:url(img/chef.jpg)"><span class="stk red vq-pill" data-ck="v1role">Повар</span></span><span class="vq-bd"><span class="vq-from" style="color:var(--muted)" data-ck="vacFrom">Зарплата</span><b class="d vq-sal" data-ck="v1sal">100% белая</b><span class="vq-hook" data-ck="v1hook">Кухня, которая кормит 110 000 человек в день</span><span class="vq-go"><span data-ck="vacGo">Хочу сюда</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></span></a><a class="q vq" data-cl href="#vacancies" style="background:var(--red);color:#fff"><span class="vq-ph" data-cp="v2ph" style="background-image:url(img/engineer2.jpg)"><span class="stk white vq-pill" data-ck="v2role">Инженер</span></span><span class="vq-bd"><span class="vq-from" style="color:#FFD3C4" data-ck="vacFrom">Зарплата</span><b class="d vq-sal" data-ck="v2sal">100% белая</b><span class="vq-hook" data-ck="v2hook">Здания работают 24/7 — и это твоя заслуга</span><span class="vq-go"><span data-ck="vacGo">Хочу сюда</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></span></a><a class="q vq" data-cl href="#vacancies" style="background:var(--navy);color:#fff"><span class="vq-ph" data-cp="v3ph" style="background-image:url(img/cleaner.jpg)"><span class="stk peach vq-pill" data-ck="v3role">Клининг</span></span><span class="vq-bd"><span class="vq-from" style="color:var(--lilac)" data-ck="vacFrom">Зарплата</span><b class="d vq-sal" data-ck="v3sal">100% белая</b><span class="vq-hook" data-ck="v3hook">Чистота, которую замечают каждый день</span><span class="vq-go"><span data-ck="vacGo">Хочу сюда</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></span></a></div>
+    <a class="vq-all" data-cl href="#vacancies"><b class="d" data-ck="vacAll">Смотреть все вакансии</b><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></i></a>
   </div></div>
 </section>
 
@@ -460,19 +517,16 @@ h1,h2,h3{text-wrap:balance;margin:0}
     <canvas id="mini" aria-label="Трёхмерный квартал: красный огонь — центральный офис iFCM"></canvas>
     <div class="pin" id="pin"><span class="stk white">Мы здесь · 3-я Рыбинская, 18</span></div>
     <div class="in w"><div class="wrap" style="width:100%">
-      <span class="drag-hint" id="dragHint" title="Квартал можно покрутить" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l-4 4"/></svg></span>
+      <div class="k-office k2"><span class="k2-tag"><i></i>Центральный офис · Москва</span><a class="k2-phone" href="tel:+74952460110"><b class="d">+7 (495) 246-01-10</b></a><a class="k2-mail" href="mailto:reception.ru@ifcmgroup.ru">reception.ru@ifcmgroup.ru</a><div class="k2-addr"><span>107113, Москва, ул. 3-я Рыбинская, д. 18, стр. 22 · БЦ «Буревестник»</span><div class="k2-btns"><a class="btn white" href="#map">Маршрут <svg class="arw" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="ghost" href="#form">Написать нам</a></div></div></div>
       <h1 class="d">Давайте<br><span class="s" style="color:var(--red);text-shadow:none">поговорим</span></h1>
     </div></div>
+    <span class="drag-hint dh-b" id="dragHint" title="Квартал можно покрутить" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l-4 4"/></svg></span>
   </div>
   <div class="w"><div class="wrap k-grid">
-    <div class="k-quick">
-      <span class="plate">Быстрая связь</span>
-      <a class="k-btn" href="tel:+74952460110" style="background:var(--red);color:#fff"><span class="lbl">Позвонить</span><b class="d">+7 (495) 246-01-10</b></a>
-      <a class="k-btn" href="mailto:reception.ru@ifcmgroup.ru" style="background:#fff;color:var(--navy)"><span class="lbl" style="color:var(--muted)">Написать на почту</span><b class="d" style="word-break:break-word">reception.ru@ifcmgroup.ru</b></a>
-    </div>
+    <div class="k-mob"><span class="k2-tag"><i></i>Центральный офис · Москва</span><a class="k2-phone" href="tel:+74952460110"><b class="d">+7 (495) 246-01-10</b></a><a class="k2-mail" href="mailto:reception.ru@ifcmgroup.ru">reception.ru@ifcmgroup.ru</a><div class="k2-addr"><span>107113, Москва, ул. 3-я Рыбинская, д. 18, стр. 22 · БЦ «Буревестник»</span><a class="btn white" href="#map">Маршрут <svg class="arw" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div></div>
     <form class="k-card" id="kf" novalidate><span id="form" style="position:absolute;margin-top:-110px"></span><input id="kweb" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-      <h2 class="d">Отправить запрос</h2>
-      <div class="topics" id="topics" role="group" aria-label="Тема обращения"><button type="button" aria-pressed="true">Заказать услуги</button><button type="button" aria-pressed="false">Стать поставщиком</button><button type="button" aria-pressed="false">Ищу работу</button><button type="button" aria-pressed="false">Другое</button></div>
+      <div class="k-left"><span class="stk red k-plate">Заявка</span><h2 class="d">Расскажите о&nbsp;задаче</h2><p class="k-sub">Выберите тему — и оставьте телефон или почту. Менеджер свяжется с вами в рабочее время.</p>
+      <div class="topics" id="topics" role="group" aria-label="Тема обращения"><button type="button" aria-pressed="true">Заказать услуги</button><button type="button" aria-pressed="false">Стать поставщиком</button><button type="button" aria-pressed="false">Ищу работу</button><button type="button" aria-pressed="false">Другое</button></div></div><div class="k-right">
       <div class="k-fields">
         <label>Имя<input id="kname" autocomplete="name" placeholder="Как к вам обращаться"></label>
         <label>Телефон<input id="ktel" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
@@ -482,12 +536,10 @@ h1,h2,h3{text-wrap:balance;margin:0}
       <label class="k-chk"><input type="checkbox" id="kcons"><span>Согласен на обработку персональных данных</span></label>
       <button class="btn" type="submit" style="align-self:flex-start">Отправить запрос <svg class="arw" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></button>
       <div class="ok" id="kok" role="status"></div>
-    </form>
+    </div></form>
   </div></div>
-  <div class="sec w" style="padding-top:50px"><div class="wrap kinfo">
-    <div style="background:var(--navy);color:#fff"><span class="lbl" style="color:var(--lilac)">Центральный офис</span><b class="d" style="font-size:26px;line-height:1.1">107113, Москва, ул. 3-я Рыбинская, д. 18, стр. 22</b><span style="color:var(--lilac)">БЦ «Буревестник»</span></div>
-    <div style="background:var(--red);color:#fff"><span class="lbl">Маршрут</span><a class="btn white" href="https://yandex.ru/maps/?text=Москва%2C%203-я%20Рыбинская%20улица%2C%2018с22" target="_blank" rel="noopener" style="align-self:flex-start">Открыть на Яндекс Картах <svg class="arw" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
-  </div></div>
+  <div class="sec w" id="map" style="padding-top:90px"><div class="wrap"><h2 class="d k-h2">Мы на карте</h2><div class="k-mapbox"><iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%203-%D1%8F%20%D0%A0%D1%8B%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%2018%D1%8122&amp;z=16" title="iFCM на Яндекс Картах" loading="lazy" allowfullscreen></iframe></div></div></div>
+  <nav class="k-sticky" aria-label="Быстрая связь"><a href="tel:+74952460110" style="background:var(--red)">Позвонить</a><a href="#form" style="background:var(--navy)">Написать</a></nav>
 </section>
 </main>
 
@@ -547,18 +599,18 @@ h1,h2,h3{text-wrap:balance;margin:0}
   function P(x,y,z){var ct=Math.cos(cam.th),st=Math.sin(cam.th),x1=x*ct-z*st,z1=x*st+z*ct,cp=Math.cos(cam.phi),sp=Math.sin(cam.phi),y2=y*cp-z1*sp,z2=y*sp+z1*cp,k=cam.f/(cam.D+z2);return [M.cx+x1*k,M.cy-y2*k,z2]}
   function quad(ctx,p){ctx.beginPath();ctx.moveTo(p[0][0],p[0][1]);for(var i=1;i<p.length;i++)ctx.lineTo(p[i][0],p[i][1]);ctx.closePath()}
   function mix(a,b,t){return 'rgb('+[0,1,2].map(function(i){return Math.round(a[i]+(b[i]-a[i])*t)}).join(',')+')'}
-  function sizeMini(){var f=fit(mini);M.ctx=f.ctx;M.w=f.w;M.h=f.h;M.cx=f.w*.55;M.cy=f.h*.66;cam.f=Math.min(f.w*1.2,f.h*1.5)*.95}
+  function sizeMini(){var f=fit(mini);M.ctx=f.ctx;M.w=f.w;M.h=f.h;var wl=Math.max(f.w<700?0:40,(f.w-1360)/2),ww=Math.min(f.w,1360);if(f.w<900){M.cx=f.w*.55;M.cy=f.h*.66;cam.f=Math.min(f.w*1.2,f.h*1.5)*.95}else{var cl=wl+540,av=f.w-cl;M.cx=cl+av*.5;M.cy=f.h*.6;cam.f=Math.min(av*1.2,f.h*1.75)*.82}M.wide=f.w>=900}
   function drawMini(t){if(mini.offsetParent===null)return;var ctx=M.ctx;if(!ctx)return;if(!cam.drag&&!reduce){cam.th+=.0016+cam.vel;cam.vel*=.94}
     var g=ctx.createLinearGradient(0,0,0,M.h);g.addColorStop(0,'#211C59');g.addColorStop(.36,'#83143F');g.addColorStop(.6,'#E50D26');g.addColorStop(.84,'#FFD3C4');g.addColorStop(1,'#FFD3C4');ctx.fillStyle=g;ctx.fillRect(0,0,M.w,M.h);
-    quad(ctx,[P(-4.6,0,-4.6),P(4.6,0,-4.6),P(4.6,0,4.6),P(-4.6,0,4.6)]);ctx.fillStyle='rgba(33,28,89,.55)';ctx.fill();
+    quad(ctx,[P(-4.6,0,-4.6),P(4.6,0,-4.6),P(4.6,0,4.6),P(-4.6,0,4.6)]);ctx.fillStyle='rgba(33,28,89,.55)';ctx.fill();var mainC=ctx;if(!M.off)M.off=document.createElement('canvas');if(M.off.width!==mini.width||M.off.height!==mini.height){M.off.width=mini.width;M.off.height=mini.height}var oc=M.off.getContext('2d'),dpr=mini.width/M.w;oc.setTransform(1,0,0,1,0,0);oc.clearRect(0,0,M.off.width,M.off.height);oc.setTransform(dpr,0,0,dpr,0,0);ctx=oc;
     var L=BL.map(function(b){return {b:b,z:P(b.x,0,b.z)[2]}}).sort(function(a,b){return b.z-a.z}),pinAt=null,time=t/1000;
-    L.forEach(function(it){var b=it.b,hw=b.w/2,x0=b.x-hw,x1=b.x+hw,z0=b.z-hw,z1=b.z+hw,h=b.h,base=b.office?[229,13,38]:[70,58,130];
+    var __draw=function(it){var b=it.b,hw=b.w/2,x0=b.x-hw,x1=b.x+hw,z0=b.z-hw,z1=b.z+hw,h=(b.office&&M.wide)?6.2:b.h,base=b.office?[229,13,38]:[70,58,130];
       [[[x0,z0],[x1,z0],0,-1],[[x1,z0],[x1,z1],1,0],[[x1,z1],[x0,z1],0,1],[[x0,z1],[x0,z0],-1,0]].forEach(function(fc,fi){var nv=(fc[2]*Math.sin(cam.th)+fc[3]*Math.cos(cam.th));if(nv>=0)return;
         var light=.5+.5*Math.max(0,fc[2]*-.6+fc[3]*.8);quad(ctx,[P(fc[0][0],0,fc[0][1]),P(fc[1][0],0,fc[1][1]),P(fc[1][0],h,fc[1][1]),P(fc[0][0],h,fc[0][1])]);ctx.fillStyle=mix(base,[255,170,150],light*.45);ctx.fill();
         var fl=Math.max(2,Math.round(h*3));for(var r=0;r<fl;r++)for(var c=0;c<3;c++){if(!b.office&&!b.lit[(fi*30+r*3+c)%80])continue;var u0=(c+.25)/3,u1=(c+.75)/3,v0=(r+.3)/fl*h,v1=(r+.75)/fl*h,ax=fc[0][0]+(fc[1][0]-fc[0][0])*u0,az=fc[0][1]+(fc[1][1]-fc[0][1])*u0,bx=fc[0][0]+(fc[1][0]-fc[0][0])*u1,bz=fc[0][1]+(fc[1][1]-fc[0][1])*u1;
           quad(ctx,[P(ax,v0,az),P(bx,v0,bz),P(bx,v1,bz),P(ax,v1,az)]);ctx.fillStyle=b.office?'rgba(255,255,255,'+(.7+.3*Math.sin(time*2+r))+')':'rgb(255,236,170)';ctx.fill()}});
       quad(ctx,[P(x0,h,z0),P(x1,h,z0),P(x1,h,z1),P(x0,h,z1)]);ctx.fillStyle=mix(base,[255,200,170],.5);ctx.fill();
-      if(b.office){var tp=P(b.x,h,b.z),pulse=(Math.sin(time*3)+1)/2,R=10+pulse*8;var rg=ctx.createRadialGradient(tp[0],tp[1],0,tp[0],tp[1],R*3);rg.addColorStop(0,'rgba(255,255,255,.8)');rg.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=rg;ctx.beginPath();ctx.arc(tp[0],tp[1],R*3,0,7);ctx.fill();pinAt=tp}});
+      if(b.office){var tp=P(b.x,h,b.z),pulse=(Math.sin(time*3)+1)/2,R=10+pulse*8;var rg=ctx.createRadialGradient(tp[0],tp[1],0,tp[0],tp[1],R*3);rg.addColorStop(0,'rgba(255,255,255,.8)');rg.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=rg;ctx.beginPath();ctx.arc(tp[0],tp[1],R*3,0,7);ctx.fill();pinAt=tp}};L.forEach(function(it){if(!it.b.office)__draw(it)});ctx=mainC;ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=M.wide?.75:1;ctx.drawImage(M.off,0,0);ctx.restore();L.forEach(function(it){if(it.b.office)__draw(it)});
     if(pinAt){var pn=$('#pin');pn.style.left=pinAt[0]+'px';pn.style.top=(pinAt[1]-18)+'px'}}
   mini.addEventListener('pointerdown',function(e){cam.drag=true;cam.lx=e.clientX;mini.setPointerCapture(e.pointerId)});
   mini.addEventListener('pointermove',function(e){if(!cam.drag)return;var dx=e.clientX-cam.lx;cam.lx=e.clientX;cam.th-=dx*.006;cam.vel=-dx*.001;if(Math.abs(dx)>2){var dh=$('#dragHint');if(dh)dh.classList.add('off')}});
@@ -574,12 +626,33 @@ h1,h2,h3{text-wrap:balance;margin:0}
       .catch(function(err){ok.innerHTML='Не получилось отправить'+(err&&err.message&&err.message!=='Failed to fetch'?': '+err.message:'')+'. Позвоните: <a href="tel:+74952460110">+7 (495) 246-01-10</a> или напишите на <a href="mailto:reception.ru@ifcmgroup.ru">reception.ru@ifcmgroup.ru</a>.'})
       .then(function(){if(btn)btn.disabled=false})});
 
+  (function(){var b=$('.k-sticky');function f(){if(!b)return;var h=$('#contacts .k-hero');b.classList.toggle('on',!$('#contacts').hidden&&!!h&&h.getBoundingClientRect().bottom<80)}addEventListener('scroll',f,{passive:true});f()})();
   function onShow(id){if(id==='contacts')sizeMini()}
   (function loop(t){drawChain(t);drawMini(t);requestAnimationFrame(loop)})(0);
   addEventListener('resize',function(){if(!$('#contacts').hidden)sizeMini()});
   function valid(h){return /^[a-z]+$/.test(h)&&!!document.getElementById(h)&&document.getElementById(h).classList.contains('page')}
   var start=(location.hash||'').slice(1);var TT={"about": "О нас", "services": "Услуги", "suppliers": "Поставщикам", "career": "Карьера", "contacts": "Контакты"};show(valid(start)?start:'services',false);var tb=document.querySelector('.tabs'),at=tb&&tb.querySelector('[aria-selected=true]');if(at)tb.scrollLeft=at.offsetLeft-tb.clientWidth/2+at.offsetWidth/2;
 })();
+</script>
+<script>
+/* Карьера: тексты, фото и ссылка из админки (content.json → career) */
+(function(){var L=(document.documentElement.lang||'ru').slice(0,2)==='en'?'en':'ru',ok=/^(img\/|uploads\/|https:\/\/)[^"'()\\\s]*$/;
+  function each(sel,f){[].forEach.call(document.querySelectorAll(sel),f)}
+  fetch('content'+'.json?v='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(c){var k=c&&c.career;if(!k)return;var d=k[L]||{};
+    each('[data-ck]',function(e){var v=d[e.getAttribute('data-ck')];if(typeof v==='string'&&v.trim())e.textContent=v.trim()});
+    var ph=k.photos||{};each('[data-cp]',function(e){var v=ph[e.getAttribute('data-cp')];if(v&&ok.test(v))e.style.backgroundImage="url('"+v+"')"});
+    if(/^https?:\/\/[^\s"'<>]+$/.test(k.vacUrl||''))each('[data-cl]',function(a){a.href=k.vacUrl;a.target='_blank';a.rel='noopener'});
+  }).catch(function(){})})();
+</script>
+<script>
+/* Услуги: тексты, списки и фото из админки (content.json → services) */
+(function(){if(!document.getElementById('services'))return;var L=(document.documentElement.lang||'ru').slice(0,2)==='en'?'en':'ru',ok=/^(img\/|uploads\/|https:\/\/)[^"'()\\\s]*$/;
+  function each(sel,f){[].forEach.call(document.querySelectorAll(sel),f)}
+  fetch('content'+'.json?v='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(c){var k=c&&c.services;if(!k)return;var d=k[L]||{};
+    each('[data-sk]',function(e){var v=d[e.getAttribute('data-sk')];if(typeof v==='string'&&v.trim())e.textContent=v.trim()});
+    each('[data-sl]',function(e){var v=d[e.getAttribute('data-sl')];if(typeof v!=='string'||!v.trim())return;e.innerHTML='';v.split(/\n+/).map(function(x){return x.trim()}).filter(Boolean).slice(0,20).forEach(function(x){var li=document.createElement('li');li.textContent=x;e.appendChild(li)})});
+    var ph=k.photos||{};each('[data-sp]',function(e){var v=ph[e.getAttribute('data-sp')];if(v&&ok.test(v))e.style.backgroundImage="url('"+v+"')"});
+  }).catch(function(){})})();
 </script>
 <script>
 (function(){var q=new URLSearchParams(location.search).get('services');if(!q)return;
