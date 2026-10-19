@@ -25,14 +25,12 @@
       '<a class="logo-fix" href="index.html" aria-label="iFCM GROUP — на главную"><img src="assets/logo-white.png" alt="iFCM"></a>' +
       '<nav class="nav" aria-label="Разделы сайта">' +
         '<div class="pill links lbl">' + links + '</div>' +
-        '<a class="lang-pill lbl" href="' + alt + '" hreflang="' + LANG.toLowerCase() + '">' + LANG + '</a>' +
         '<a class="cta-pill lbl" href="contacts.html"' + cur('contacts.html') + '>Связаться</a>' +
         '<button class="burger lbl" type="button" aria-expanded="false" aria-controls="siteMenu"><i></i>Меню</button>' +
       '</nav>' +
       '<div class="menu" id="siteMenu" hidden>' +
         '<button class="close lbl" type="button">Закрыть</button>' +
         PAGES.map(function (p) { return '<a href="' + p[0] + '"' + cur(p[0]) + '>' + p[1] + '</a>'; }).join('') +
-        '<a href="' + alt + '" hreflang="' + LANG.toLowerCase() + '">' + LANG + '</a>' +
         '<div class="m-foot"><span data-c="phone">+7 (495) 246-01-10</span><br><span data-c="email">reception.ru@ifcmgroup.ru</span></div>' +
       '</div>';
     var menu = document.getElementById('siteMenu'), burger = head.querySelector('.burger');
@@ -58,7 +56,7 @@
     foot.innerHTML =
       '<footer class="foot w"><div class="wrap">' +
         '<div class="top">' +
-          '<div class="brand"><img src="assets/logo-white.png" alt="iFCM"><span class="s" style="color:var(--red-soft);font-size:19px;line-height:1.35">с 1993 года каждый день заботимся о вас</span></div>' +
+          '<div class="brand"><img src="assets/logo-white.png" alt="iFCM"><span class="s" style="color:var(--red-soft);font-size:19px;line-height:1.35">Мы не просто оказываем услугу — мы создаём качество жизни</span></div>' +
           '<div class="cols">' +
             '<div class="col"><b>Компания</b>' + PAGES.slice(1).map(function (p) { return '<a href="' + p[0] + '">' + p[1] + '</a>'; }).join('') + '</div>' +
             '<div class="col"><b>Документы</b>' +
