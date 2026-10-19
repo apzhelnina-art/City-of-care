@@ -351,6 +351,40 @@ a.vq:hover .vq-ph{background-size:112%}
 .vq-all b{font-size:clamp(20px,2vw,28px)}
 .vq-all i{flex:none;width:64px;height:64px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;transition:background .25s}.vq-all:hover i{background:var(--navy)}
 @media (max-width:700px){.vq-all{margin-top:40px;padding-left:24px}.vq-all i{width:52px;height:52px}}
+
+/* Отрасли, переключатель услуг, вопросы, слоган */
+.seg-tabs{display:flex;flex-wrap:wrap;gap:14px 12px;padding-block:6px 10px}
+.seg-tabs .stk{border:0;cursor:pointer;font-size:clamp(14px,1.4vw,18px);transition:transform .2s,opacity .2s;opacity:.55}
+.seg-tabs .stk:nth-child(odd){transform:rotate(-2deg)}.seg-tabs .stk:nth-child(even){transform:rotate(2deg)}
+.seg-tabs .stk[aria-pressed=true]{opacity:1;transform:rotate(0) scale(1.06)}
+.seg-b[hidden]{display:none}
+.todo{display:inline-block;border:1.5px dashed #C9A9B6;color:#8C6A79;background:#fff;border-radius:10px;padding:3px 9px;font-size:13px;font-weight:500}
+.cz{position:relative;z-index:1;max-width:1360px;margin:clamp(30px,4vw,56px) auto 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:center;border-radius:36px;padding:clamp(24px,3vw,40px) clamp(24px,4vw,56px);background:#fff;color:var(--navy)}
+.ub.lt .cz{background:var(--navy);color:#fff}
+.cz-n{font-size:clamp(64px,8vw,128px);line-height:.85;color:var(--red);white-space:nowrap;letter-spacing:-.02em}
+.ub.lt .cz-n{color:#FF5A6E}
+.cz-t{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.cz-tag{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;opacity:.6}
+.cz-t b{font-size:clamp(20px,2vw,28px);line-height:1.15;max-width:620px}
+.cz-t p{margin:0;opacity:.7;font-size:15.5px;max-width:560px;line-height:1.45}
+.ind-facts{display:flex;gap:clamp(24px,5vw,72px);flex-wrap:wrap;padding-block:4px 22px}
+.ind-facts div{display:flex;flex-direction:column;gap:2px}.ind-facts b{font-size:clamp(34px,3.6vw,52px);line-height:1;color:var(--red)}.ind-facts span{color:var(--muted);font-size:15px}
+@media (max-width:700px){.cz{grid-template-columns:minmax(0,1fr);gap:10px}}
+.vsw{display:flex;gap:8px;padding-top:34px}
+.vsw a{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:15px;letter-spacing:.01em;text-decoration:none;color:var(--navy);background:#fff;border-radius:999px;padding:13px 22px;box-shadow:0 5px 0 #D9CFE0;transition:transform .15s}
+.vsw a:hover{transform:translateY(-2px)}.vsw a.on{background:var(--navy);color:#fff;box-shadow:0 5px 0 #0B0826}
+.vsw+.s-head{padding-top:28px}
+.sv-more{max-width:980px;margin:0 auto;padding:clamp(40px,6vw,90px) var(--gut);display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-items:start}
+.sv-ind{background:var(--navy);color:#fff;border-radius:40px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden}
+.sv-ind::after{content:"";position:absolute;right:-50px;bottom:-70px;width:190px;height:190px;border-radius:50% 0 50% 50%;background:var(--red)}
+.sv-ind .lbl{color:#C9C7E0}.sv-ind h2{margin:0;font-size:clamp(34px,3.6vw,54px);line-height:1}.sv-ind h2 .s{display:block}
+.sv-chips{display:flex;flex-wrap:wrap;gap:14px 10px;position:relative;z-index:1;max-width:460px}.sv-chips .stk{font-size:14px;padding:10px 16px;text-decoration:none}.sv-chips .stk:nth-child(odd){transform:rotate(-2deg)}.sv-chips .stk:nth-child(even){transform:rotate(2deg)}
+.sv-faq{display:grid;gap:10px}.sv-faq h2{margin:0 0 8px;font-size:clamp(34px,3.6vw,54px);color:var(--navy)}
+.sv-faq details{background:#fff;border-radius:24px;padding:18px 22px}.sv-faq summary{cursor:pointer;font-weight:700;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:12px;font-size:17px}
+.sv-faq summary::after{content:"+";font:900 22px/1 var(--display);color:var(--red)}.sv-faq details[open] summary::after{content:"–"}.sv-faq p{margin:10px 0 0;color:var(--muted);font-size:15.5px;line-height:1.5}
+@media (max-width:860px){.sv-more{grid-template-columns:minmax(0,1fr)}}
+.slg{padding-block:clamp(50px,7vw,110px) 10px}.slg p{margin:0;font-size:clamp(40px,6vw,96px);line-height:1;color:var(--navy);max-width:1200px;letter-spacing:-.01em}.slg p em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--red)}
+.tabs .tab-hid{display:none!important}
 .lang-sw{margin-left:auto;flex:none;background:#fff;color:var(--navy);border-radius:999px;padding:11px 16px;font-weight:700;font-size:14px;text-decoration:none}.lang-sw:hover{background:var(--peach)}@media (max-width:700px){.bar .logo{order:0}.lang-sw{order:1}.bar .tabs{order:2}.k-hero h1{color:var(--navy);text-shadow:none}}
 </style>
 
@@ -362,21 +396,23 @@ a.vq:hover .vq-ph{background-size:112%}
   <nav class="tabs" role="tablist" aria-label="Разделы сайта">
     <button role="tab" data-p="about" aria-selected="false">О нас</button>
     <button role="tab" data-p="services" aria-selected="true">Услуги</button>
+    <button role="tab" data-p="industries" aria-selected="false" class="tab-hid">Отрасли</button>
     <button role="tab" data-p="suppliers" aria-selected="false">Поставщикам</button>
     <button role="tab" data-p="career" aria-selected="false">Карьера</button>
     <button role="tab" data-p="contacts" aria-selected="false">Контакты</button>
   </nav>
-  <a class="lang-sw" href="en-services.html" hreflang="en">EN</a>
 </header>
 
 <main>
 <!-- ======================= 1. О НАС ======================= -->
 <section class="page" id="about" role="tabpanel" hidden>
   <div class="a-hero w">
-    <div class="ph" role="img" aria-label="Инженер iFCM с ноутбуком на объекте" style="background-image:url(img/laptop.jpg)"></div>
+    <div class="ph" role="img" aria-label="Команда iFCM на объекте" style="background-image:url(img/team.jpg);background-position:50% 62%"></div>
     <h1 class="d"><span>С 1993</span><span>года</span><span>рядом.</span></h1>
   </div>
-  <div class="a-side w"><div class="wrap"><div class="side2"><b>iFCM GROUP</b>С 1993 года — от представительства Sodexo до полностью автономного российского предприятия с международными стандартами.</div></div></div>
+  <div class="a-side w"><div class="wrap"><div class="side2"><b>iFCM GROUP</b>На рынке с 1993 года. Сегодня iFCM — полностью российская компания: те же высокие стандарты, команда и опыт — и быстрые решения на месте.</div></div></div>
+
+  <div class="w slg"><div class="wrap"><p class="d">Мы не просто <span>оказываем услугу</span> — мы&nbsp;создаём <em>качество жизни</em></p></div></div>
 
   <div class="sec w"><div class="wrap">
     <span class="plate" style="margin-bottom:34px">Кто мы?</span>
@@ -429,6 +465,7 @@ a.vq:hover .vq-ph{background-size:112%}
 
 <!-- ======================= 2. УСЛУГИ ======================= -->
 <section class="page" id="services" role="tabpanel">
+  <nav class="vsw w wrap" aria-label="Как смотреть услуги"><a href="services.html" aria-current="page" class="on">По направлениям</a><a href="industries.html" >По отраслям</a></nav>
   <div class="s-head w wrap">
     <h1 class="d"><span data-sk="h1a">100+</span> <span class="s" data-sk="h1b">услуг</span><br><span data-sk="h1c">«под ключ»</span></h1>
     <p style="margin:0;max-width:380px;font-size:18px;color:var(--muted)" data-sk="sub">Четыре направления и больше ста услуг — закрываем одним договором.</p>
@@ -439,7 +476,35 @@ a.vq:hover .vq-ph{background-size:112%}
 <div class="ub dk" id="s3"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">03 / 04</span><h2 class="d"><span data-sk="s3t1">Управление</span><br><span class="s" data-sk="s3t2">инфраструктурой</span></h2><p class="ub-l" data-sk="s3lead">Все инфраструктурные задачи — по единому договору.</p><ul data-sl="s3list"><li>Клининг</li><li>Ресепшн</li><li>Охрана</li><li>Озеленение</li><li>Почта</li><li>Управление отходами</li><li>Прачечная</li><li>Транспорт</li><li>Фитнес и досуг</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" data-sp="s3ph" role="img" aria-label="Управление инфраструктурой" style="background-image:url(img/gardener.jpg);background-position:30% 30%;border-radius:999px 999px 28px 28px;aspect-ratio:4/5"></div><span class="stk navy" data-sk="s3stk" style="left:-3%;bottom:3%">Чисто</span></div></div></div>
 <div class="ub lt rev" id="s4"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">04 / 04</span><h2 class="d"><span data-sk="s4t1">Жилые комплексы</span><br><span class="s" data-sk="s4t2">«под ключ»</span></h2><p class="ub-l" data-sk="s4lead">Вахтовые посёлки и жилые комплексы: проживание, питание, инженерия.</p><ul data-sl="s4list"><li>Гостиничное обслуживание</li><li>Сбалансированное питание</li><li>Эксплуатация инженерных систем</li></ul><a class="ub-cta" href="contacts.html">Оставить заявку <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" data-sp="s4ph" role="img" aria-label="Жилые комплексы «под ключ»" style="background-image:url(img/engineers.jpg);background-position:65% 30%;border-radius:0 50% 50% 50%;aspect-ratio:1/1"></div><span class="stk peach" data-sk="s4stk">Как дома</span></div></div></div>
   </div>
+<div class="sv-more"><div class="sv-faq"><h2 class="d">Частые вопросы</h2>
+    <details open><summary>Чем вы отличаетесь?</summary><p>Одна команда закрывает питание, эксплуатацию и инфраструктурные сервисы — одним договором. С 1993 года, более 8 000 сотрудников, 40 городов.</p></details>
+    <details><summary>Как оформлен персонал?</summary><p>Официальное трудоустройство и 100% белая зарплата. Медосмотры и обучение для всех сотрудников.</p></details>
+    <details><summary>Можно заказать одну услугу?</summary><p>Да. Можно начать с одного направления и добавить другие позже.</p></details>
+    <details><summary>Как быстро вы запускаетесь?</summary><p>Крупные проекты мы запускали за 25–30 дней. Срок для вашего объекта назовём после расчёта.</p></details>
+  </div></div>
   <div class="marq" aria-hidden="true"><div class="d"><span>Питание</span><span class="bdot" aria-hidden="true"></span><span class="out">Инженерия 24/7</span><span class="bdot" aria-hidden="true"></span><span>Клининг</span><span class="bdot" aria-hidden="true"></span><span class="out">Вахтовые посёлки</span><span class="bdot" aria-hidden="true"></span><span>Питание</span><span class="bdot" aria-hidden="true"></span><span class="out">Инженерия 24/7</span><span class="bdot" aria-hidden="true"></span><span>Клининг</span><span class="bdot" aria-hidden="true"></span><span class="out">Вахтовые посёлки</span><span class="bdot" aria-hidden="true"></span></div></div>
+</section>
+
+<section class="page" id="industries" role="tabpanel" hidden>
+  <nav class="vsw w wrap" aria-label="Как смотреть услуги"><a href="services.html" >По направлениям</a><a href="industries.html" aria-current="page" class="on">По отраслям</a></nav>
+  <div class="s-head w wrap">
+    <h1 class="d">Решения <span class="s">по отраслям</span></h1>
+    <p style="margin:0;max-width:380px;font-size:18px;color:var(--muted)">Выберите свою — покажем, что делаем, и реальный результат.</p>
+  </div>
+  <div class="w wrap ind-facts"><div><b class="d">98%</b><span>партнёров остаются с нами</span></div><div><b class="d">28 лет</b><span>самое долгое партнёрство</span></div><div><b class="d">111</b><span>локаций по России</span></div></div>
+  <div class="w wrap seg-tabs" id="segTabs" role="group" aria-label="Отрасль"><button type="button" class="stk red" data-seg="office" aria-pressed="true">Офисы</button><button type="button" class="stk white" data-seg="plant" aria-pressed="false">Производства</button><button type="button" class="stk navy" data-seg="remote" aria-pressed="false">Вахта</button><button type="button" class="stk peach" data-seg="ifm" aria-pressed="false">IFM</button><button type="button" class="stk red" data-seg="edu" aria-pressed="false">Образование</button></div>
+  <div class="ubands">
+<div class="ub dk seg-b" id="seg-office"><div class="ub-in"><div class="ub-tx"><span class="ub-n d">01 / 05</span><h2 class="d">Офисы<br><span class="s">и бизнес-центры</span></h2><p class="ub-l">Корпоративные рестораны в бизнес-центрах класса А и головных офисах.</p><ul><li>Рестораны и кафетерии</li><li>Кофе-пойнты</li><li>Банкеты и VIP</li><li>Клининг и ресепшн</li></ul><a class="ub-cta" href="contacts.html#form">Запросить расчёт <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Офисы и бизнес-центры" style="background-image:url(img/cafe.jpg);background-position:center;border-radius:50% 0 50% 50%;aspect-ratio:1/1"></div><span class="stk red">Вкусно</span></div></div>
+<div class="cz"><div class="cz-n d">25 лет</div><div class="cz-t"><span class="cz-tag">Опыт iFCM · Офисы и БЦ</span><b>на рынке корпоративных ресторанов в бизнес-центрах и офисах</b><p>Рестораны в бизнес-центрах класса А и головных офисах — до 1 850 гостей в день в каждом.</p></div></div></div>
+<div class="ub lt rev seg-b" id="seg-plant" hidden><div class="ub-in"><div class="ub-tx"><span class="ub-n d">02 / 05</span><h2 class="d">Производства<br><span class="s">24/7</span></h2><p class="ub-l">Питание всех смен — днём и ночью, быстро и без очередей.</p><ul><li>Столовые и буфеты</li><li>Предзаказ на проходной</li><li>Карты питания</li><li>VIP-обслуживание</li></ul><a class="ub-cta" href="contacts.html#form">Запросить расчёт <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Производства 24/7" style="background-image:url(img/plant.jpg);background-position:center;border-radius:50%;aspect-ratio:1/1"></div><span class="stk white">Сытно</span></div></div>
+<div class="cz"><div class="cz-n d">280</div><div class="cz-t"><span class="cz-tag">Опыт iFCM · Производства</span><b>столовых и кафе iFCM по всей России</b><p>Машиностроение, фармацевтика, пищевая промышленность. Предзаказ обеда на проходной — в перерыв без очередей.</p></div></div></div>
+<div class="ub dk seg-b" id="seg-remote" hidden><div class="ub-in"><div class="ub-tx"><span class="ub-n d">03 / 05</span><h2 class="d">Вахта<br><span class="s">и месторождения</span></h2><p class="ub-l">Посёлок «под ключ»: жильё, питание и инженерия там, где до города далеко.</p><ul><li>Питание 24/7</li><li>Проживание</li><li>Завоз продуктов</li><li>Спецтехника</li></ul><a class="ub-cta" href="contacts.html#form">Запросить расчёт <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Вахта и месторождения" style="background-image:url(img/remote.jpg);background-position:center;border-radius:999px 999px 28px 28px;aspect-ratio:1/1"></div><span class="stk navy">Как дома</span></div></div>
+<div class="cz"><div class="cz-n d">39</div><div class="cz-t"><span class="cz-tag">Опыт iFCM · Вахта</span><b>удалённых локаций: месторождения, вахтовые посёлки, стройки</b><p>Запускаем объекты за 25–30 дней — даже в новогодние праздники.</p></div></div></div>
+<div class="ub lt rev seg-b" id="seg-ifm" hidden><div class="ub-in"><div class="ub-tx"><span class="ub-n d">04 / 05</span><h2 class="d">IFM<br><span class="s">«под ключ»</span></h2><p class="ub-l">Один договор и одно окно на все сервисы объекта.</p><ul><li>Питание</li><li>Техобслуживание 24/7</li><li>Клининг и прачечная</li><li>Склады и магазин</li></ul><a class="ub-cta" href="contacts.html#form">Запросить расчёт <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="IFM «под ключ»" style="background-image:url(img/hall.jpg);background-position:center;border-radius:0 50% 50% 50%;aspect-ratio:1/1"></div><span class="stk peach">Под ключ</span></div></div>
+<div class="cz"><div class="cz-n d">3,1 млн м²</div><div class="cz-t"><span class="cz-tag">Опыт iFCM · IFM «под ключ»</span><b>убираем на промышленных объектах</b><p>Питание, техобслуживание 24/7, клининг и склады — одним договором и через одно окно.</p></div></div></div>
+<div class="ub dk seg-b" id="seg-edu" hidden><div class="ub-in"><div class="ub-tx"><span class="ub-n d">05 / 05</span><h2 class="d">Образование<br><span class="s">с заботой</span></h2><p class="ub-l">Питание детей в частных и международных школах и детских садах.</p><ul><li>Завтраки и обеды</li><li>Питание по возрастным нормам</li><li>Клининг</li><li>Техобслуживание</li></ul><a class="ub-cta" href="contacts.html#form">Запросить расчёт <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="ub-pic"><div class="ub-ph" role="img" aria-label="Образование с заботой" style="background-image:url(img/school.jpg);background-position:center;border-radius:50% 50% 50% 0;aspect-ratio:1/1"></div><span class="stk red">Полезно</span></div></div>
+<div class="cz"><div class="cz-n d">10</div><div class="cz-t"><span class="cz-tag">Опыт iFCM · Образование</span><b>школ и детских садов: гимназии, лицеи, международные школы</b><p>Кормим школьников с 2004 года.</p></div></div></div>
+  </div>
 </section>
 
 <!-- ======================= 3. ПОСТАВЩИКАМ ======================= -->
@@ -486,9 +551,9 @@ a.vq:hover .vq-ph{background-size:112%}
       <span class="stk white" style="left:40%;top:18%;transform:rotate(6deg);animation-delay:.35s" data-ck="st2">Медосмотры</span>
       <span class="stk navy" style="left:52%;top:72%;transform:rotate(-5deg);animation-delay:.5s" data-ck="st3">Обучение и рост</span>
       <span class="stk peach" style="left:4%;top:82%;transform:rotate(4deg);animation-delay:.65s" data-ck="st4">Стабильность</span>
-      <span class="stk red" style="left:74%;top:30%;transform:rotate(9deg);animation-delay:.8s" data-ck="st5">Более 7 000 коллег</span>
+      <span class="stk red" style="left:74%;top:30%;transform:rotate(9deg);animation-delay:.8s" data-ck="st5">Более 8 000 коллег</span>
     </div>
-    <div class="stk-row" aria-hidden="true"><span class="stk red" data-ck="st1">100% белая зарплата</span><span class="stk white" data-ck="st2">Медосмотры</span><span class="stk navy" data-ck="st3">Обучение и рост</span><span class="stk peach" data-ck="st4">Стабильность</span><span class="stk red" data-ck="st5">Более 7 000 коллег</span></div>
+    <div class="stk-row" aria-hidden="true"><span class="stk red" data-ck="st1">100% белая зарплата</span><span class="stk white" data-ck="st2">Медосмотры</span><span class="stk navy" data-ck="st3">Обучение и рост</span><span class="stk peach" data-ck="st4">Стабильность</span><span class="stk red" data-ck="st5">Более 8 000 коллег</span></div>
   </div></div>
 
   <div class="sec w" style="padding-top:20px"><div class="wrap" style="display:flex;flex-direction:column;gap:22px">
@@ -544,7 +609,7 @@ a.vq:hover .vq-ph{background-size:112%}
 </main>
 
 <footer class="foot w"><div class="wrap row">
-  <div><img src="assets/logo-white.png" alt="iFCM" style="height:30px;width:auto"><p class="s" style="margin:14px 0 0;color:var(--red-soft);font-size:19px">с 1993 года каждый день заботимся о вас</p></div>
+  <div><img src="assets/logo-white.png" alt="iFCM" style="height:30px;width:auto"><p class="s" style="margin:14px 0 0;color:var(--red-soft);font-size:19px">Мы не просто оказываем услугу — мы создаём качество жизни</p></div>
   <p style="margin:0;color:#C9C7E0;font-size:14px;max-width:420px;line-height:1.7"><a href="tel:+74952460110" style="color:#fff;text-decoration:none">+7 (495) 246-01-10</a><br><a href="mailto:reception.ru@ifcmgroup.ru" style="color:#fff;text-decoration:none">reception.ru@ifcmgroup.ru</a><br>Москва, ул. 3-я Рыбинская, 18, стр. 22<br><a href="index.html" style="color:#FF6B7D">На главную</a></p>
 </div></footer>
 
@@ -631,7 +696,7 @@ a.vq:hover .vq-ph{background-size:112%}
   (function loop(t){drawChain(t);drawMini(t);requestAnimationFrame(loop)})(0);
   addEventListener('resize',function(){if(!$('#contacts').hidden)sizeMini()});
   function valid(h){return /^[a-z]+$/.test(h)&&!!document.getElementById(h)&&document.getElementById(h).classList.contains('page')}
-  var start=(location.hash||'').slice(1);var TT={"about": "О нас", "services": "Услуги", "suppliers": "Поставщикам", "career": "Карьера", "contacts": "Контакты"};show(valid(start)?start:'services',false);var tb=document.querySelector('.tabs'),at=tb&&tb.querySelector('[aria-selected=true]');if(at)tb.scrollLeft=at.offsetLeft-tb.clientWidth/2+at.offsetWidth/2;
+  var start=(location.hash||'').slice(1);var TT={"about": "О нас", "services": "Услуги", "industries": "Услуги по отраслям", "suppliers": "Поставщикам", "career": "Карьера", "contacts": "Контакты"};show(valid(start)?start:'services',false);var tb=document.querySelector('.tabs'),at=tb&&tb.querySelector('[aria-selected=true]');if(at)tb.scrollLeft=at.offsetLeft-tb.clientWidth/2+at.offsetWidth/2;
 })();
 </script>
 <script>
@@ -653,6 +718,13 @@ a.vq:hover .vq-ph{background-size:112%}
     each('[data-sl]',function(e){var v=d[e.getAttribute('data-sl')];if(typeof v!=='string'||!v.trim())return;e.innerHTML='';v.split(/\n+/).map(function(x){return x.trim()}).filter(Boolean).slice(0,20).forEach(function(x){var li=document.createElement('li');li.textContent=x;e.appendChild(li)})});
     var ph=k.photos||{};each('[data-sp]',function(e){var v=ph[e.getAttribute('data-sp')];if(v&&ok.test(v))e.style.backgroundImage="url('"+v+"')"});
   }).catch(function(){})})();
+</script>
+<script>
+(function(){var t=document.getElementById('segTabs');if(!t)return;
+  function seg(k){[].forEach.call(t.querySelectorAll('[data-seg]'),function(b){b.setAttribute('aria-pressed',String(b.dataset.seg===k))});[].forEach.call(document.querySelectorAll('.seg-b'),function(b){b.hidden=b.id!=='seg-'+k})}
+  t.addEventListener('click',function(e){var b=e.target.closest('[data-seg]');if(b)seg(b.dataset.seg)});
+  var q=new URLSearchParams(location.search).get('seg');if(q&&document.getElementById('seg-'+q))seg(q);
+})();
 </script>
 <script>
 (function(){var q=new URLSearchParams(location.search).get('services');if(!q)return;

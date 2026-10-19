@@ -4,8 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>iFCM — Город заботы</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
 <link rel="stylesheet" href="assets/nav.css">
-<style>body{margin:0}</style>
+<style>body{margin:0}.why{background:#fff;border-radius:40px;padding:clamp(28px,4vw,56px);margin-top:20px;display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:32px;align-items:center}
+.why h2{margin:0;font-size:clamp(40px,5vw,76px);color:var(--navy);line-height:.95}.why h2 .s{display:block;color:var(--red)}
+.why-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 22px}.why-g>div{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.why-g .stk{font-size:clamp(14px,1.3vw,17px);padding:10px 18px}.why-g p{margin:0;color:var(--muted);font-size:16px;line-height:1.45}
+@media (max-width:820px){.why{grid-template-columns:minmax(0,1fr)}.why-g{grid-template-columns:minmax(0,1fr)}}
+</style>
 </head>
 <body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -182,6 +190,26 @@ h1,h2,h3{text-wrap:balance}
 @media (max-width:520px){.tiles{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:900px),(hover:none){.tile{min-height:0;gap:14px}.tile .ph{position:relative;inset:auto;height:190px;margin:-26px -26px 4px;opacity:1;transform:none}.tile .ph::after{display:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+
+/* MVP по брифу */
+.ind-strip{background:var(--navy);color:#fff;border-radius:40px;padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:center;margin-top:20px;position:relative;overflow:hidden}
+.ind-strip::after{content:"";position:absolute;right:-60px;bottom:-80px;width:220px;height:220px;border-radius:50% 0 50% 50%;background:var(--red);opacity:.9}
+.ind-h{display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
+.ind-h h2{font-size:clamp(34px,4.2vw,62px);line-height:.95;margin:0}
+.ind-chips{display:flex;flex-wrap:wrap;gap:26px 18px;position:relative;z-index:1;padding:10px 0}
+.ind-chips .stk{text-decoration:none;font-size:clamp(17px,1.7vw,24px)!important;padding:.6em 1.25em!important;transition:transform .2s}
+.ind-chips .stk:nth-child(1){transform:rotate(-4deg)}.ind-chips .stk:nth-child(2){transform:rotate(3deg)}.ind-chips .stk:nth-child(3){transform:rotate(-2deg)}.ind-chips .stk:nth-child(4){transform:rotate(4deg)}.ind-chips .stk:nth-child(5){transform:rotate(-3deg)}
+.ind-chips .stk:hover{transform:rotate(0) scale(1.06)}
+@media (max-width:820px){.ind-strip{grid-template-columns:minmax(0,1fr)}}
+.c-form.calc{border-radius:36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:10px 14px;align-items:end;padding:18px 18px 18px 26px}
+.c-form.calc label{display:flex;flex-direction:column;gap:2px;min-width:0}
+.c-form.calc label span{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#8E5A4B}
+.c-form.calc input,.c-form.calc select{font:inherit;font-size:17px;min-height:46px;border:0;border-bottom:1.5px solid rgba(21,18,58,.18);background:transparent;color:var(--ink);padding:4px 0;border-radius:0;width:100%}
+.c-form.calc .wide{grid-column:1/5}
+.c-form.calc button{grid-column:5;grid-row:1/3;align-self:stretch;height:auto;width:96px}
+@media (max-width:900px){.c-form.calc{grid-template-columns:repeat(2,minmax(0,1fr)) auto}.c-form.calc .wide{grid-column:1/3}.c-form.calc button{grid-column:3;grid-row:1/4;width:72px}}
+@media (max-width:520px){.c-form.calc{grid-template-columns:minmax(0,1fr)}.c-form.calc .wide{grid-column:auto}.c-form.calc button{grid-column:auto;grid-row:auto;width:100%;height:64px}}
+.lang-pill{display:none!important}
 </style>
 
 <div id="siteHeader"></div>
@@ -235,8 +263,31 @@ h1,h2,h3{text-wrap:balance}
   <div class="tiles" id="tilesBox"></div>
 </section>
 
+<!-- ОТРАСЛИ -->
+<section class="w" id="industries">
+  <div class="ind-strip">
+    <div class="ind-h"><span class="lbl" style="color:var(--red-soft)">Решения по отраслям</span><h2 class="d">Знаем специфику <span class="s" style="color:var(--peach)">вашей отрасли</span></h2></div>
+    <div class="ind-chips">
+      <a class="stk red" href="industries.html?seg=office">Офисы и БЦ</a>
+      <a class="stk white" href="industries.html?seg=plant">Производства</a>
+      <a class="stk peach" href="industries.html?seg=remote">Вахта и удалённые</a>
+      <a class="stk white" href="industries.html?seg=ifm">IFM «под ключ»</a>
+      <a class="stk red" href="industries.html?seg=edu">Образование</a>
+    </div>
+  </div>
+</section>
+
 <!-- РЕДАКТИРУЕМЫЕ БЛОКИ -->
 <div class="w" id="blocksBox"></div>
+<div class="w"><section class="why">
+  <h2 class="d">Почему <span class="s">iFCM</span></h2>
+  <div class="why-g">
+    <div><span class="stk red" style="transform:rotate(-3deg)">Одна команда</span><p>Питание, эксплуатация и клининг — одним договором и одним менеджером.</p></div>
+    <div><span class="stk navy" style="transform:rotate(2deg)">Белая компания</span><p>Официальное трудоустройство и 100% белая зарплата всего персонала.</p></div>
+    <div><span class="stk white" style="transform:rotate(-2deg)">С 1993 года</span><p>Свои стандарты качества и безопасности — более 30 лет опыта.</p></div>
+    <div><span class="stk peach" style="transform:rotate(3deg)">Под ваш объект</span><p>Формат, объём и модель договора подбираем под численность и график.</p></div>
+  </div></section></div>
+
 
 <!-- НОВОСТИ -->
 <section class="w blk" id="news" hidden>
@@ -247,15 +298,18 @@ h1,h2,h3{text-wrap:balance}
 <!-- GRID FOOTER -->
 <section class="grid-sec w" id="contact">
   <div class="contact-row">
-    <div class="c-red d">Давайте поговорим</div>
-    <form class="c-form" id="f" novalidate>
-      <label for="tel" class="lbl" style="position:absolute;left:-9999px">Ваш телефон</label>
+    <div class="c-red d">Запросить&nbsp;<span style="font-family:var(--serif);font-style:italic;font-weight:400">расчёт</span></div>
+    <form class="c-form calc" id="f" novalidate>
       <input class="hp" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <input id="tel" type="tel" placeholder="Ваш телефон, перезвоним" autocomplete="tel">
-      <button type="submit" aria-label="Отправить"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></button>
+      <label><span>Город объекта</span><input id="cCity" placeholder="Москва" autocomplete="address-level2"></label>
+      <label><span>Компания</span><input id="cCo" placeholder="Название" autocomplete="organization"></label>
+      <label><span>Сотрудников</span><input id="cN" inputmode="numeric" placeholder="например, 800"></label>
+      <label><span>Отрасль</span><select id="cInd"><option>Офис / БЦ</option><option>Производство</option><option>Вахта, удалённый проект</option><option>IFM</option><option>Образование</option><option>Другое</option></select></label>
+      <label class="wide"><span>Телефон</span><input id="tel" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel"></label>
+      <button type="submit" aria-label="Запросить расчёт"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></button>
     </form>
   </div>
-  <label class="pd-ok"><input type="checkbox" id="pdOk"><span>Согласен на обработку персональных данных. Нажимая стрелку, вы передаёте телефон, чтобы мы перезвонили.</span></label>
+  <label class="pd-ok"><input type="checkbox" id="pdOk"><span>Согласен на обработку персональных данных. Менеджер вашего региона подготовит расчёт и перезвонит.</span></label>
   <div class="selbox" id="selBox" aria-live="polite"></div>
   <div class="ok" id="ok" role="status"></div>
   <div class="gwrap">
@@ -264,7 +318,7 @@ h1,h2,h3{text-wrap:balance}
   </div>
   <div class="foot">
     <div style="font-size:14px;line-height:1.6"><b class="d" style="font-size:22px;user-select:all" id="cPhone">+7 (495) 246-01-10</b><br><span style="user-select:all" id="cEmail">reception.ru@ifcmgroup.ru</span> · <span id="cAddr">Москва, ул. 3-я Рыбинская, 18, стр. 22</span></div>
-    <nav class="chips" aria-label="Другие разделы"><a href="about.html">О нас</a><a href="services.html">Услуги</a><a href="suppliers.html">Поставщикам</a><a href="career.html">Карьера</a><a href="contacts.html">Контакты</a><a href="en.html" hreflang="en">EN</a></nav>
+    <nav class="chips" aria-label="Другие разделы"><a href="about.html">О нас</a><a href="services.html">Услуги</a><a href="suppliers.html">Поставщикам</a><a href="career.html">Карьера</a><a href="contacts.html">Контакты</a></nav>
   </div>
 </section>
 </main>
@@ -389,7 +443,7 @@ const BACKEND_URL = window.IFCM_BACKEND_URL || ""; // адрес задаётс�
   var small=innerWidth<700, S=small?.6:1;
   var STK=[];
   /* ================= СОДЕРЖИМОЕ (из content.json, правится в админке) ================= */
-  var DEFAULT_CONTENT={"hero": {"badge": "iFCM GROUP · с 1993 года", "title": "Город\nзаботы", "lead": "Корпоративное питание, эксплуатация зданий и инфраструктурные сервисы — под управлением одной команды.", "labels": ["Питание", "Инженерия 24/7", "Клининг", "Вахтовый посёлок"]}, "poster": {"lines": ["Вкусно.", "Чисто.", "Надёжно."], "text": "Мы создаём, управляем и развиваем сервисы корпоративного питания и технической эксплуатации зданий. Уже более 30 лет наши партнёры становятся счастливее, а команды — сплочённее.", "photo": "img/chef2.jpg"}, "constructor": {"title": "Соберите сервис", "accent": "для своего объекта", "text": "Перетащите нужные услуги в зону «Ваш объект». Всё, что окажется внутри, мы закроем одним договором.", "services": [{"name": "Корпоративное питание", "color": "red"}, {"name": "Эксплуатация 24/7", "color": "navy"}, {"name": "Клининг", "color": "white"}, {"name": "Кофепоинт", "color": "peach"}, {"name": "Охрана", "color": "navy"}, {"name": "СКУД и видео", "color": "white"}, {"name": "Ресепшн", "color": "peach"}, {"name": "Озеленение", "color": "white"}, {"name": "Лифты и котельные", "color": "navy"}, {"name": "Прачечная", "color": "peach"}, {"name": "Доставка обедов", "color": "red"}, {"name": "Банкеты и VIP", "color": "red"}]}, "tiles": [{"title": "Корпоративное питание", "text": "Рестораны, кухни полного цикла, доставка, кофепоинты", "color": "navy", "photo": "img/kitchen.jpg"}, {"title": "Эксплуатация зданий 24/7", "text": "Электрика, СКУД, водоснабжение, лифты, котельные", "color": "red", "photo": "img/engineer.jpg"}, {"title": "Управление инфраструктурой", "text": "Клининг, ресепшн, охрана, благоустройство", "color": "peach", "photo": "img/corridor.jpg"}, {"title": "Жилые комплексы «под ключ»", "text": "Проживание, питание и инженерия вахтовых посёлков", "color": "ink", "photo": "img/cashier.jpg"}], "blocks": [{"id": "b1", "type": "numbers", "title": "iFCM в цифрах", "hidden": false, "items": [{"value": "1993", "label": "год основания"}, {"value": "7 000+", "label": "профессионалов в команде"}, {"value": "110 000", "label": "человек получают сервис каждый день"}, {"value": "40", "label": "городов в 7 регионах"}]}], "newsTitle": "Новости", "news": [{"id": "n1", "date": "2026-10-09", "title": "Пример новости", "text": "Это образец, чтобы было видно, как выглядит раздел. Замените или удалите его в админке.", "photo": "img/meeting.jpg", "hidden": false}], "contacts": {"phone": "+7 (495) 246-01-10", "email": "reception.ru@ifcmgroup.ru", "address": "Москва, ул. 3-я Рыбинская, 18, стр. 22"}};
+  var DEFAULT_CONTENT={"hero": {"badge": "iFCM GROUP · с 1993 года", "title": "Город\nзаботы", "lead": "Корпоративное питание, эксплуатация зданий и инфраструктурные сервисы — под управлением одной команды.", "labels": ["Питание", "Инженерия 24/7", "Клининг", "Вахтовый посёлок"]}, "poster": {"lines": ["Вкусно.", "Чисто.", "Надёжно."], "text": "Мы создаём, управляем и развиваем сервисы корпоративного питания и технической эксплуатации зданий. Уже более 30 лет наши партнёры становятся счастливее, а команды — сплочённее.", "photo": "img/chef2.jpg"}, "constructor": {"title": "Соберите сервис", "accent": "для своего объекта", "text": "Перетащите нужные услуги в зону «Ваш объект». Всё, что окажется внутри, мы закроем одним договором.", "services": [{"name": "Корпоративное питание", "color": "red"}, {"name": "Эксплуатация 24/7", "color": "navy"}, {"name": "Клининг", "color": "white"}, {"name": "Кофепоинт", "color": "peach"}, {"name": "Охрана", "color": "navy"}, {"name": "СКУД и видео", "color": "white"}, {"name": "Ресепшн", "color": "peach"}, {"name": "Озеленение", "color": "white"}, {"name": "Лифты и котельные", "color": "navy"}, {"name": "Прачечная", "color": "peach"}, {"name": "Доставка обедов", "color": "red"}, {"name": "Банкеты и VIP", "color": "red"}]}, "tiles": [{"title": "Корпоративное питание", "text": "Рестораны, кухни полного цикла, доставка, кофепоинты", "color": "navy", "photo": "img/kitchen.jpg"}, {"title": "Эксплуатация зданий 24/7", "text": "Электрика, СКУД, водоснабжение, лифты, котельные", "color": "red", "photo": "img/engineer.jpg"}, {"title": "Управление инфраструктурой", "text": "Клининг, ресепшн, охрана, благоустройство", "color": "peach", "photo": "img/corridor.jpg"}, {"title": "Жилые комплексы «под ключ»", "text": "Проживание, питание и инженерия вахтовых посёлков", "color": "ink", "photo": "img/cashier.jpg"}], "blocks": [{"id": "b1", "type": "numbers", "title": "iFCM в цифрах", "hidden": false, "items": [{"value": "1993", "label": "год основания"}, {"value": "8 000+", "label": "профессионалов в команде"}, {"value": "110 000", "label": "человек получают сервис каждый день"}, {"value": "40", "label": "городов в 7 регионах"}]}], "newsTitle": "Новости", "news": [{"id": "n1", "date": "2026-10-09", "title": "Пример новости", "text": "Это образец, чтобы было видно, как выглядит раздел. Замените или удалите его в админке.", "photo": "img/meeting.jpg", "hidden": false}], "contacts": {"phone": "+7 (495) 246-01-10", "email": "reception.ru@ifcmgroup.ru", "address": "Москва, ул. 3-я Рыбинская, 18, стр. 22"}};
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function img(u){u=String(u||'');if(!/^(img\/|uploads\/|https:\/\/)[^"'()\\\s]*$/.test(u))return 'none';return "url('"+u+"')"}
   var TILE_BG={navy:['var(--navy)','#fff'],red:['var(--red)','#fff'],peach:['var(--peach)','var(--navy)'],ink:['var(--ink)','#fff'],white:['#fff','var(--navy)']};
@@ -523,7 +577,7 @@ const BACKEND_URL = window.IFCM_BACKEND_URL || ""; // адрес задаётс�
     if(v.length<10||v.length>12){ok.textContent='Введите номер целиком, 10–11 цифр.';return}
     if(!$('#pdOk').checked){ok.textContent='Отметьте согласие на обработку персональных данных.';return}
     btn.disabled=true;ok.textContent='Отправляем…';
-    fetch(BACKEND_URL+'/api/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:$('#tel').value,services:window.__sel||[],website:$('#website').value,page:location.href})})
+    fetch(BACKEND_URL+'/api/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:$('#tel').value,company:$('#cCo').value,topic:'Запросить расчёт',message:['Город: '+$('#cCity').value,'Сотрудников: '+$('#cN').value,'Отрасль: '+$('#cInd').value].join('; '),services:window.__sel||[],website:$('#website').value,page:location.href})})
       .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok)throw new Error(j.error||'ошибка')})})
       .then(function(){ok.textContent='Спасибо! Заявка отправлена, мы перезвоним.';$('#tel').value=''})
       .catch(function(){ok.textContent='Не получилось отправить. Позвоните нам: '+$('#cPhone').textContent})
