@@ -13,6 +13,10 @@
 .why-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 22px}.why-g>div{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
 .why-g .stk{font-size:clamp(14px,1.3vw,17px);padding:10px 18px}.why-g p{margin:0;color:var(--muted);font-size:16px;line-height:1.45}
 @media (max-width:820px){.why{grid-template-columns:minmax(0,1fr)}.why-g{grid-template-columns:minmax(0,1fr)}}
+a.tag3d:hover,a.tag3d:focus-visible{transform:translate(-50%,-140%) scale(1.08);background:var(--red);color:#fff;--sh:#8E0716}
+a.tag3d{transition:opacity .3s,transform .2s,background .2s}a.tag3d[style*="opacity: 0"]{pointer-events:none}
+a.tag3d::before{content:"";position:absolute;right:-4px;top:-4px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px rgba(229,13,38,.25);animation:tagp 1.8s infinite}
+@keyframes tagp{50%{box-shadow:0 0 0 7px rgba(229,13,38,0)}}
 </style>
 </head>
 <body>
@@ -64,7 +68,7 @@ h1,h2,h3{text-wrap:balance}
 .hero-in{position:relative;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding-block:104px 28px;pointer-events:none}
 .hero-in a,.hero-in button{pointer-events:auto}
 .hero h1{margin:0;font-size:clamp(52px,10vw,180px);line-height:.86;text-shadow:0 6px 40px rgba(21,18,58,.35)}
-.tag3d{position:absolute;left:0;top:0;z-index:3;pointer-events:none;transform:translate(-50%,-130%);font-size:12px;padding:8px 12px;transition:opacity .3s}
+.tag3d{position:absolute;left:0;top:0;z-index:3;pointer-events:auto;cursor:pointer;text-decoration:none;transform:translate(-50%,-130%);font-size:12px;padding:8px 12px;transition:opacity .3s}
 .tag3d::after{content:"";position:absolute;left:50%;bottom:-10px;width:2px;height:10px;background:#fff;transform:translateX(-50%)}
 .drag-hint{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:rgba(21,18,58,.55);border-radius:50%;animation:sway 2.4s ease-in-out infinite;transition:opacity .5s}
 .drag-hint.off{opacity:0}
@@ -218,10 +222,10 @@ h1,h2,h3{text-wrap:balance}
 <!-- HERO: 3D CITY -->
 <section class="hero" id="top">
   <canvas id="city" aria-label="Трёхмерный город: красные огни отмечают объекты, где работает iFCM"></canvas>
-  <span class="tag3d stk white" id="t0">Питание</span>
-  <span class="tag3d stk red" id="t1">Инженерия 24/7</span>
-  <span class="tag3d stk navy" id="t2">Клининг</span>
-  <span class="tag3d stk peach" id="t3">Вахтовый посёлок</span>
+  <a class="tag3d stk white" id="t0" href="services.html#s1">Питание</a>
+  <a class="tag3d stk red" id="t1" href="services.html#s2">Здания 24/7</a>
+  <a class="tag3d stk navy" id="t2" href="services.html#s3">Чистота</a>
+  <a class="tag3d stk peach" id="t3" href="services.html#s4">Вахтовый посёлок</a>
   <div class="hero-in w">
     <div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start">
       <span class="stk red lbl" id="hBadge" style="padding:10px 16px;font-size:13px">iFCM GROUP · с 1993 года</span>
@@ -231,7 +235,7 @@ h1,h2,h3{text-wrap:balance}
       <h1 class="d" id="hTitle">Город<br>заботы<span style="color:var(--red)">.</span></h1>
       <p id="hLead">Корпоративное питание, эксплуатация зданий и инфраструктурные сервисы — под управлением одной команды.</p>
       <div class="cta2"><a class="stk red" href="#play">Подобрать услуги <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="stk white" href="#contact">Обсудить объект</a></div>
-      <div class="stats2"><div><b>40</b><span>городов</span></div><div><b>110&#160;000</b><span>человек ежедневно</span></div><div><b>30+</b><span>лет опыта</span></div><span class="dh-wrap"><span class="drag-hint dh2" id="dragHint" title="Город можно покрутить" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l-4 4"/></svg></span></span></div>
+      <div class="stats2"><div><b>111</b><span>объектов по России</span></div><div><b>110&#160;000</b><span>человек ежедневно</span></div><div><b>30+</b><span>лет опыта</span></div><span class="dh-wrap"><span class="drag-hint dh2" id="dragHint" title="Город можно покрутить" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l-4 4"/></svg></span></span></div>
     </div>
   </div>
 </section>
@@ -271,7 +275,7 @@ h1,h2,h3{text-wrap:balance}
       <a class="stk red" href="industries.html?seg=office">Офисы и БЦ</a>
       <a class="stk white" href="industries.html?seg=plant">Производства</a>
       <a class="stk peach" href="industries.html?seg=remote">Вахта и удалённые</a>
-      <a class="stk white" href="industries.html?seg=ifm">IFM «под ключ»</a>
+      <a class="stk white" href="industries.html?seg=ifm">Всё «под ключ»</a>
       <a class="stk red" href="industries.html?seg=edu">Образование</a>
     </div>
   </div>
@@ -282,10 +286,10 @@ h1,h2,h3{text-wrap:balance}
 <div class="w"><section class="why">
   <h2 class="d">Почему <span class="s">iFCM</span></h2>
   <div class="why-g">
-    <div><span class="stk red" style="transform:rotate(-3deg)">Одна команда</span><p>Питание, эксплуатация и клининг — одним договором и одним менеджером.</p></div>
-    <div><span class="stk navy" style="transform:rotate(2deg)">Белая компания</span><p>Официальное трудоустройство и 100% белая зарплата всего персонала.</p></div>
-    <div><span class="stk white" style="transform:rotate(-2deg)">С 1993 года</span><p>Свои стандарты качества и безопасности — более 30 лет опыта.</p></div>
-    <div><span class="stk peach" style="transform:rotate(3deg)">Под ваш объект</span><p>Формат, объём и модель договора подбираем под численность и график.</p></div>
+    <div><span class="stk red" style="transform:rotate(-3deg)">Одна команда</span><p>Один договор и один менеджер, которому можно просто позвонить.</p></div>
+    <div><span class="stk navy" style="transform:rotate(2deg)">Белая компания</span><p>Все сотрудники оформлены официально и получают 100% белую зарплату.</p></div>
+    <div><span class="stk white" style="transform:rotate(-2deg)">С 1993 года</span><p>Больше 30 лет опыта и свои стандарты качества и безопасности.</p></div>
+    <div><span class="stk peach" style="transform:rotate(3deg)">Под ваш объект</span><p>Подберём формат и объём под ваших людей и ваш график.</p></div>
   </div></section></div>
 
 
@@ -304,12 +308,12 @@ h1,h2,h3{text-wrap:balance}
       <label><span>Город объекта</span><input id="cCity" placeholder="Москва" autocomplete="address-level2"></label>
       <label><span>Компания</span><input id="cCo" placeholder="Название" autocomplete="organization"></label>
       <label><span>Сотрудников</span><input id="cN" inputmode="numeric" placeholder="например, 800"></label>
-      <label><span>Отрасль</span><select id="cInd"><option>Офис / БЦ</option><option>Производство</option><option>Вахта, удалённый проект</option><option>IFM</option><option>Образование</option><option>Другое</option></select></label>
+      <label><span>Отрасль</span><select id="cInd"><option>Офис / БЦ</option><option>Производство</option><option>Вахта, удалённый проект</option><option>Всё «под ключ»</option><option>Образование</option><option>Другое</option></select></label>
       <label class="wide"><span>Телефон</span><input id="tel" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel"></label>
       <button type="submit" aria-label="Запросить расчёт"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></button>
     </form>
   </div>
-  <label class="pd-ok"><input type="checkbox" id="pdOk"><span>Согласен на обработку персональных данных. Менеджер вашего региона подготовит расчёт и перезвонит.</span></label>
+  <label class="pd-ok"><input type="checkbox" id="pdOk"><span>Согласен на обработку персональных данных. Расскажите об объекте — менеджер посчитает стоимость и перезвонит. Без долгих анкет.</span></label>
   <div class="selbox" id="selBox" aria-live="polite"></div>
   <div class="ok" id="ok" role="status"></div>
   <div class="gwrap">
@@ -443,7 +447,7 @@ const BACKEND_URL = window.IFCM_BACKEND_URL || ""; // адрес задаётс�
   var small=innerWidth<700, S=small?.6:1;
   var STK=[];
   /* ================= СОДЕРЖИМОЕ (из content.json, правится в админке) ================= */
-  var DEFAULT_CONTENT={"hero": {"badge": "iFCM GROUP · с 1993 года", "title": "Город\nзаботы", "lead": "Корпоративное питание, эксплуатация зданий и инфраструктурные сервисы — под управлением одной команды.", "labels": ["Питание", "Инженерия 24/7", "Клининг", "Вахтовый посёлок"]}, "poster": {"lines": ["Вкусно.", "Чисто.", "Надёжно."], "text": "Мы создаём, управляем и развиваем сервисы корпоративного питания и технической эксплуатации зданий. Уже более 30 лет наши партнёры становятся счастливее, а команды — сплочённее.", "photo": "img/chef2.jpg"}, "constructor": {"title": "Соберите сервис", "accent": "для своего объекта", "text": "Перетащите нужные услуги в зону «Ваш объект». Всё, что окажется внутри, мы закроем одним договором.", "services": [{"name": "Корпоративное питание", "color": "red"}, {"name": "Эксплуатация 24/7", "color": "navy"}, {"name": "Клининг", "color": "white"}, {"name": "Кофепоинт", "color": "peach"}, {"name": "Охрана", "color": "navy"}, {"name": "СКУД и видео", "color": "white"}, {"name": "Ресепшн", "color": "peach"}, {"name": "Озеленение", "color": "white"}, {"name": "Лифты и котельные", "color": "navy"}, {"name": "Прачечная", "color": "peach"}, {"name": "Доставка обедов", "color": "red"}, {"name": "Банкеты и VIP", "color": "red"}]}, "tiles": [{"title": "Корпоративное питание", "text": "Рестораны, кухни полного цикла, доставка, кофепоинты", "color": "navy", "photo": "img/kitchen.jpg"}, {"title": "Эксплуатация зданий 24/7", "text": "Электрика, СКУД, водоснабжение, лифты, котельные", "color": "red", "photo": "img/engineer.jpg"}, {"title": "Управление инфраструктурой", "text": "Клининг, ресепшн, охрана, благоустройство", "color": "peach", "photo": "img/corridor.jpg"}, {"title": "Жилые комплексы «под ключ»", "text": "Проживание, питание и инженерия вахтовых посёлков", "color": "ink", "photo": "img/cashier.jpg"}], "blocks": [{"id": "b1", "type": "numbers", "title": "iFCM в цифрах", "hidden": false, "items": [{"value": "1993", "label": "год основания"}, {"value": "8 000+", "label": "профессионалов в команде"}, {"value": "110 000", "label": "человек получают сервис каждый день"}, {"value": "40", "label": "городов в 7 регионах"}]}], "newsTitle": "Новости", "news": [{"id": "n1", "date": "2026-10-09", "title": "Пример новости", "text": "Это образец, чтобы было видно, как выглядит раздел. Замените или удалите его в админке.", "photo": "img/meeting.jpg", "hidden": false}], "contacts": {"phone": "+7 (495) 246-01-10", "email": "reception.ru@ifcmgroup.ru", "address": "Москва, ул. 3-я Рыбинская, 18, стр. 22"}};
+  var DEFAULT_CONTENT={"hero": {"badge": "iFCM GROUP · с 1993 года", "title": "Город\nзаботы", "lead": "Кормим ваших сотрудников и следим, чтобы в здании было светло, тепло и чисто. Всё это — одна команда.", "labels": ["Питание", "Здания 24/7", "Чистота", "Вахтовый посёлок"]}, "poster": {"lines": ["Вкусно.", "Чисто.", "Надёжно."], "text": "Мы любим, когда в обед пахнет домашней едой, в офисе чисто, а свет и лифты просто работают. Больше 30 лет делаем так, чтобы партнёрам было спокойно, а их командам — хорошо.", "photo": "img/chef2.jpg"}, "constructor": {"title": "Соберите сервис", "accent": "для своего объекта", "text": "Соберите всё, что нужно вашему объекту, а мы возьмём это на себя по одному договору.", "services": [{"name": "Корпоративное питание", "color": "red"}, {"name": "Здания 24/7", "color": "navy"}, {"name": "Уборка", "color": "white"}, {"name": "Кофепоинт", "color": "peach"}, {"name": "Охрана", "color": "navy"}, {"name": "Пропуска и видео", "color": "white"}, {"name": "Ресепшн", "color": "peach"}, {"name": "Озеленение", "color": "white"}, {"name": "Лифты и котельные", "color": "navy"}, {"name": "Прачечная", "color": "peach"}, {"name": "Доставка обедов", "color": "red"}, {"name": "Банкеты и VIP", "color": "red"}]}, "tiles": [{"title": "Корпоративное питание", "text": "Рестораны и столовые, буфеты, кофе-поинты, банкеты", "color": "navy", "photo": "img/kitchen.jpg"}, {"title": "Обслуживание зданий 24/7", "text": "Свет, тепло, вода, лифты и ремонт — круглосуточно", "color": "red", "photo": "img/engineer.jpg"}, {"title": "Чистота и порядок", "text": "Уборка, прачечная, снег, озеленение, ресепшн", "color": "peach", "photo": "img/corridor.jpg"}, {"title": "Вахтовые посёлки «под ключ»", "text": "Жильё, еда и забота там, где до города далеко", "color": "ink", "photo": "img/cashier.jpg"}], "blocks": [{"id": "b1", "type": "numbers", "title": "iFCM в цифрах", "text": "", "photo": "", "hidden": false, "items": [{"value": "1993", "label": "год основания", "title": "", "text": ""}, {"value": "8 000+", "label": "профессионалов в команде", "title": "", "text": ""}, {"value": "110 000", "label": "человек получают сервис каждый день", "title": "", "text": ""}, {"value": "111", "label": "объектов по всей России", "title": "", "text": ""}]}], "newsTitle": "Новости", "news": [{"id": "n1", "date": "2026-10-09", "title": "Пример новости", "text": "Это образец, чтобы было видно, как выглядит раздел. Замените или удалите его в админке.", "photo": "img/meeting.jpg", "hidden": false}], "contacts": {"phone": "+7 (495) 246-01-10", "email": "reception.ru@ifcmgroup.ru", "address": "Москва, ул. 3-я Рыбинская, 18, стр. 22"}};
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function img(u){u=String(u||'');if(!/^(img\/|uploads\/|https:\/\/)[^"'()\\\s]*$/.test(u))return 'none';return "url('"+u+"')"}
   var TILE_BG={navy:['var(--navy)','#fff'],red:['var(--red)','#fff'],peach:['var(--peach)','var(--navy)'],ink:['var(--ink)','#fff'],white:['#fff','var(--navy)']};
