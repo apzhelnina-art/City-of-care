@@ -775,7 +775,22 @@ a.vq:hover .vq-ph{background-size:112%}
 </script>
 <style>.pickbox{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:#FFF4EE;border-radius:20px;padding:14px 16px;font-size:14px;color:var(--navy)}
 .pickbox b{width:100%;font-family:var(--display);font-weight:900;font-size:16px}
-.pickbox span{background:var(--navy);color:#fff;border-radius:999px;padding:7px 13px;font-weight:700;font-size:13.5px}</style>
+.pickbox span{background:var(--navy);color:#fff;border-radius:999px;padding:7px 13px;font-weight:700;font-size:13.5px}
+/* единый ритм между блоками (как на главной) */
+:root{--sp:clamp(56px,6vw,96px)}
+.page .sec{padding-top:var(--sp)!important;padding-bottom:0!important}
+.page .slg{padding-top:var(--sp)!important;padding-bottom:0!important}
+.page .sv-more{padding-top:var(--sp)!important;padding-bottom:0!important}
+.page .marq{margin-top:var(--sp);padding-block:0!important}
+.page .ubands+.marq,.page .sv-more+.marq{margin-top:var(--sp)}
+.foot{margin-top:var(--sp)!important}
+.page .sec.mission{margin-top:var(--sp);padding-bottom:var(--sp)!important}
+.page .a-side{padding-bottom:0!important}
+.page .c-hero{padding-bottom:0!important}
+.page .c-hero+.sec{padding-top:max(32px,calc(var(--sp) - 50px))!important}
+.page .sec:has(.perks){padding-top:calc(var(--sp) + 20px)!important}
+.page .sec:has(.docgrid){padding-top:calc(var(--sp) + 34px)!important}
+</style>
 <script src="assets/site.js" defer></script>
 </body>
 </html>
