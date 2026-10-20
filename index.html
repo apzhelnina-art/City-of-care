@@ -17,6 +17,7 @@ a.tag3d:hover,a.tag3d:focus-visible{transform:translate(-50%,-140%) scale(1.08);
 a.tag3d{transition:opacity .3s,transform .2s,background .2s}a.tag3d[style*="opacity: 0"]{pointer-events:none}
 a.tag3d::before{content:"";position:absolute;right:-4px;top:-4px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px rgba(229,13,38,.25);animation:tagp 1.8s infinite}
 @keyframes tagp{50%{box-shadow:0 0 0 7px rgba(229,13,38,0)}}
+.ub h2.pr-h2{font-size:clamp(34px,4.3vw,66px)}@media (max-width:700px){.ub h2.pr-h2{font-size:clamp(30px,8.6vw,46px)}}
 </style>
 </head>
 <body>
@@ -214,6 +215,51 @@ h1,h2,h3{text-wrap:balance}
 @media (max-width:900px){.c-form.calc{grid-template-columns:repeat(2,minmax(0,1fr)) auto}.c-form.calc .wide{grid-column:1/3}.c-form.calc button{grid-column:3;grid-row:1/4;width:72px}}
 @media (max-width:520px){.c-form.calc{grid-template-columns:minmax(0,1fr)}.c-form.calc .wide{grid-column:auto}.c-form.calc button{grid-column:auto;grid-row:auto;width:100%;height:64px}}
 .lang-pill{display:none!important}
+
+/* «Забота — это система» по референсу */
+#process{overflow-x:clip}
+.r7{position:relative;margin-top:40px;clip-path:inset(0 -400px -400px -400px);padding:clamp(250px,24vw,340px) 0 clamp(10px,2vw,30px);display:flex;flex-direction:column;isolation:isolate}
+.r7-bg{position:absolute;z-index:-1;pointer-events:none}
+.r7-bg.g1{right:-8%;top:-60px;width:80%;height:400px;background:#F1E9F3;border-radius:0 0 50% 50%/0 0 100% 100%;border-bottom-left-radius:60% 100%}
+.r7-bg.g2{left:-14%;bottom:-40px;width:42%;aspect-ratio:1;background:#E7E2F1;border-radius:50% 0 50% 50%;transform:rotate(180deg);opacity:.8}
+.r7-bg.g3{right:-10%;bottom:-60px;width:30%;aspect-ratio:1;background:var(--peach);border-radius:50% 0 50% 50%;opacity:.55}
+.r7-city{position:absolute;z-index:1;right:calc(-1 * var(--gut));top:-300px;width:min(72%,1080px);pointer-events:none;filter:drop-shadow(0 24px 30px rgba(33,28,89,.15))}
+.r7-h{position:relative;z-index:2;display:flex;flex-direction:column;gap:14px;max-width:none}
+.r7-plate{align-self:flex-start;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(13px,1.1vw,16px);background:var(--red);color:#fff;padding:.55em 1.3em .55em 1em;border-radius:1.4em 999px 999px 0;position:relative}
+.r7-plate::after{content:"";position:absolute;right:-30px;top:-18px;width:26px;height:26px;background:linear-gradient(var(--red),var(--red)) 4px 14px/12px 3px no-repeat,linear-gradient(var(--red),var(--red)) 10px 4px/3px 10px no-repeat,linear-gradient(var(--red),var(--red)) 16px 9px/9px 3px no-repeat;transform:rotate(-18deg)}
+.r7-h h2{margin:0;font-size:clamp(46px,6.2vw,104px);line-height:.95;color:var(--navy);letter-spacing:-.025em;white-space:nowrap}.r7-h h2 .s{color:var(--red)}
+.r7-h p{margin:0;color:var(--muted);font-size:clamp(16px,1.35vw,21px);line-height:1.45}
+.r7-stage{position:relative;z-index:2;margin-top:clamp(36px,4vw,60px);padding-bottom:110px}
+.r7-l{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,30px);position:relative;z-index:2}
+.r7-c{position:relative;display:flex;flex-direction:column;gap:4px;padding:30px 28px 0;min-width:0;border-radius:48px 12px 48px 48px;overflow:hidden;box-shadow:0 26px 50px rgba(33,28,89,.14);padding-bottom:12px}
+.r7-navy{background:var(--navy);color:#fff}.r7-white{background:#fff;color:var(--navy)}.r7-peach{background:var(--peach);color:var(--navy)}.r7-red{background:var(--red);color:#fff}
+.r7-n{font-size:clamp(36px,3.2vw,52px);line-height:1;letter-spacing:-.02em;color:#B7B3D6}.r7-peach .r7-n{color:var(--red)}.r7-red .r7-n{color:#FFD3C4}
+.r7-c b{font-size:clamp(24px,2.3vw,38px);line-height:1;letter-spacing:-.02em;margin-top:8px}
+.r7-sub{font-size:clamp(14px,1.15vw,17px);line-height:1.35;opacity:.85}
+.r7-ic{position:absolute;right:22px;top:22px;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.92);color:var(--navy);box-shadow:0 8px 18px rgba(33,28,89,.15)}
+.r7-white .r7-ic{background:#F1ECF5}.r7-red .r7-ic,.r7-peach .r7-ic{color:var(--red)}.r7-ic svg{width:28px;height:28px}
+.r7-ph{position:relative;display:block;margin:26px -16px 0;aspect-ratio:5/4;background-size:cover;border-radius:50% 0 36px 36px/40% 0 36px 36px}
+.r7-path{position:absolute;left:0;right:0;bottom:0;width:100%;height:120px;z-index:1}
+.r7-i{position:absolute;z-index:3;pointer-events:none;filter:drop-shadow(0 14px 16px rgba(33,28,89,.2))}
+.r7-i.bench{left:-3%;bottom:20px;width:clamp(130px,11vw,180px)}
+.r7-i.tree{left:calc(25% - 2%);bottom:40px;width:clamp(80px,7vw,112px)}
+.r7-i.van{left:calc(50% - 5%);bottom:22px;width:clamp(120px,10.5vw,170px);animation:r7v 2.6s ease-in-out infinite}
+.r7-i.tree2{left:calc(75% - 6%);bottom:40px;width:clamp(80px,7vw,112px)}
+.r7-i.sign{right:0;bottom:20px;width:clamp(110px,9.5vw,150px)}
+.r7-notes{position:absolute;left:0;right:0;bottom:0;height:96px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,30px);z-index:3}
+.r7-note{position:relative;display:flex;align-items:flex-start;gap:8px;font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.4vw,21px);line-height:1.05;color:var(--navy)}
+.r7-note .r7-arr{flex:none;width:30px;height:36px;color:var(--navy);margin-top:-14px;opacity:.85}
+.r7-note.n1{padding-left:18%;transform:rotate(-3deg)}.r7-note.n2{padding-left:30%;top:10px;transform:rotate(-2deg)}.r7-note.n3{padding-left:6%;transform:rotate(-3deg)}.r7-note.n4{padding-left:22%;top:6px;transform:rotate(-2deg)}
+.r7-hand{position:absolute;z-index:3;left:24%;top:clamp(120px,11vw,160px);font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.3vw,19px);line-height:1.05;color:var(--navy);transform:rotate(-9deg);display:flex;align-items:flex-start;gap:4px}
+.r7-hand svg{width:46px;height:46px;margin-top:18px;color:var(--navy)}
+@keyframes r7v{50%{transform:translateY(-3px)}}
+.r7-cta{position:relative;z-index:3;align-self:center;margin-top:24px;display:inline-flex;align-items:center;gap:14px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:clamp(16px,1.3vw,19px);padding:22px 40px;border-radius:999px;box-shadow:0 18px 30px rgba(33,28,89,.25);transition:transform .15s}
+.r7-cta:hover{transform:translateY(-2px)}
+.r7-spark{position:absolute;top:50%;width:28px;height:30px;margin-top:-15px;background:linear-gradient(var(--red),var(--red)) 0 2px/18px 3px no-repeat,linear-gradient(var(--red),var(--red)) 4px 13px/24px 3px no-repeat,linear-gradient(var(--red),var(--red)) 0 24px/18px 3px no-repeat}
+.r7-spark.l{left:-44px;transform:scaleX(-1)}.r7-spark.r{right:-44px}
+@media (prefers-reduced-motion:reduce){.r7-i.van{animation:none}}
+@media (max-width:1100px){.r7-notes,.r7-hand{display:none}.r7-h h2{white-space:normal}.r7-l{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:30px}.r7-i{display:none}.r7-path{display:none}.r7-stage{padding-bottom:50px}.r7-city{width:70%;top:-110px}}
+@media (max-width:600px){.r7{padding-top:clamp(170px,48vw,230px)}.r7-city{width:120%;right:-20%;top:-40px}.r7-bg.g1{width:120%;right:-20%}.r7-l{grid-template-columns:minmax(0,1fr)}.r7-c{aspect-ratio:auto;padding-bottom:0;min-height:0}.r7-ph{position:relative;left:auto;right:auto;bottom:auto;margin:20px -16px 12px;height:auto;aspect-ratio:16/10}.r7-i.van{display:block;position:relative;left:auto;bottom:auto;align-self:flex-end;margin:-40px 0 0 auto;width:130px}.r7-stage{display:flex;flex-direction:column;padding-bottom:30px}.r7-spark{display:none}}
 </style>
 
 <div id="siteHeader"></div>
@@ -272,10 +318,10 @@ h1,h2,h3{text-wrap:balance}
   <div class="ind-strip">
     <div class="ind-h"><span class="lbl" style="color:var(--red-soft)">Решения по отраслям</span><h2 class="d">Знаем специфику <span class="s" style="color:var(--peach)">вашей отрасли</span></h2></div>
     <div class="ind-chips">
-      <a class="stk red" href="industries.html?seg=office">Офисы и БЦ</a>
-      <a class="stk white" href="industries.html?seg=plant">Производства</a>
-      <a class="stk peach" href="industries.html?seg=remote">Вахта и удалённые</a>
-      <a class="stk white" href="industries.html?seg=ifm">Всё «под ключ»</a>
+      <a class="stk red" href="industries.html?seg=office">Бизнес-центры</a>
+      <a class="stk white" href="industries.html?seg=plant">Промышленность</a>
+      <a class="stk peach" href="industries.html?seg=remote">Вахта</a>
+      <a class="stk white" href="industries.html?seg=ifm">Под ключ</a>
       <a class="stk red" href="industries.html?seg=edu">Образование</a>
     </div>
   </div>
@@ -293,6 +339,23 @@ h1,h2,h3{text-wrap:balance}
   </div></section></div>
 
 
+<!-- КАК МЫ РАБОТАЕМ -->
+<section class="w" id="process"><div class="r7">
+  <span class="r7-bg g1" aria-hidden="true"></span><span class="r7-bg g2" aria-hidden="true"></span><span class="r7-bg g3" aria-hidden="true"></span>
+  <img class="r7-city" src="img/ai_city.png" alt="" aria-hidden="true">
+  <em class="r7-hand" aria-hidden="true">Единая команда<br>на каждом этапе<svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6c-6 22 6 40 34 44"/><path d="M36 42l9 8-11 4"/></svg></em>
+  <div class="r7-h"><span class="r7-plate">Как мы работаем</span><h2 class="d">Забота — это <span class="s">система.</span></h2><p>От первого знакомства с объектом до ежедневного контроля качества.</p></div>
+  <div class="r7-stage">
+    <svg class="r7-path" viewBox="0 0 1360 120" preserveAspectRatio="none" aria-hidden="true"><path d="M30 40 C200 110 330 20 480 70 S760 120 900 60 S1180 10 1330 70" fill="none" stroke="#E50D26" stroke-width="2.5" stroke-dasharray="7 9" stroke-linecap="round"/></svg>
+    <ol class="r7-l"><li class="r7-c r7-navy"><span class="r7-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span><span class="r7-n d">01</span><b class="d">Изучаем</b><span class="r7-sub">Понимаем ваши задачи</span><span class="r7-ph" role="img" aria-label="Изучаем" style="background-image:url(img/s_hall.jpg);background-position:50% 55%"></span></li><li class="r7-c r7-white"><span class="r7-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span><span class="r7-n d">02</span><b class="d">Планируем</b><span class="r7-sub">Собираем оптимальное решение</span><span class="r7-ph" role="img" aria-label="Планируем" style="background-image:url(img/s_recipe.jpg);background-position:50% 35%"></span></li><li class="r7-c r7-peach"><span class="r7-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 2 6 5.5"/></svg></span><span class="r7-n d">03</span><b class="d">Запускаем</b><span class="r7-sub">Организуем работу на объекте</span><span class="r7-ph" role="img" aria-label="Запускаем" style="background-image:url(img/s_open.jpg);background-position:40% 55%"></span></li><li class="r7-c r7-red"><span class="r7-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span class="r7-n d">04</span><b class="d">Контролируем</b><span class="r7-sub">Развиваем сервис каждый день</span><span class="r7-ph" role="img" aria-label="Контролируем" style="background-image:url(img/s_kiosk.jpg);background-position:45% 40%"></span></li></ol>
+    <img class="r7-i bench" src="img/ai_bench.png" alt="" aria-hidden="true" loading="lazy">
+    <img class="r7-i tree" src="img/ai_tree.png" alt="" aria-hidden="true" loading="lazy">
+    <img class="r7-i van" src="img/ai_van.png" alt="" aria-hidden="true" loading="lazy">
+    <img class="r7-i tree2" src="img/ai_tree2.png" alt="" aria-hidden="true" loading="lazy">
+    <img class="r7-i sign" src="img/ai_sign.png" alt="" aria-hidden="true" loading="lazy">
+  </div>
+</div></section>
+
 <!-- НОВОСТИ -->
 <section class="w blk" id="news" hidden>
   <div class="sec-h"><h2 class="d" id="newsTitle">Новости</h2></div>
@@ -308,7 +371,7 @@ h1,h2,h3{text-wrap:balance}
       <label><span>Город объекта</span><input id="cCity" placeholder="Москва" autocomplete="address-level2"></label>
       <label><span>Компания</span><input id="cCo" placeholder="Название" autocomplete="organization"></label>
       <label><span>Сотрудников</span><input id="cN" inputmode="numeric" placeholder="например, 800"></label>
-      <label><span>Отрасль</span><select id="cInd"><option>Офис / БЦ</option><option>Производство</option><option>Вахта, удалённый проект</option><option>Всё «под ключ»</option><option>Образование</option><option>Другое</option></select></label>
+      <label><span>Отрасль</span><select id="cInd"><option>Бизнес-центр</option><option>Промышленность</option><option>Вахта, удалённый проект</option><option>Всё «под ключ»</option><option>Образование</option><option>Другое</option></select></label>
       <label class="wide"><span>Телефон</span><input id="tel" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel"></label>
       <button type="submit" aria-label="Запросить расчёт"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></button>
     </form>
