@@ -638,7 +638,7 @@ a.vq:hover .vq-ph{background-size:112%}
         <label class="full">Почта<input id="kmail" type="email" autocomplete="email" placeholder="name@company.ru"></label>
         <label class="full">Сообщение<textarea id="kmsg" placeholder="Объект, город, количество сотрудников — всё, что поможет подготовиться"></textarea></label>
       </div>
-      <label class="k-chk"><input type="checkbox" id="kcons"><span>Согласен на обработку персональных данных</span></label>
+      <label class="k-chk"><input type="checkbox" id="kcons"><span>Согласен на <a class="pd-link" href="https://disk.360.yandex.ru/i/gnEF3XklKYBSMg" target="_blank" rel="noopener">обработку персональных данных</a></span></label>
       <button class="btn" type="submit" style="align-self:flex-start">Отправить запрос <svg class="arw" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></button>
       <div class="ok" id="kok" role="status"></div>
     </div></form>
@@ -790,6 +790,7 @@ a.vq:hover .vq-ph{background-size:112%}
 .page .c-hero+.sec{padding-top:max(32px,calc(var(--sp) - 50px))!important}
 .page .sec:has(.perks){padding-top:calc(var(--sp) + 20px)!important}
 .page .sec:has(.docgrid){padding-top:calc(var(--sp) + 34px)!important}
+.pd-link{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px;text-decoration-color:var(--red)}.pd-link:hover{color:var(--red)}
 </style>
 <script src="assets/site.js" defer></script>
 </body>
