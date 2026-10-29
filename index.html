@@ -122,6 +122,7 @@ body.live #gscroll .play{display:none}
 #gscroll #heroUI h1{margin:0}
 #gscroll #heroUI .htxt{top:clamp(110px,15vh,150px)}
 .hero.old{display:none!important}
+#gscroll canvas,#gscroll #gstage{touch-action:pan-y!important}
 @media(max-width:860px){#gscroll #heroUI .htxt{top:86px}#gscroll .play{bottom:118px!important}}
 </style>
 </head>
@@ -943,7 +944,7 @@ const BASE=hex('#d9b6e0'),GLASS=hex('#b9a4e6'),SNOW=hex('#f6e6f3'),RED=hex('#E50
 function view(){
   const cy=Math.cos(cam.yaw),sy=Math.sin(cam.yaw),cp=Math.cos(cam.pitch),sp=Math.sin(cam.pitch);
   const narrow=CW<860;
-  const s=Math.min((narrow?CW*1.5:CW-380)/(W*1.0),CH/(H*1.25))*cam.zoom;
+  const s=Math.min((narrow?CW*1.02:CW-380)/(W*1.0),CH/(H*1.25))*cam.zoom;
   const ox=(narrow?CW*.5:400+(CW-400)*.55)+(narrow?0:CW*.12*HS), oy=CH*(narrow?lerp(.6,.66,HS):lerp(.52,.5,HS));
   const pr=(x,y,z)=>{const X=x-cam.tx,Z=z-cam.tz;const xr=X*cy-Z*sy,zr=X*sy+Z*cy;return [ox+xr*s, oy+(zr*sp-y*cp)*s, zr*cp+y*sp];};
   return {pr,s,cy,sy,cp,sp};
