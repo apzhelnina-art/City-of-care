@@ -23,7 +23,8 @@ a.tag3d::before{content:"";position:absolute;right:-4px;top:-4px;width:10px;heig
 </style>
 <style>
 #gscroll{--ink:#211C59;--red:#E50D26;--red2:#8E0716;--navy2:#0f0d33}
-#gscroll *{box-sizing:border-box;margin:0;padding:0}
+#gscroll *{box-sizing:border-box}
+#gscroll h1,#gscroll h2,#gscroll p,#gscroll ul{margin:0;padding:0}
 #gscroll{height:330vh;position:relative}
 #gscroll #gstage{position:sticky;top:0;height:100vh;overflow:hidden;background:radial-gradient(120% 90% at 80% 100%,#ef4148 0%,#b03a63 30%,#5b2f78 62%,#3b2160 100%)}
 #gscroll canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
@@ -122,8 +123,31 @@ body.live #gscroll .play{display:none}
 #gscroll #heroUI h1{margin:0}
 #gscroll #heroUI .htxt{top:clamp(110px,15vh,150px)}
 .hero.old{display:none!important}
+#gscroll #gtop{display:none!important}
+
+/* === единые правила сайта: поля, шрифты, кнопки === */
+#gscroll #gheroUI .htxt{left:var(--gut);right:var(--gut);max-width:min(560px,calc(100% - 2*var(--gut)));top:clamp(100px,15vh,140px);text-shadow:0 2px 18px rgba(21,18,58,.55)}
+#gscroll #gheroUI .htxt h1{font-family:var(--display);font-weight:900;font-size:clamp(52px,min(9vw,15vh),160px);line-height:.86;letter-spacing:-.04em;margin:0}
+#gscroll #gheroUI .htxt #hLead{margin:22px 0 0;max-width:430px;font-size:clamp(16px,1.35vw,19px);line-height:1.5}
+#gscroll #gheroUI .hbtn{gap:14px;margin-top:24px;flex-wrap:wrap}
+#gscroll #gheroUI .hbtn .stk{text-decoration:none;padding:18px 26px;font-size:15px;gap:10px}
+#gscroll .card #gcl.stk{padding:16px 20px;font-size:14px;text-decoration:none}
+@media(max-width:860px){#gscroll #gheroUI .hbtn .stk{padding:15px 18px;font-size:13px}}
+#gscroll #gheroUI .hcnt{left:var(--gut);right:var(--gut);bottom:28px;gap:clamp(18px,3vw,48px);padding-top:18px;border-top:1px solid rgba(255,255,255,.3)}
+#gscroll #gheroUI .hcnt b{font-family:var(--display);font-weight:900;font-size:clamp(28px,3.4vw,52px);line-height:1;letter-spacing:-.03em}
+#gscroll #gheroUI .hcnt small{display:block;font-size:13px;opacity:.85;margin-top:6px}
+#gscroll #gsec{left:var(--gut)}
+#gscroll #gsec h2{letter-spacing:-.04em}
+#gscroll #gsec:before{content:'';position:absolute;z-index:-1;left:calc(-1*var(--gut));top:-80px;bottom:-60px;width:calc(100% + 180px);background:radial-gradient(closest-side,rgba(43,29,99,.78),rgba(43,29,99,.5) 60%,rgba(43,29,99,0));pointer-events:none}
+#gscroll .chips{left:var(--gut)}
+#gscroll .ctrl{right:var(--gut)}
+#gscroll aside.card{right:var(--gut)}
+#gscroll .card #gcl{display:flex;width:100%;justify-content:center;margin-top:4px}
+@media(max-width:860px){#gscroll #gheroUI .htxt{top:96px}#gscroll #gheroUI .htxt #hLead{font-size:16px;max-width:none}#gscroll .chip{font-size:11px!important;padding:9px 12px!important}#gscroll .chips{padding:0 var(--gut) 8px!important;left:0!important}#gscroll aside.card{left:var(--gut);right:var(--gut)}}
+@media(max-width:600px){#gscroll #gheroUI .htxt{top:88px}#gscroll #gheroUI .hcnt{bottom:0;padding-bottom:22px}#gscroll .ctrl{display:none!important}#gscroll .chips{bottom:22px!important}}
+@media(max-width:860px){#gscroll #gheroUI:before{content:'';position:absolute;left:0;right:0;top:0;height:62%;background:linear-gradient(180deg,#2B1D63 0,#2B1D63 70%,rgba(43,29,99,0) 100%);z-index:-1}#gscroll #gheroUI .hcnt{background:linear-gradient(0deg,rgba(33,28,89,.92),rgba(33,28,89,.55));margin:0 calc(-1*var(--gut));padding:14px var(--gut) 24px;border-top:0}}
 #gscroll canvas,#gscroll #gstage{touch-action:pan-y!important}
-@media(max-width:860px){#gscroll #heroUI .htxt{top:86px}#gscroll .play{bottom:118px!important}}
+@media(max-width:860px){#gscroll #heroUI .htxt{top:86px}#gscroll .play{display:none!important}#gscroll .chips{bottom:84px!important}#gscroll .ctrl{bottom:20px!important}}
 </style>
 </head>
 <body>
@@ -395,13 +419,13 @@ h1,h2,h3{text-wrap:balance}
   <canvas id="gcv"></canvas>
   
   
-  <div id="gheroUI"><div class="htxt"><span class="stk red lbl" id="hBadge" style="padding:10px 16px;font-size:13px;margin-bottom:22px">iFCM GROUP · с 1993 года</span><h1 id="hTitle">Город<br>заботы<span style="color:var(--red)">.</span></h1><p id="hLead">Корпоративное питание и техническая эксплуатация зданий и сооружений — для офисов, заводов, месторождений и школ по всей России.</p><div class="hbtn"><a class="pill" href="#play">Подобрать услуги ↗</a><a class="pill white lead" href="#contact">Обсудить объект</a></div></div><div class="hcnt"><div><b>111</b><small>объектов по России</small></div><div><b>110 000</b><small>человек ежедневно</small></div><div><b>30+</b><small>лет опыта</small></div></div></div>
+  <div id="gheroUI"><div class="htxt"><span class="stk red lbl" id="hBadge" style="padding:10px 16px;font-size:13px;margin-bottom:22px">iFCM GROUP · с 1993 года</span><h1 id="hTitle">Город<br>заботы<span style="color:var(--red)">.</span></h1><p id="hLead">Корпоративное питание и техническая эксплуатация зданий и сооружений — для офисов, заводов, месторождений и школ по всей России.</p><div class="hbtn"><a class="stk red" href="#play">Подобрать услуги <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="stk white lead" href="#contact">Обсудить объект</a></div></div><div class="hcnt"><div><b>111</b><small>объектов по России</small></div><div><b>110 000</b><small>человек ежедневно</small></div><div><b>30+</b><small>лет опыта</small></div></div></div>
   <div id="gsec"><h2>Наш город —<br>это 8000 человек<em>.</em></h2><p>Они кормят, убирают и следят за зданиями по всей стране — даже там, куда можно добраться только вертолётом.</p><div class="facts"><span><b>280</b> столовых</span><span><b>39</b> удалённых объектов</span><span><b>6</b> региональных офисов</span></div><p class="cta-hint">Нажмите на точку на карте — расскажем, что мы там делаем.</p></div>
   <div class="chips ui" id="gchips"></div>
   <div class="ctrl ui"><button id="gback" style="display:none" class="on">← Вся страна</button><button id="gzo">−</button><button id="gzi">+</button><button id="gtop">Вид сверху</button><button id="grs">⟲</button></div>
-  <aside class="card" id="gcard"><div class="img" id="gci"></div><button class="x" id="gcx">✕</button><div class="type" id="gct"></div><h2 id="gcn"></h2><div class="sell" id="gcc"></div><div class="kpis" id="gkp"></div><ul class="cl" id="gtg"></ul><a class="pill" id="gcl" href="#contact">Хочу так же у себя</a><div class="demo">Расположение точек на карте приблизительное</div></aside>
+  <aside class="card" id="gcard"><div class="img" id="gci"></div><button class="x" id="gcx">✕</button><div class="type" id="gct"></div><h2 id="gcn"></h2><div class="sell" id="gcc"></div><div class="kpis" id="gkp"></div><ul class="cl" id="gtg"></ul><a class="stk red" id="gcl" href="#contact">Хочу так же у себя</a><div class="demo">Расположение точек на карте приблизительное</div></aside>
   <div class="tip" id="gtip"></div>
-  <button class="play pill white" id="gplay">▶ Показать</button><div class="scrollhint">ЛИСТАЙТЕ ↓</div>
+  <div class="scrollhint">ЛИСТАЙТЕ ↓</div>
   <div class="list"><div id="gitems"></div></div>
 </div></div>
 
@@ -945,7 +969,7 @@ function view(){
   const cy=Math.cos(cam.yaw),sy=Math.sin(cam.yaw),cp=Math.cos(cam.pitch),sp=Math.sin(cam.pitch);
   const narrow=CW<860;
   const s=Math.min((narrow?CW*1.02:CW-380)/(W*1.0),CH/(H*1.25))*cam.zoom;
-  const ox=(narrow?CW*.5:400+(CW-400)*.55)+(narrow?0:CW*.12*HS), oy=CH*(narrow?lerp(.6,.66,HS):lerp(.52,.5,HS));
+  const ox=(narrow?CW*.56:400+(CW-400)*.55)+(narrow?0:CW*.12*HS), oy=CH*(narrow?lerp(.6,.84,HS):lerp(.52,.5,HS));
   const pr=(x,y,z)=>{const X=x-cam.tx,Z=z-cam.tz;const xr=X*cy-Z*sy,zr=X*sy+Z*cy;return [ox+xr*s, oy+(zr*sp-y*cp)*s, zr*cp+y*sp];};
   return {pr,s,cy,sy,cp,sp};
 }
@@ -1030,11 +1054,11 @@ function draw(){
     ctx.strokeStyle=`rgba(255,255,255,${(1-ph)*.6})`;ctx.lineWidth=2;ctx.beginPath();ctx.arc(hub[0],hub[1],r+ph*30,0,7);ctx.stroke();
     ctx.fillStyle='#211C59';ctx.beginPath();ctx.arc(hub[0],hub[1],r,0,7);ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=2.5;ctx.stroke();
     mark(hub[0],hub[1],r);
-    ctx.fillStyle='#fff';ctx.font='900 14px Cera Round Pro,Arial,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('Город заботы · Москва',hub[0],hub[1]-r-16);ctx.globalAlpha=1;
+    ctx.fillStyle='#fff';ctx.font='900 14px Cera Round Pro,Arial,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(narrow0()?'Москва':'Город заботы · Москва',hub[0],hub[1]-r-16);ctx.globalAlpha=1;
   }
   // district pills
   V.dp=[];
-  if((cityMode||cam.zoom>3.5)&&!(CW<860&&P<.14)){DIST.forEach((D,i)=>{const p=pr(D.cx,1.9,D.cz);ctx.font='900 12px Cera Round Pro,Arial,sans-serif';const w=ctx.measureText(D.n.toUpperCase()).width+28,h=30;const x=p[0]-w/2,y=p[1]-h;
+  if((cityMode||cam.zoom>3.5)&&!(CW<860&&P<.14)&&!(CW<600&&!cityMode)){DIST.forEach((D,i)=>{const p=pr(D.cx,1.9,D.cz);ctx.font='900 12px Cera Round Pro,Arial,sans-serif';const w=ctx.measureText(D.n.toUpperCase()).width+28,h=30;const x=p[0]-w/2,y=p[1]-h;
     const C={white:['#fff','#211C59','#c8c0dc'],navy:['#211C59','#fff','#0f0d33'],red:['#E50D26','#fff','#8E0716'],cream:['#f6dccf','#211C59','#c9a99a']}[D.c];
     const lift=cityHov===i?-4:0;
     ctx.strokeStyle='rgba(255,255,255,.7)';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(p[0],p[1]);ctx.lineTo(p[0],pr(D.cx,.4,D.cz)[1]);ctx.stroke();
@@ -1061,10 +1085,11 @@ function draw(){
     ctx.fillStyle=`rgba(${col},${a})`;ctx.beginPath();ctx.arc(head[0],head[1],R,0,7);ctx.fill();if(off){ctx.strokeStyle='rgba(255,255,255,.9)';ctx.lineWidth=2;ctx.stroke();}
     if(o.remote){ctx.strokeStyle=`rgba(255,255,255,${a})`;ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(head[0],head[1],R*.55,0,7);ctx.stroke();}
     else{ctx.fillStyle=`rgba(255,255,255,${a})`;if(off){mark(head[0],head[1],R,a);}else{ctx.beginPath();ctx.arc(head[0],head[1],R*.36,0,7);ctx.fill();}}
-    if(on&&(off||isS||isH||cam.zoom>2)){ctx.fillStyle='rgba(255,255,255,.95)';ctx.font='800 12px Cera Round Pro,Arial';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(o.name.split(' — ')[0],head[0],head[1]-R-10);}
+    if(on&&(narrow0()?(isS||isH||cam.zoom>4.5):(off||isS||isH||cam.zoom>2))){ctx.fillStyle='rgba(255,255,255,.95)';ctx.font='800 12px Cera Round Pro,Arial';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(o.name.split(' — ')[0],head[0],head[1]-R-10);}
     V.pins.push({o,x:head[0],y:head[1],on,R});
   });
 }
+function narrow0(){return CW<600}
 function mark(x,y,r,a){a=a==null?1:a;ctx.fillStyle=`rgba(228,21,39,${a})`;ctx.beginPath();ctx.arc(x,y-r*.62,r*.2,0,7);ctx.fill();ctx.fillStyle=`rgba(255,255,255,${a})`;for(let q=0;q<3;q++){ctx.beginPath();ctx.ellipse(x,y-r*.14+q*r*.42,r*.3,r*.155,0,0,7);ctx.fill();}}
 function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
 function lerp2(a,b,t){return [lerp(a[0],b[0],t),lerp(a[1],b[1],t)];}
@@ -1090,7 +1115,7 @@ function exitCity(){cityMode=false;cityHov=-1;document.getElementById('gcard').c
 function showCard(c){const ci=document.getElementById('gci');if(c.img){ci.style.display='block';ci.style.backgroundImage=`url(${IMG[c.img]})`;}else ci.style.display='none';document.getElementById('gct').textContent=c.type;document.getElementById('gcn').textContent=c.name;document.getElementById('gcc').textContent=c.sell||c.d||'';const kp=document.getElementById('gkp');kp.style.display=c.k?'grid':'none';if(c.k)kp.innerHTML=c.k.map(([v,l])=>`<div class="kpi"><b>${v}</b><small>${l}</small></div>`).join('');document.getElementById('gtg').innerHTML=(c.list||[]).map(x=>`<li>${x}</li>`).join('');const a=document.getElementById('gcl');a.textContent=c.link||'Хочу так же у себя';a.href=c.href||LEAD_URL;document.getElementById('gcard').classList.add('on');}
 function distAt(x,y){if(!V||!V.dp)return -1;for(const p of V.dp)if(x>=p.x&&x<=p.x+p.w&&y>=p.y-4&&y<=p.y+p.h)return p.i;return -1;}
 function hubAt(x,y){return !cityMode&&V&&V.hub&&Math.hypot(x-V.hub[0],y-V.hub[1])<30;}
-document.getElementById('gplay').onclick=()=>{const max=sc.offsetTop+sc.offsetHeight-innerHeight,t0=performance.now(),from=scrollY;const st=n=>{const k=cl((n-t0)/5000);scrollTo(0,from+(max-from)*(k*k*(3-2*k)));if(k<1)requestAnimationFrame(st);};requestAnimationFrame(st);};
+if(document.getElementById('gplay'))document.getElementById('gplay').onclick=()=>{const max=sc.offsetTop+sc.offsetHeight-innerHeight,t0=performance.now(),from=scrollY;const st=n=>{const k=cl((n-t0)/5000);scrollTo(0,from+(max-from)*(k*k*(3-2*k)));if(k<1)requestAnimationFrame(st);};requestAnimationFrame(st);};
 function loop(){
   const now=performance.now();intro();
   if(P>.99&&!drag&&!sel&&selReg<0&&!topMode&&now-lastInteract>5000) goal.yaw=DEF.yaw+Math.sin(now/5000)*.12;
